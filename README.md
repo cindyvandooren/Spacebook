@@ -2,10 +2,14 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: https://spacebookproject.herokuapp.com/
+
+[Project link][project]
+
+[project]: http://www.spacebook.website/
 
 ## Minimum Viable Product
-Flux-capacitr is a clone of Tumblr built on Rails and Backbone. Users can:
+Spacebook is a clone of Facebook built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
@@ -88,4 +92,3 @@ collections, but they will fetch from the new `search` routes.
 [phase-three]: ./docs/phases/phase3.md
 [phase-four]: ./docs/phases/phase4.md
 [phase-five]: ./docs/phases/phase5.md
-
