@@ -1,22 +1,24 @@
 # Phase 1: User Authentication, Basic Blogs and Posts
 
+## User stories
+* If user clicks Sign In with valid info: user is taken to profile page.
+* If user clicks Sign In with invalid info: user gets info and request to change input. User stays on landing page.
+* If user clicks Sign Up with valid new info: user is taken to profile page.
+* If user clicks Sign Up with invalid new info: user gets info and request to change input. User stays on landing page.
+
 ## Rails
 ### Models
 * User
-* Blog
-* Post
 
 ### Controllers
-* UsersController (create, new)
+* UsersController (create, new, edit, update)
 * SessionsController (create, new, destroy)
-* BlogsController (create, new, show)
-* PostsController (create, new, show)
+* ApplicationController
+* StaticPagesController (landing, root)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* blogs/new.html.erb
-* blogs/show.html.erb
+* landing.html.erb
+* root.html.erb
 
 ## Backbone
 ### Models
@@ -26,3 +28,4 @@
 ### Views
 
 ## Gems/Libraries
+* BCrypt

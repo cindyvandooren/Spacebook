@@ -2,19 +2,32 @@
 
 ## Rails
 ### Models
+* Friends
+* Invitations
 
 ### Controllers
-Api::PostsController (feed)
+Api::FriendsController (create, destroy, index)
+Api::InvitationsController (create, destroy, index)
 
 ### Views
-posts/feed.json.jbuilder
+* invitations/invitation.json.jbuilder (partial)
+* invitations/show.json.jbuilder
+* friends/friend.json.jbuilder (partial)
+* friends/show.json.jbuilder
 
 ## Backbone
 ### Models
+* Friend
+* Invitation
 
 ### Collections
+* Invitations
+* Friends
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* FriendsIndex
+* FriendsIndexItem
+* InvitationIndex
+* InvitationIndexItem
 
 ## Gems/Libraries
