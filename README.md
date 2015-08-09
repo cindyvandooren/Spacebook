@@ -13,10 +13,10 @@ Spacebook is a clone of Facebook built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [x] Create accounts
-- [x] Create sessions (log in)
-- [x] Create blogs
-- [x] Create blog posts
+- [ ] Create users/accounts
+- [ ] Create sessions (log in)
+- [ ] Create user profile page
+- [ ] Create posts
 - [ ] View blogs and posts
 - [ ] Subscribe to blogs
 - [ ] View a feed of subscribed blogs

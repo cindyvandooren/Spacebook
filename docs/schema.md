@@ -1,45 +1,67 @@
 # Schema Information
 
-## blogs
+## notifications
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-owner_id    | integer   | not null, foreign key (references users)
-title       | string    | not null
+type        | string    | not null
+(references posts or comments or likes)
+type_id     | integer   | not null, foreign key
+(references posts or comments or likes)
+author_id   | integer   | not null, foreign key
+post_id     | integer   | not null, foreign key
 
-## followings
+## likes
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-blog_id     | integer   | not null, foreign key (references blogs)
-follower_id | integer   | not null, foreign key (references users)
+type        | string    | not null
+(references posts or comments)
+type_id     | integer   | not null
+(references posts or comments)
+author_id   | integer   | not null, foreign key (references users)
+
+## comments
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+post_id     | integer   | not null, foreign key (references posts)
+author_id   | integer   | not null, foreign key (references users)
+body        | string    | not null, max 240 chr
 
 ## posts
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users)
-title       | string    | not null
-body        | string    |
+body        | string    | not null, max 240 chr
 
-## tags
+## invitations
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-label       | string    | not null, unique
+inviter_id  | integer   | not null
+invitee_id  | integer  | not null
 
-## taggings
+## friendships
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-post_id     | integer   | not null, foreign key (references posts)
-tag_id      | integer   | not null, foreign key (references tags)
+own_id      | integer   | not null, foreign key
+(references users)
+friend_id   | integer   | not null, foreign key (references users)
 
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------
-id              | integer   | not null, primary key
-email           | string    | not null, unique
+id              | integer   | not null, primary
+username        | string    | not null, unique
 password_digest | string    | not null
 session_token   | string    | not null, unique
-
+last_note_time  | datetime  |
+birthday        | date      |
+interests       | string    |
+home planet     | string    |
+planet of birth | string    |
+profile_img     | string    |
+background_img  | string    |
