@@ -1,4 +1,4 @@
-# Flux-capacitr
+# Spacebook
 
 [Heroku link][heroku]
 
@@ -14,15 +14,20 @@ Spacebook is a clone of Facebook built on Rails and Backbone. Users can:
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
 - [ ] Create users/accounts
-- [ ] Create sessions (log in)
-- [ ] Create user profile page
+- [ ] Create sessions (login/logout)
+- [ ] Implement authentication
+- [ ] Have an about page for user
 - [ ] Create posts
-- [ ] View blogs and posts
-- [ ] Subscribe to blogs
-- [ ] View a feed of subscribed blogs
-- [ ] Tag blog posts
-- [ ] Search for blogs by title
-- [ ] Search for posts by tag
+- [ ] Delete posts
+- [ ] Edit posts
+- [ ] Delete posts
+- [ ] Search and find other users
+- [ ] Send friendship invitations
+- [ ] Accept friendship invitations
+- [ ] Show friends on page
+- [ ] Delete friendship
+- [ ] Notify user of new posts of friends
+- [ ] Show number of notifications on page
 
 ## Design Docs
 * [View Wireframes][views]
@@ -77,13 +82,11 @@ collections, but they will fetch from the new `search` routes.
 [Details][phase-five]
 
 ### Bonus Features (TBD)
-- [ ] "Like" button and counter for posts
-- [ ] Custom blog urls
-- [ ] Pagination/infinite scroll
-- [ ] Activity history (e.g. likes, reblogs, taggings)
-- [ ] Post types (image posts, quote posts, etc)
-- [ ] Reblogging
-- [ ] Multiple sessions/session management
+- [ ] Like button and counter for posts
+- [ ] Have notifications for likes
+- [ ] Have a profile page to update profile
+- [ ] Upload pictures
+- [ ] Create photo albums
 - [ ] User avatars
 - [ ] Typeahead search bar
 
