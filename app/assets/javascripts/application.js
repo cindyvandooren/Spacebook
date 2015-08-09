@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require_tree ./utils
 //= require spacebook
+//= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
