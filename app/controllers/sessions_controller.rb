@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
     if @user
       sign_in(@user)
-      redirect_to "#/users/#{@user.id}"
+      redirect_to "#/profile/#{@user.id}"
     else
       flash[:errors] = ["Invalid credentials, please try again."]
       redirect_to landing_url

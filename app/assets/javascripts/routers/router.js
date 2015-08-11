@@ -5,14 +5,14 @@ Spacebook.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "users/:id" : "show"
+    "profile/:id" : "show"
   },
 
-  // show: function (id) {
-  //   var user = this.collection.getOrFetch(id);
-  //   var showView = new Spacebook.Views.UserShow({ model: user });
-  //   this._swapView(showView);
-  // },
+  show: function (id) {
+    var user = this.collection.getOrFetch(id);
+    var showView = new Spacebook.Views.ProfileShow({ model: user });
+    this._swapView(showView);
+  },
 
   swapView: function () {
     this._currentView && this.currentView.remove();
