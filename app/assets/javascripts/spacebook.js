@@ -4,10 +4,15 @@ window.Spacebook = {
   Views: {},
   Routers: {},
   initialize: function() {
-    var router = new Spacebook.Routers.Router();
-        
-    // TODO: Does not need a model yet. Might have to add that later.
-    var navbar = new Spacebook.Views.Navbar();
+    var users = new Spacebook.Collections.Users({});
+
+    var currentUser = new Spacebook.Models.User({
+      id: window.CURRENT_USER_ID
+    });
+    currentUser.fetch();
+
+    var router = new Spacebook.Routers.Router({ collection: users });
+    var navbar = new Spacebook.Views.Navbar({ model: currentUser });
 
     $("#navbar").html(navbar.render().$el);
     Backbone.history.start();
