@@ -10,8 +10,6 @@ Spacebook.Routers.Router = Backbone.Router.extend({
 
   show: function (id) {
     var user = this.collection.getOrFetch(id);
-    debugger;
-    // says that model is undefined
     var showView = new Spacebook.Views.ProfileShow({ model: user });
     this.swapView(showView);
   },
