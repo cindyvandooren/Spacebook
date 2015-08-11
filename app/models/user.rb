@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   attr_reader :password
   after_initialize :ensure_session_token
+  before_save :ensure_profile_img_id
+  before_save :ensure_background_img_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -29,5 +31,25 @@ class User < ActiveRecord::Base
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+# Make sure that users have a background, profile and thumbnail img
+# when they sign up. To start, these images will be default images.
+
+  def ensure_profile_img_id
+    self.profile_img_id
+  end
+
+  def ensure_background_img_id
+    self.background_img_id
+  end
+
+  def profile_img_url
+  end
+
+  def thumbnail_img_url
+  end
+
+  def background_img_url
   end
 end

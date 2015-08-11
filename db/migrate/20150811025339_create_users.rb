@@ -9,8 +9,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :interests
       t.string :home_planet
       t.string :planet_of_birth
-      t.string :profile_img
-      t.string :background_img
+      t.string :profile_img_id
+      t.string :background_img_id
       t.timestamps null: false
     end
 

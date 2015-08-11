@@ -55,9 +55,22 @@ body {
   color: white;
 }
 
+.navbar-collapse.root {
+  padding: 0px;
+}
+
+.btn-primary.root {
+  margin: 8px;
+}
+
 .btn-primary {
   background-color: rgb(238, 238, 238);
   color: black;
+}
+
+div .profile {
+  height: 150px;
+  border: 1px solid black;
 }
 
 #loginbox {
