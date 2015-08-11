@@ -4,10 +4,12 @@ window.Spacebook = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    var router = new Spacebook.Routers.Router();
+        
+    // TODO: Does not need a model yet. Might have to add that later.
+    var navbar = new Spacebook.Views.Navbar();
+
+    $("#navbar").html(navbar.render().$el);
+    Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  Spacebook.initialize();
-});
