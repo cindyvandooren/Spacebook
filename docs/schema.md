@@ -63,7 +63,7 @@ password_digest | string    | not null
 session_token   | string    | not null, unique
 last_note_time  | datetime  |
 birthday        | date      |
-likes           | string    |
+interest        | string    |
 home planet     | string    |
 planet of birth | string    |
 profile_img     | string    |

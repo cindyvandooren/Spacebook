@@ -15,11 +15,13 @@ gem 'rails_12factor'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem 'ejs'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+  gem 'quiet_assets'
 end
 
 group :development, :test do
