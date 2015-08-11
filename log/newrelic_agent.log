@@ -93,3 +93,21 @@
 [08/09/15 14:25:54 -0700 Cindys-MBP (96946)] INFO : Installing Rails 4 view instrumentation
 [08/09/15 14:25:54 -0700 Cindys-MBP (96946)] INFO : Installing Rails 4 Error instrumentation
 [08/09/15 14:25:54 -0700 Cindys-MBP (96946)] INFO : Finished instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Starting the New Relic agent in "development" environment.
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Environment: development
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : No known dispatcher detected.
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Application: development
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing ActiveJob instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing ActiveRecord 4 instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Net instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing deferred Rack instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Rack::Builder middleware instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Rails 3+ middleware instrumentation
+[08/10/15 19:16:49 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Rails 4 Controller instrumentation
+[08/10/15 19:16:50 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Rails 4 view instrumentation
+[08/10/15 19:16:50 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Installing Rails 4 Error instrumentation
+[08/10/15 19:16:50 -0700 Cindys-MacBook-Pro.local (38621)] INFO : Finished instrumentation
