@@ -23,6 +23,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_signed_in
-    redirect_to "static_pages#landing" unless logged_in?
+    redirect_to "static_pages#landing" unless signed_in?
   end
 end

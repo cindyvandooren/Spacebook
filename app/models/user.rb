@@ -31,4 +31,3 @@ class User < ActiveRecord::Base
     self.session_token
   end
 end
-end

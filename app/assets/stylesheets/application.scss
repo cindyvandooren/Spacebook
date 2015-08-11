@@ -1,0 +1,119 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+body {
+  background-color: #edf0f5;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+
+.navbar {
+  background-color: #3a5795;
+  height: 82px;
+  position: relative;
+}
+
+.navbar-collapse {
+  padding-top: 20px;
+}
+
+.navbar-header {
+  padding-top: 15px;
+}
+
+.navbar-brand {
+  font-family: 'Freight Sans Bold', 'lucida grande',
+               tahoma,verdana,arial,sans-serif;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.btn-primary {
+  background-color: rgb(238, 238, 238);
+  color: black;
+}
+
+#loginbox {
+    margin-top: 30px;
+    width: 400px;
+    padding-top: 100px;
+}
+
+#loginbox > div:first-child {
+    padding-bottom: 10px;
+    float: left;
+}
+
+.container:before {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+
+#form > div {
+    margin-bottom: 25px;
+}
+
+#form > div:last-child {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-img {
+  float: right;
+  height: 282px;
+}
+
+.panel {
+    background-color: transparent;
+}
+
+.panel-body {
+    padding-top: 30px;
+    background-color: rgba(2555,255,255,.3);
+}
+
+.container {
+  position: relative;
+}
+
+.pull-right {
+  background: linear-gradient(#67ae55, #578843);
+  background-color: #69a74e;
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+}
+
+.panel-default > .panel-heading {
+  background-color: #3a5795;
+  color: white;
+  font-family: 'Freight Sans Bold', 'lucida grande',
+                tahoma,verdana,arial,sans-serif;
+}

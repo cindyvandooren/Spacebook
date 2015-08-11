@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    render "static_pages#landing"
+    render "static_pages/landing"
   end
 
   def create
@@ -15,12 +15,12 @@ class SessionsController < ApplicationController
       # redirect_to "#/profiles/#{user.id}"
     else
       flash[:errors] = ["Invalid credentials, please try again."]
-      redirect_to "static_pages#landing"
+      redirect_to landing_url
     end
   end
 
   def destroy
     sign_out
-    redirect_to "static_pages#landing"
+    redirect_to landing_url
   end
 end
