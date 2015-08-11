@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def new
+    @user = User.new
+  end
+
   def create
     @user = User.new(create_user_params)
     if @user.save
@@ -6,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to root_url
       # redirect_to "#/profiles/#{@user.id}"
     else
-      flash[:errors] = ["Invalid credentials. Please try again."]
+      flash[:errors] = @user.errors.full_messages
       redirect_to landing_url
     end
   end
