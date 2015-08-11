@@ -71,6 +71,7 @@ In this phase I will set up a polymorphic association for the notifications. Use
 [Details][phase-six]
 
 ### Bonus Features (TBD)
+- [ ] Custom styling for the cloudinary widget
 - [ ] Unfriend functionality
 - [ ] Use markdown in creation of posts
 - [ ] Being able to make comments
