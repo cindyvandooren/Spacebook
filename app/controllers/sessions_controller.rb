@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :sign_in_first, only: [:destroy]
+
   def new
     render "static_pages/landing"
   end
@@ -23,4 +25,10 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to landing_url
   end
+
+  # def guest_login
+  #   user = User.find()
+  #   sign_in(user)
+  #   redirect_to root_url
+  # end
 end

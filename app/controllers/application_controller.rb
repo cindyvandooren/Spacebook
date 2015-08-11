@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
     session[:session_token] = nil
   end
 
+  def sign_in_first
+    redirect_to landing_url unless current_user
+  end
+
   def require_signed_in
     redirect_to landing_url unless signed_in?
   end

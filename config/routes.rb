@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :static_pages, only: [:landing]
 
   namespace :api, defaults: { format: :json } do
-    resources :users, only: [:update, :show, :index]
+    resources :users, only: [:index, :show, :update]
   end
 end
