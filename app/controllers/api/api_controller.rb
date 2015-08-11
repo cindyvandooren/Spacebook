@@ -1,3 +1,3 @@
-class Api::ApiController < ApplicationController
-  before_action :require_signed_in
-end
+# class Api::ApiController < ApplicationController
+#   before_action :require_signed_in
+# end

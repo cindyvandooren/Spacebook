@@ -7,8 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(create_user_params)
     if @user.save
       sign_in(@user)
-      redirect_to root_url
-      # redirect_to "#/profiles/#{@user.id}"
+      redirect_to "#/users/#{@user.id}"
     else
       flash[:errors] = @user.errors.full_messages
       redirect_to landing_url

@@ -3,6 +3,14 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     this.$rootEl = $("#content");
   },
 
+  routes: {
+    "users/:id" : "show"
+  },
+
+  show: function () {
+
+  },
+
   swapView: function () {
     this._currentView && this.currentView.remove();
     this._currentView = view;
