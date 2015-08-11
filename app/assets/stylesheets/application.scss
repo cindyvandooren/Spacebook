@@ -25,16 +25,30 @@ body {
 
 .navbar {
   background-color: #3a5795;
-  height: 82px;
   position: relative;
+}
+
+.navbar.landing {
+  height: 82px;
+}
+
+.navbar.root {
+  height: 42px;
 }
 
 .navbar-brand {
   font-family: 'Freight Sans Bold', 'lucida grande',
                tahoma,verdana,arial,sans-serif;
-  font-size: 36px;
   color: white;
   cursor: pointer;
+}
+
+.navbar-brand.landing {
+  font-size: 36px;
+}
+
+.navbar-brand.root{
+  font-size: 28px;
 }
 
 .navbar-default .navbar-brand {
@@ -76,11 +90,6 @@ body {
 #form > div:last-child {
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.home-img {
-  float: right;
-  height: 282px;
 }
 
 .panel {
