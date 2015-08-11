@@ -29,3 +29,4 @@
 
 ## Gems/Libraries
 * BCrypt
+* bootstrap-sass
