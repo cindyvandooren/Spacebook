@@ -25,26 +25,39 @@ body {
   font-size: 12px;
 }
 
-div .profile {
-  height: 150px;
-  border: 1px solid black;
-}
-
-div .profile-main-box {
+.profile-main-box {
   width: 851px;
   margin-left: 75px;
 }
 
-div .profile-header {
+.profile-header {
   height: 273px;
   width: 851px;
 }
 
-div .profile-sidebar .container {
+.profile-sidebar .container {
   width: 100px;
 }
 
-div .profile-non-header:after {
+.profile-non-header {
+  position: relative;
+  width: 851px;
+}
+
+.profile-sidebar {
+  float: left;
+  width: 323px;
+  position: absolute;
+}
+
+.profile-content {
+  float: right;
+  width: 510px;
+  position: absolute;
+  margin-left: 341px;
+}
+
+.profile-non-header:after {
   content: "";
   display: block;
   clear: both;
@@ -114,7 +127,7 @@ div .profile-non-header:after {
   margin: 25px;
 }
 
-div .home-img {
+.home-img {
   // padding-top: 132px;
   margin-top: 132px;
   margin-left: 45px;
