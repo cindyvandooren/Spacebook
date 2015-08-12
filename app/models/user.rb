@@ -37,19 +37,37 @@ class User < ActiveRecord::Base
 # when they sign up. To start, these images will be default images.
 
   def ensure_profile_img_id
-    self.profile_img_id
+    self.profile_img_id ||= "image/upload/c_fit,w_40/v1439329855/alien_head_img.jpg"
   end
 
   def ensure_background_img_id
-    self.background_img_id
+    self.background_img_id ||= "image/upload/c_fill,h_273,w_851/v1439329874/blue_space_background.jpg"
   end
 
   def profile_img_url
+    final_profile_img_id = profile_img_id.sub(
+    'image/upload',
+    'image/upload/c_fit,w_168'
+    )
+
+    "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_profile_img_id
   end
 
   def thumbnail_img_url
+    final_thumbnail_img_id = profile_img_id.sub(
+    'image/upload',
+    'image/upload/c_fit,w_40'
+    )
+
+    "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_thumbnail_img_id
   end
 
   def background_img_url
+    final_background_img_id = background_img_id.sub(
+    'image/upload',
+    'image/upload/c_fill,h_273,w_851'
+    )
+
+    "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_background_img_id
   end
 end
