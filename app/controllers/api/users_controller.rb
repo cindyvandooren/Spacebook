@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
   before_action :require_signed_in
   # before_action :require_own_profile, only: [:update]
   # TODO: validate that the user can only edit his own page
-  
+
   def index
     @users = User.all
   end
@@ -30,8 +30,8 @@ class Api::UsersController < ApplicationController
                                   :interests,
                                   :home_planet,
                                   :planet_of_birth,
-                                  :profile_img,
-                                  :background_img
+                                  :profile_img_id,
+                                  :background_img_id
                                  )
   end
 end

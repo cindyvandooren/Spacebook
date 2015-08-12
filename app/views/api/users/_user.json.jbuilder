@@ -5,6 +5,6 @@ json.extract!(user, :id,
                     :interests,
                     :home_planet,
                     :planet_of_birth,
-                    :profile_img,
-                    :background_img
+                    :profile_img_id,
+                    :background_img_id
               )
