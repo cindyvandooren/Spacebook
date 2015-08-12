@@ -4,8 +4,10 @@
 <script> $(Spacebook.initialize); </script>
 
 <script> $( document ).ready(
-  Spacebook.CURRENT_USER_ID = "<%= current_user.id %>";
-  Spacebook.CURRENT_USER_NAME = "<%= current_user.username %>";
-  Spacebook.initialize;
+  function () {
+    Spacebook.CURRENT_USER_ID = <%= current_user.id %>;
+    Spacebook.CURRENT_USER_NAME = "<%= current_user.username %>";
+    Spacebook.initialize;
+  }
 );
 </script>
