@@ -3,7 +3,7 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
 
   initialize: function () {
     var user = this.model;
-    this.listenTo(user, "sync", this.render);
+    this.listenTo(user, "sync change", this.render);
     this.addHeaderBackgroundView(user);
     this.addHeaderInfoView(user);
     this.addHeaderPictureView(user);

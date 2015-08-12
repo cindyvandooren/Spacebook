@@ -2,7 +2,7 @@ Spacebook.Views.HeaderPicture = Backbone.View.extend({
   template: JST["profile/profile_header/picture"],
 
   initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model, "sync change", this.render);
   },
 
   render: function () {

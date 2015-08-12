@@ -6,6 +6,10 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
   className: "update-profile-button",
 
   initialize: function () {
+    this.listenTo(this.model, "sync change", this.render);
+  },
+
+  initialize: function () {
     this.listenTo(this.model, "sync", this.render);
   },
 

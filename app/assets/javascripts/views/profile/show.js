@@ -3,7 +3,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
 
   initialize: function () {
     var user = this.model;
-    this.listenTo(user, "sync", this.render);
+    this.listenTo(user, "sync change", this.render);
     this.addProfileSideBarView(user);
     this.addProfileContentView(user);
     this.addProfileHeaderView(user);

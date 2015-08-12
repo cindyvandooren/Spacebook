@@ -17,6 +17,8 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+// TODO: Can div be removed? Figure out!
+
 body {
   background-color: #edf0f5;
   font-family: helvetica, arial, sans-serif;
@@ -28,12 +30,24 @@ div .profile {
   border: 1px solid black;
 }
 
+div .profile-main-box {
+  width: 851px;
+  margin-left: 75px;
+}
+
 div .profile-header {
   height: 273px;
   width: 851px;
-  margin-top: -105px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+div .profile-sidebar .container {
+  width: 100px;
+}
+
+div .profile-non-header:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .navbar {

@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_profile_img_id
-    self.profile_img_id ||= "image/upload/c_fit,w_40/v1439329855/alien_head_img.jpg"
+    self.profile_img_id ||= "image/upload/c_fit,w_168/v1439329855/alien_head_img.jpg"
   end
 
   def ensure_background_img_id
