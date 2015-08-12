@@ -8,8 +8,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.listenTo(user, "sync change", this.render);
     this.addProfileSideBarView(user);
     this.addProfileHeaderView(user);
-    this.addProfileContentView(user);
-    debugger;
+    this.addProfileTimelineView(user);
   },
 
   events: {
@@ -36,29 +35,45 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.addSubview(".profile-header", subview);
   },
 
-  addProfileContentView: function (user) {
-    var subview = new Spacebook.Views.ProfileContent({ model :user });
+  addProfileTimelineView: function (user) {
+    var subview = new Spacebook.Views.ProfileTimeline({ model: user });
     this.addSubview(".profile-content", subview);
   },
 
   changeProfileContentViews: function (event) {
     this.$(".active").removeClass("active");
     $(event.currentTarget).addClass("active");
+    var view = this;
+    if (this.subviews(".profile-content")) {
+      var firstView = this.subviews(".profile-content").first();
+      view.removeSubview(
+        ".profile-content",
+        firstView
+      );
+    }
   },
 
   changeToAbout: function (event) {
-    console.log("hello");
+    this.changeProfileContentViews(event);
+    var aboutView = new Spacebook.Views.ProfileAbout({ model: this.model});
+    this.addSubview(".profile-content", aboutView);
   },
 
   changeToTimeline: function (event) {
-    console.log("hello");
+    this.changeProfileContentViews(event);
+    var timelineView = new Spacebook.Views.ProfileTimeline({ model: this.model});
+    this.addSubview(".profile-content", timelineView);
   },
 
   changeToFriends: function (event) {
-    console.log("hello");
+    this.changeProfileContentViews(event);
+    var friendsView = new Spacebook.Views.ProfileFriends({ model: this.model});
+    this.addSubview(".profile-content", friendsView);
   },
 
   changeToUpdate: function (event) {
-    console.log("hello");
+    this.changeProfileContentViews(event);
+    var updateView = new Spacebook.Views.ProfileUpdate({ model: this.model});
+    this.addSubview(".profile-content", updateView);
   }
 });
