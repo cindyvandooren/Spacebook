@@ -341,3 +341,58 @@
 [08/11/15 19:34:43 -0700 Cindys-MacBook-Pro.local (2644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `profile_img' for #<User:0x007ff1630c4660>
 [08/11/15 19:36:05 -0700 Cindys-MacBook-Pro.local (2644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `profile_img' for #<User:0x007ff165396440>
 [08/11/15 19:36:05 -0700 Cindys-MacBook-Pro.local (2644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `profile_img' for #<User:0x007ff1654a6218>
+[08/11/15 20:27:56 -0700 Cindys-MacBook-Pro.local (2644)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:60: syntax error, unexpected '}', expecting =>
+...inary.com/#{{ENV['CLOUD_NAME']}}/image/upload/c_scale,h_184/...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:60: syntax error, unexpected ',', expecting tSTRING_DEND
+..._NAME']}}/image/upload/c_scale,h_184/v1439329894/spaceship_i...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:60: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...39329894/spaceship_img.jpg.jpg") );@output_buffer.safe_appen...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:62: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+    <div id="loginbox"
+                     ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+         class="mainbox col-md-6 col-md-offset-7 col...
+                       ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...    class="mainbox col-md-6 col-md-offset-7 col-sm-6 col-sm-...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...ox col-md-6 col-md-offset-7 col-sm-6 col-sm-offset-7">
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:63: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...-6 col-md-offset-7 col-sm-6 col-sm-offset-7">
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:63: syntax error, unexpected tSTRING_BEG, expecting tSTRING_DEND
+...set-7 col-sm-6 col-sm-offset-7">
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:64: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+         <div class="panel panel-default" >
+                          ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+         <div class="panel panel-default" >
+                                         ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:65: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+            <div class="panel-heading">
+                             ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:65: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+            <div class="panel-heading">
+                                      ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...              <div class="panel-title text-center">Sign Up F...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:66: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...   <div class="panel-title text-center">Sign Up For Free</di...
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:66: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...class="panel-title text-center">Sign Up For Free</div>
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:69: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+            <div class="panel-body" >
+                             ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb:69: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+            <div class="panel-body" >
+                                   ^
+/Users/Cindy/Desktop/Spacebook/app/views/static_pages/landing.html.erb

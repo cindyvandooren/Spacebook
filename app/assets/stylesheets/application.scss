@@ -88,28 +88,33 @@ div .profile {
   color: black;
 }
 
+#signin {
+  margin: 25px;
+}
+
+div .home-img {
+  // padding-top: 132px;
+  margin-top: 132px;
+  margin-left: 45px;
+  // padding-left: 45px;
+  float: left;
+  position: absolute;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
 #loginbox {
     margin-top: 30px;
     width: 400px;
     padding-top: 100px;
+    float: right;
+    position: absolute;
 }
 
 #loginbox > div:first-child {
     padding-bottom: 10px;
     float: left;
 }
-
-.container:before {
-  content: " ";
-  display: table;
-}
-
-.container:after {
-  content: " ";
-  display: table;
-  clear: both;
-}
-
 
 #form > div {
     margin-bottom: 25px;
@@ -129,8 +134,14 @@ div .profile {
     background-color: rgba(2555,255,255,.3);
 }
 
-.container {
+.container.landing-content {
   position: relative;
+}
+
+.container.landing-content:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .pull-right {
