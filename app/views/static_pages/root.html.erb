@@ -1,13 +1,11 @@
 <div id="navbar"></div>
 <div id="content"></div>
 
-<script> $(Spacebook.initialize); </script>
-
 <script> $( document ).ready(
   function () {
     Spacebook.CURRENT_USER_ID = <%= current_user.id %>;
     Spacebook.CURRENT_USER_NAME = "<%= current_user.username %>";
-    Spacebook.initialize;
+    Spacebook.initialize();
   }
 );
 </script>

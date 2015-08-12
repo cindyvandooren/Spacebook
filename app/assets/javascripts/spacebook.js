@@ -5,7 +5,7 @@ window.Spacebook = {
   Routers: {},
   initialize: function() {
     var users = new Spacebook.Collections.Users({});
-
+    
     var currentUserId = Spacebook.CURRENT_USER_ID;
     var currentUser = new Spacebook.Models.User({ id: currentUserId });
     currentUser.fetch();

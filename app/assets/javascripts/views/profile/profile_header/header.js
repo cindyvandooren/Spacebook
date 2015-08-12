@@ -6,9 +6,9 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
   initialize: function () {
     var user = this.model;
     this.listenTo(user, "sync change", this.render);
-    this.addHeaderInfoView(user);
     this.addHeaderPictureView(user);
     this.addHeaderNameView(user);
+    this.addHeaderInfoView(user);
   },
 
   render: function () {
@@ -23,8 +23,11 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
   },
 
   addHeaderInfoView: function (user) {
-    var subview = new Spacebook.Views.HeaderInfo({ model: user });
-    this.addSubview(".profile-header-info", subview);
+    debugger;
+    if (user.get('id') == Spacebook.CURRENT_USER_ID) {
+      var subview = new Spacebook.Views.HeaderInfo({ model: user });
+      this.addSubview(".profile-header-info", subview);
+    }
   },
 
   addHeaderPictureView: function (user) {

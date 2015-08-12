@@ -9,10 +9,6 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
     this.listenTo(this.model, "sync change", this.render);
   },
 
-  initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
-  },
-
   render: function () {
     var renderedContent = this.template( {user: this.model });
     this.$el.html(renderedContent);
