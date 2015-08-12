@@ -9,6 +9,9 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.addProfileHeaderView(user);
   },
 
+  // What happens when there is a sync. Does the user get sent to the subviews? Seems to be that that is not the case now. How to solve this issue? The user needs to be synced all the way down to the profile header background view.
+  // Also can I give views the tagname img and how to do that?
+
   render: function () {
     var renderedContent = this.template({ user: this.model });
     this.$el.html(renderedContent);
