@@ -1,16 +1,21 @@
 Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   template: JST["profile/show"],
 
+  className: "profile-main-box",
+
   initialize: function () {
     var user = this.model;
     this.listenTo(user, "sync change", this.render);
     this.addProfileSideBarView(user);
-    this.addProfileContentView(user);
     this.addProfileHeaderView(user);
+    this.addProfileContentView(user);
   },
 
-  // What happens when there is a sync. Does the user get sent to the subviews? Seems to be that that is not the case now. How to solve this issue? The user needs to be synced all the way down to the profile header background view.
-  // Also can I give views the tagname img and how to do that?
+  events: {
+    "click .sidebar-about" : "showProfileContentAbout",
+    "click .sidebar-timeline" : "showProfileContentTimeline",
+    "click .sidebar-friends" : "showProfileContentFriends"
+  },
 
   render: function () {
     var renderedContent = this.template({ user: this.model });
@@ -24,13 +29,18 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.addSubview(".profile-sidebar", subview);
   },
 
-  addProfileContentView: function (user) {
-    var subview = new Spacebook.Views.ProfileContent({ model: user });
-    this.addSubview(".profile-content", subview);
-  },
-
   addProfileHeaderView: function (user) {
     var subview = new Spacebook.Views.ProfileHeader({ model: user });
     this.addSubview(".profile-header", subview);
+  },
+
+  addProfileContentView: function (user) {
+    var subview = new Spacebook.Views.ProfileContent({ model :user });
+    this.addSubview(".profile-content", subview);
+  },
+
+  switchContentViews: function (event) {
+    this.$(".active").removeClass("active");
+    $(event.currentTarget).addClass("active");
   }
 });
