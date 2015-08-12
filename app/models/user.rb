@@ -32,10 +32,7 @@ class User < ActiveRecord::Base
     self.save!
     self.session_token
   end
-
-# Make sure that users have a background, profile and thumbnail img
-# when they sign up. To start, these images will be default images.
-
+  
   def ensure_profile_img_id
     self.profile_img_id ||= "image/upload/c_fit,w_40/v1439329855/alien_head_img.jpg"
   end
