@@ -1,5 +1,5 @@
 Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
-  template: JST["profile/header"],
+  template: JST["profile/profile_header/header"],
 
   className: "profile-header",
 

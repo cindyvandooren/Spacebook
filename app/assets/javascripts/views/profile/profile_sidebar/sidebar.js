@@ -1,5 +1,5 @@
 Spacebook.Views.ProfileSideBar = Backbone.View.extend({
-  template: JST["profile/sidebar"],
+  template: JST["profile/profile_sidebar/sidebar"],
 
 
   render: function () {

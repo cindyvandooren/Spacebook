@@ -9,12 +9,14 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.addProfileSideBarView(user);
     this.addProfileHeaderView(user);
     this.addProfileContentView(user);
+    debugger;
   },
 
   events: {
-    "click .sidebar-about" : "showProfileContentAbout",
-    "click .sidebar-timeline" : "showProfileContentTimeline",
-    "click .sidebar-friends" : "showProfileContentFriends"
+    "click .sidebar-about" : "changeToAbout",
+    "click .sidebar-timeline" : "changeToTimeline",
+    "click .sidebar-friends" : "changeToFriends",
+    "click .update-info" : "changeToUpdate"
   },
 
   render: function () {
@@ -39,8 +41,24 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.addSubview(".profile-content", subview);
   },
 
-  switchContentViews: function (event) {
+  changeProfileContentViews: function (event) {
     this.$(".active").removeClass("active");
     $(event.currentTarget).addClass("active");
+  },
+
+  changeToAbout: function (event) {
+    console.log("hello");
+  },
+
+  changeToTimeline: function (event) {
+    console.log("hello");
+  },
+
+  changeToFriends: function (event) {
+    console.log("hello");
+  },
+
+  changeToUpdate: function (event) {
+    console.log("hello");
   }
 });
