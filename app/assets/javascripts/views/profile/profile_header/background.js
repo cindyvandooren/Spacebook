@@ -6,7 +6,6 @@ Spacebook.Views.HeaderBackground = Backbone.View.extend({
   },
 
   render: function () {
-    debugger;
     var renderedContent = this.template( {user: this.model });
     this.$el.html(renderedContent);
     return this;
