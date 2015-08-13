@@ -28,6 +28,7 @@ body {
 .profile-main-box {
   width: 851px;
   margin-left: 75px;
+  margin-top: -20px;
 }
 
 .profile-header {
@@ -94,6 +95,7 @@ body {
   position: relative;
   font-family: 'Freight Sans Bold', 'lucida grande',
                tahoma,verdana,arial,sans-serif;
+  border: 1px solid #3a5795;
 }
 
 .navbar.landing {
