@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                :integer          not null, primary key
+#  username          :string           not null
+#  password_digest   :string           not null
+#  session_token     :string           not null
+#  last_note_time    :datetime
+#  birthday          :date
+#  interests         :string
+#  home_planet       :string
+#  planet_of_birth   :string
+#  profile_img_id    :string
+#  background_img_id :string
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
+
 class User < ActiveRecord::Base
   validates :username, :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
@@ -10,10 +29,10 @@ class User < ActiveRecord::Base
   before_save :ensure_background_img_id
 
   has_many :posts, foreign_key: :author_id, dependent: :destroy
-  has_many :wall_posts,
+  has_many :timeline_posts,
            class_name: :Post,
            primary_key: :id,
-           foreign_key: :wall_id
+           foreign_key: :timeline_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
