@@ -6,11 +6,13 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
   className: "update-profile",
 
   events: {
-    "click .update-profile" : "updateProfile"
+    "click .update-profile" : "updateProfile",
+    "click .update-profile-picture" : "updateProfilePicture",
+    "click .update-background-picture" : "updateBackgroundPicture"
   },
 
   initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model, "sync change", this.render);
   },
 
   render: function () {
@@ -37,5 +39,43 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         console.log("Something went wrong");
       }
     });
+  },
+
+  updateProfilePicture: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
+      if (error) {
+        alert("Your picture was not saved. Please try again!");
+      } else {
+        var data = result[0];
+        var url = data.url;
+        var profile_picture_id = url.substring(36);
+        this.model.set({ profile_img_id: profile_picture_id });
+        this.model.save({}, {
+          error: function () {
+            alert("Your picture was not saved. Please try again!");
+          }
+        });
+      }
+    }.bind(this));
+  },
+
+  updateBackgroundPicture: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
+      if (error) {
+        alert("Your picture was not saved. Please try again!");
+      } else {
+        var data = result[0];
+        var url = data.url;
+        var background_picture_id = url.substring(36);
+        this.model.set({ background_img_id: background_picture_id });
+        this.model.save({}, {
+          error: function () {
+            alert("Your picture was not saved.Please try again!");
+          }
+        });
+      }
+    }.bind(this));
   }
 });

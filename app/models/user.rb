@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_profile_img_id
-    self.profile_img_id ||= "image/upload/c_fit,w_168/v1439329855/alien_head_img.jpg"
+    self.profile_img_id ||= "image/upload/c_fill,w_168/v1439329855/alien_head_img.jpg"
   end
 
   def ensure_background_img_id
@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   def profile_img_url
     final_profile_img_id = profile_img_id.sub(
     'image/upload',
-    'image/upload/c_fit,w_168'
+    'image/upload/c_fill,h_168,w_168'
     )
 
     "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_profile_img_id
@@ -53,7 +53,7 @@ class User < ActiveRecord::Base
   def thumbnail_img_url
     final_thumbnail_img_id = profile_img_id.sub(
     'image/upload',
-    'image/upload/c_fit,w_40'
+    'image/upload/c_fill,h_40,w_40'
     )
 
     "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_thumbnail_img_id
