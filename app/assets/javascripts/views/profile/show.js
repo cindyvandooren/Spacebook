@@ -4,6 +4,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   className: "profile-main-box",
 
   initialize: function () {
+    this.timelinePosts = new Spacebook.Collections.Posts();
     this.listenTo(this.model, "sync change", this.render);
     this.addProfileSideBarView();
     this.addProfileHeaderView();
@@ -39,8 +40,11 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   },
 
   addProfileTimelineView: function () {
+    this.timelinePosts.fetch({
+      data: { id: this.model.id, profile: true }
+    });
     var subview = new Spacebook.Views.ProfileTimeline({
-      model: this.model
+      collection: this.timelinePosts
     });
     this.addSubview(".profile-content", subview);
   },
@@ -67,9 +71,12 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   },
 
   changeToTimeline: function (event) {
+    this.timelinePosts.fetch({
+      data: { id: this.model.id, profile: true }
+    });
     this.changeProfileContentViews(event);
     var timelineView = new Spacebook.Views.ProfileTimeline({
-      model: this.model
+      collection: this.timelinePosts
     });
     this.addSubview(".profile-content", timelineView);
   },

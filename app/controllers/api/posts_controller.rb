@@ -5,8 +5,13 @@ class Api::PostsController < ApplicationController
     # TODO: Does this need to be changed? Right now everyone can access
     # the index of all posts via the api.
 
-    @posts = Post.all
-    render :index
+    if params[:profile]
+      @posts = User.find(params[:id]).timeline_posts.includes(:author)
+    else
+      # TODO: Eventually the feed posts should go here, but I don't
+      # have a feed page yet.
+      @posts = Post.all
+    end
   end
 
   def show
@@ -37,6 +42,8 @@ class Api::PostsController < ApplicationController
   end
 
   def destroy
+    #TODO: Fix the destroy method. Right now, it does not show the
+    #correct message upon save.
     @post = Post.find(params[:id])
 
     if @post.destroy
