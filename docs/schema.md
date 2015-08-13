@@ -36,8 +36,9 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key
+wall_id     | integer   | not null, foreign key
 body        | string    | not null, max 240 chr
-author_id references user
+author_id and wall_id reference user
 
 ## invitations
 column name | data type | details
