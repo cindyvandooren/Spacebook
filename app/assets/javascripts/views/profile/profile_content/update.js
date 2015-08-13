@@ -7,8 +7,8 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
 
   events: {
     "click .update-profile" : "updateProfile",
-    "click .update-profile-picture" : "updateProfilePicture",
-    "click .update-background-picture" : "updateBackgroundPicture"
+    "click .update-profile-picture" : "updatePicture",
+    "click .update-background-picture" : "updatePicture"
   },
 
   initialize: function () {
@@ -41,38 +41,28 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
     });
   },
 
-  updateProfilePicture: function (event) {
+  updatePicture: function (event) {
     event.preventDefault();
+
+    var clickedClass = $(event.currentTarget).attr('class');
+    var image_type = "";
+    if (clickedClass.indexOf("update-profile-picture") > -1) {
+      image_type = "profile_img_id";
+    } else {
+      image_type = "background_img_id";
+    }
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
       if (error) {
         alert("Your picture was not saved. Please try again!");
       } else {
         var data = result[0];
-        var url = data.url;
-        var profile_picture_id = url.substring(36);
-        this.model.set({ profile_img_id: profile_picture_id });
+        var uploaded_picture_id = data.url.substring(36);
+        var options = {};
+        options[image_type] = uploaded_picture_id;
+        this.model.set(options);
         this.model.save({}, {
           error: function () {
             alert("Your picture was not saved. Please try again!");
-          }
-        });
-      }
-    }.bind(this));
-  },
-
-  updateBackgroundPicture: function (event) {
-    event.preventDefault();
-    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
-      if (error) {
-        alert("Your picture was not saved. Please try again!");
-      } else {
-        var data = result[0];
-        var url = data.url;
-        var background_picture_id = url.substring(36);
-        this.model.set({ background_img_id: background_picture_id });
-        this.model.save({}, {
-          error: function () {
-            alert("Your picture was not saved.Please try again!");
           }
         });
       }
