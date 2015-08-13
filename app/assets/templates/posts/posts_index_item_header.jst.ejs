@@ -1,4 +1,5 @@
 <p>Created at: <%= post.escape('created_at') %></p>
+<img src="<%= post.author_details().get('thumbnail_img_url') %>">
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
   <p><%= post.author_details().get('username') %></p>
 <% } else { %>
