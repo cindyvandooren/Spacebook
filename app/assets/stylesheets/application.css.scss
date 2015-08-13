@@ -41,6 +41,11 @@ body {
   padding: 52px;
 }
 
+.profile-header-picture img {
+  border: 0px;
+  border-radius: 5px;
+}
+
 .profile-header-name {
   width: 200px;
   height: 40px;
@@ -48,6 +53,7 @@ body {
   font-weight: 500;
   color: white;
   margin-left: 250px;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .profile-header-info {
@@ -141,6 +147,8 @@ body {
 .btn-primary {
   background-color: rgb(238, 238, 238);
   color: black;
+  font-family: 'Freight Sans Bold', 'lucida grande',
+               tahoma,verdana,arial,sans-serif;
 }
 
 #signin {
