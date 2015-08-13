@@ -1,44 +1,25 @@
 <label id="user_birthday">Birthday</label>
 <input type="date"
        id="user_birthday"
-       name="user[birthday]"
+       name="birthday"
        value="<%= user.escape('birthday') %>">
-
-t.date     "birthday"
-t.string   "interests"
-t.string   "home_planet"
-t.string   "planet_of_birth"
-t.string   "profile_img_id"
-t.string   "background_img_id"
-
-
-<form id="signin"
-      class="navbar-form navbar-right"
-      role="form"
-      action="<%= session_url %>"
-      method="post">
- <%= auth_token_input %>
-    <div class="input-group">
-        <span class="input-group-addon">
-          <i class="glyphicon glyphicon-user"></i></span>
-        <input id="user_username"
-               type="text"
-               class="form-control"
-               name="user[username]"
-               value=""
-               placeholder="Username">
-    </div>
-
-    <div class="input-group">
-        <span class="input-group-addon">
-          <i class="glyphicon glyphicon-lock"></i></span>
-        <input id="user_password"
-               type="password"
-               class="form-control"
-               name="user[password]"
-               value=""
-               placeholder="Password">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Sign In</button>
-</form>
+<br>
+<label id="user_interests">Interests</label>
+<input type="text"
+       name="interests"
+       id="user_interests"
+       value="<%= user.escape('interests') %>">
+<br>
+<label id="user_home_planet">Home Planet</label>
+<input type="text"
+       name="home_planet"
+       id="user_home_planet"
+       value="<%= user.escape('home_planet') %>">
+<br>
+<label id="user_planet_of_birth">Planet of Birth</label>
+<input type="text"
+       name="planet_of_birth"
+       id="user_planet_of_birth"
+       value="<%= user.escape('planet_of_birth') %>">
+<br>
+<button class="update-profile">Submit</button>

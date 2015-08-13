@@ -4,11 +4,10 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
   className: "profile-header",
 
   initialize: function () {
-    var user = this.model;
-    this.listenTo(user, "sync change", this.render);
-    this.addHeaderPictureView(user);
-    this.addHeaderNameView(user);
-    this.addHeaderInfoView(user);
+    this.listenTo(this.model, "sync change", this.render);
+    this.addHeaderPictureView();
+    this.addHeaderNameView();
+    this.addHeaderInfoView();
   },
 
   render: function () {
@@ -22,21 +21,20 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
     return this;
   },
 
-  addHeaderInfoView: function (user) {
-    debugger;
-    if (user.get('id') == Spacebook.CURRENT_USER_ID) {
-      var subview = new Spacebook.Views.HeaderInfo({ model: user });
+  addHeaderInfoView: function () {
+    if (this.model.get('id') == Spacebook.CURRENT_USER_ID) {
+      var subview = new Spacebook.Views.HeaderInfo({ model: this.model });
       this.addSubview(".profile-header-info", subview);
     }
   },
 
-  addHeaderPictureView: function (user) {
-    var subview = new Spacebook.Views.HeaderPicture({ model: user });
+  addHeaderPictureView: function () {
+    var subview = new Spacebook.Views.HeaderPicture({ model: this.model });
     this.addSubview(".profile-header-picture", subview);
   },
 
-  addHeaderNameView: function (user) {
-    var subview = new Spacebook.Views.HeaderName({ model: user });
+  addHeaderNameView: function () {
+    var subview = new Spacebook.Views.HeaderName({ model: this.model });
     this.addSubview(".profile-header-name", subview);
   }
 });

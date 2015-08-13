@@ -1,1 +1,7 @@
-<h4>This is the about page</h4>
+<h2>About <%= user.escape('username') %></h2>
+<ul class="about-user">
+  <li>Birthday: <%= user.escape('birthday') %></li>
+  <li>Interests: <%= user.escape('interests') %></li>
+  <li>Home Planet: <%= user.escape('home_planet') %></li>
+  <li>Planet of Birth: <%= user.escape('planet_of_birth') %></li>
+</ul>

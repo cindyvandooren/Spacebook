@@ -4,11 +4,10 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   className: "profile-main-box",
 
   initialize: function () {
-    var user = this.model;
-    this.listenTo(user, "sync change", this.render);
-    this.addProfileSideBarView(user);
-    this.addProfileHeaderView(user);
-    this.addProfileTimelineView(user);
+    this.listenTo(this.model, "sync change", this.render);
+    this.addProfileSideBarView();
+    this.addProfileHeaderView();
+    this.addProfileTimelineView();
   },
 
   events: {
@@ -25,18 +24,24 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     return this;
   },
 
-  addProfileSideBarView: function (user) {
-    var subview = new Spacebook.Views.ProfileSideBar({ model: user });
+  addProfileSideBarView: function () {
+    var subview = new Spacebook.Views.ProfileSideBar({
+      model: this.model
+    });
     this.addSubview(".profile-sidebar", subview);
   },
 
-  addProfileHeaderView: function (user) {
-    var subview = new Spacebook.Views.ProfileHeader({ model: user });
+  addProfileHeaderView: function () {
+    var subview = new Spacebook.Views.ProfileHeader({
+      model: this.model
+    });
     this.addSubview(".profile-header", subview);
   },
 
-  addProfileTimelineView: function (user) {
-    var subview = new Spacebook.Views.ProfileTimeline({ model: user });
+  addProfileTimelineView: function () {
+    var subview = new Spacebook.Views.ProfileTimeline({
+      model: this.model
+    });
     this.addSubview(".profile-content", subview);
   },
 
@@ -55,25 +60,34 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
 
   changeToAbout: function (event) {
     this.changeProfileContentViews(event);
-    var aboutView = new Spacebook.Views.ProfileAbout({ model: this.model});
+    var aboutView = new Spacebook.Views.ProfileAbout({
+      model: this.model
+    });
     this.addSubview(".profile-content", aboutView);
   },
 
   changeToTimeline: function (event) {
     this.changeProfileContentViews(event);
-    var timelineView = new Spacebook.Views.ProfileTimeline({ model: this.model});
+    var timelineView = new Spacebook.Views.ProfileTimeline({
+      model: this.model
+    });
     this.addSubview(".profile-content", timelineView);
   },
 
   changeToFriends: function (event) {
     this.changeProfileContentViews(event);
-    var friendsView = new Spacebook.Views.ProfileFriends({ model: this.model});
+    var friendsView = new Spacebook.Views.ProfileFriends({
+      model: this.model 
+    });
     this.addSubview(".profile-content", friendsView);
   },
 
   changeToUpdate: function (event) {
     this.changeProfileContentViews(event);
-    var updateView = new Spacebook.Views.ProfileUpdate({ model: this.model});
+    var updateView = new Spacebook.Views.ProfileUpdate({
+      model: this.model,
+      collection: this.collection
+    });
     this.addSubview(".profile-content", updateView);
   }
 });

@@ -16,6 +16,7 @@
 //= require backbone
 //= require spacebook
 //= require bootstrap
+//= require serialize_json
 //= require_tree ./utils
 //= require_tree ../templates
 //= require_tree ./models
