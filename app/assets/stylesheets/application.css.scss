@@ -55,6 +55,18 @@ body {
   text-shadow: 2px 2px 2px #000;
 }
 
+.create-post {
+  width: 425px;
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+textarea#body.create-post-body {
+  width: 425px;
+  height: 60px;
+}
+
 .profile-header-info {
   width: 150px;
   margin-left: 700px;

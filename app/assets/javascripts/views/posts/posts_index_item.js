@@ -11,6 +11,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.model, "sync change", this.render);
+    // this.listenTo(this.collection, "remove", this.render);
     this.addPostsIndexItemHeaderView();
     this.addPostsIndexItemBodyView();
   },
@@ -83,6 +84,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   deletePost: function (event) {
     var that = this;
     event.preventDefault();
+    debugger;
     this.model.destroy({
       success: function () {
         that.collection.remove(that.model);
