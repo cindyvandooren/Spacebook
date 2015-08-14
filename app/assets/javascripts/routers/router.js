@@ -5,7 +5,7 @@ Spacebook.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "" : "show",
+    "" : "showProfile",
     "profiles/:id" : "showProfile",
     "feeds/:id" : "showFeed"
   },

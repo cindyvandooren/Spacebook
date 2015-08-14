@@ -44,12 +44,10 @@ class Api::PostsController < ApplicationController
   end
 
   def destroy
-    #TODO: Fix the destroy method. Right now, it does not show the
-    #correct message upon save.
     @post = Post.find(params[:id])
 
     if @post.destroy
-      render json: @post.errors.full_messages
+      render json: "Post has been successfully destroyed."
     else
       render json: @post.errors_full_messages,
                    status: :unprocessable_entity
