@@ -9,7 +9,7 @@ Spacebook.Views.PostForm = Backbone.View.extend({
 
   initialize: function (options) {
     this.userId = options.userId;
-    this.listenTo(this.collection, "add", this.render);
+    this.listenTo(this.collection, "sync add", this.render);
   },
 
   render: function () {

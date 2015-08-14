@@ -15,6 +15,7 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   addPostsIndexItemView: function (post) {
+    this.collection.getOrFetch(post.id);
     var subview = new Spacebook.Views.PostsIndexItem({
       model: post,
     });
