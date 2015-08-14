@@ -5,6 +5,7 @@
   function () {
     Spacebook.CURRENT_USER_ID = <%= current_user.id %>;
     Spacebook.CURRENT_USER_NAME = "<%= current_user.username %>";
+    Spacebook.CURRENT_USER_THUMBNAIL_URL = "<%= current_user.tiny_thumbnail_img_url %>"
     Spacebook.initialize();
   }
 );

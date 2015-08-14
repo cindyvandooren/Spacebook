@@ -1,7 +1,8 @@
 Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
   template: JST["posts/posts_index"],
 
-  initialize: function () {
+  initialize: function (options) {
+    this.userName = options.userName;
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addPostsIndexItemView);
     this.collection.each(this.addPostsIndexItemView.bind(this));

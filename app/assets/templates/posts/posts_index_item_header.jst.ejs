@@ -1,7 +1,8 @@
 <p><%= post.escape('created_at') %> ago</p>
 <img src="<%= post.author_details().get('thumbnail_img_url') %>">
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
-  <p><%= post.author_details().get('username') %></p>
+  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().get('username') %></a>
 <% } else { %>
-  <p><%= post.author_details().get('username') %> ></p>
+  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().get('username') %></a> >
+  <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.get('receiver_name') %></a>
 <% } %>
