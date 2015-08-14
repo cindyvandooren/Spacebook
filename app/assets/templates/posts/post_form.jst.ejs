@@ -1,0 +1,9 @@
+<input type="hidden" name="timeline_id" value="<%= timeline_id %>">
+<textarea name="body"
+          id="body"
+          class="create-post-body"
+          placeholder="What's on your mind?"><%= post.escape('body') %></textarea>
+<br>
+<input type="submit"
+       value="Post"
+       class="btn btn-primary create-post">

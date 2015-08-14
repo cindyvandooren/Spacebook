@@ -3,5 +3,5 @@
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
   <p><%= post.author_details().get('username') %></p>
 <% } else { %>
-  <p><%= post.author_details().get('username') %> > <%= post.author_details().get('username') %></p>
+  <p><%= post.author_details().get('username') %> ></p>
 <% } %>

@@ -26,11 +26,11 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
     event.preventDefault();
 
     var attrs = this.$el.serializeJSON();
-    $(":input").val("");
 
     this.model.set(attrs);
     this.model.save({}, {
       success: function () {
+        $(":input").val("");
         that.collection.add(that.model, { merge: true });
         $(".sidebar-about").click();
       },

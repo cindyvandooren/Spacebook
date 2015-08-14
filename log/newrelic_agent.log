@@ -518,3 +518,43 @@
 [08/13/15 09:42:17 -0700 Cindys-MacBook-Pro.local (24890)] INFO : Installing Rails 4 view instrumentation
 [08/13/15 09:42:17 -0700 Cindys-MacBook-Pro.local (24890)] INFO : Installing Rails 4 Error instrumentation
 [08/13/15 09:42:17 -0700 Cindys-MacBook-Pro.local (24890)] INFO : Finished instrumentation
+[08/13/15 16:47:48 -0700 Cindys-MacBook-Pro.local (15946)] INFO : Starting Agent shutdown
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Starting the New Relic agent in "development" environment.
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Environment: development
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Dispatcher: webrick
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Application: development
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing ActiveJob instrumentation
+[08/13/15 16:48:08 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing ActiveRecord 4 instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Net instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing deferred Rack instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Rack::Builder middleware instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Rails 3+ middleware instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Rails 4 Controller instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Rails 4 view instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Installing Rails 4 Error instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Finished instrumentation
+[08/13/15 16:48:09 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Doing deferred dependency-detection before Rack startup
+[08/13/15 16:48:14 -0700 Cindys-MacBook-Pro.local (31475)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/13/15 16:48:14 -0700 Cindys-MacBook-Pro.local (31475)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Starting the New Relic agent in "development" environment.
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Environment: development
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : No known dispatcher detected.
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Application: development
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing ActiveJob instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing ActiveRecord 4 instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Net instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing deferred Rack instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Rack::Builder middleware instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Rails 3+ middleware instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Rails 4 Controller instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Rails 4 view instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Installing Rails 4 Error instrumentation
+[08/13/15 16:57:07 -0700 Cindys-MacBook-Pro.local (31690)] INFO : Finished instrumentation
