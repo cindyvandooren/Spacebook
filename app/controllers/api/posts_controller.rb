@@ -1,5 +1,6 @@
 class Api::PostsController < ApplicationController
   before_action :require_signed_in
+  before_action :require_own_post, only: [:update, :destroy]
 
   def index
     # TODO: Does this need to be changed? Right now everyone can access
@@ -58,5 +59,12 @@ class Api::PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:author_id, :timeline_id, :body)
+  end
+
+  def require_own_post
+    post = Post.find(params[:id])
+    unless current_user.id == post.author_id
+      render json: "You can't change other user's posts"
+    end
   end
 end

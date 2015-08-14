@@ -71,6 +71,14 @@ textarea#body.create-post-body {
   height: 60px;
 }
 
+.alert.alert-danger {
+  width: 368px;
+  height: 70px;
+  position: absolute;
+  margin-left: 725px;
+  font-size: 16px;
+}
+
 .profile-header-info {
   width: 150px;
   margin-left: 700px;
@@ -78,6 +86,11 @@ textarea#body.create-post-body {
 
 .profile-sidebar .container {
   width: 100px;
+}
+
+.about-table {
+  width: 510px;
+  padding: 0px;
 }
 
 .profile-non-header {
@@ -102,6 +115,11 @@ textarea#body.create-post-body {
   content: "";
   display: block;
   clear: both;
+}
+
+h2 {
+  font-family: 'Freight Sans Bold', 'lucida grande',
+               tahoma,verdana,arial,sans-serif;
 }
 
 .navbar {

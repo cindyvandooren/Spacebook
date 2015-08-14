@@ -1,5 +1,7 @@
 <% flash[:errors].try(:each) do |error| %>
   <ul>
-    <li> <%= error %> </li>
+    <div class="alert alert-danger" role="alert">
+      <li> <%= error %> </li>
+    </div>
   </ul>
 <% end %>
