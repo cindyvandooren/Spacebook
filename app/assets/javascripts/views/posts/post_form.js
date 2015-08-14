@@ -1,10 +1,8 @@
 Spacebook.Views.PostForm = Backbone.View.extend({
   template: JST["posts/post_form"],
 
-  tagName: "form",
-
   events: {
-    "submit" : "createPost"
+    "click .create-post" : "createPost"
   },
 
   initialize: function (options) {
@@ -13,7 +11,6 @@ Spacebook.Views.PostForm = Backbone.View.extend({
   },
 
   render: function () {
-    // View does get rerendered when posting, but no new model is created.
     var renderedContent = this.template({
       post: this.model,
       timeline_id: this.userId
@@ -26,7 +23,7 @@ Spacebook.Views.PostForm = Backbone.View.extend({
     var that = this;
     event.preventDefault();
 
-    var attrs = this.$el.serializeJSON();
+    var attrs = this.$el.find('form').serializeJSON();
 
     this.model.set(attrs);
     this.model.save({}, {
