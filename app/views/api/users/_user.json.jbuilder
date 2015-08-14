@@ -7,5 +7,6 @@ json.extract!(user, :id,
                     :planet_of_birth,
                     :profile_img_url,
                     :background_img_url,
-                    :thumbnail_img_url
+                    :thumbnail_img_url,
+                    :tiny_thumbnail_img_url
               )

@@ -59,11 +59,11 @@ class User < ActiveRecord::Base
   end
 
   def have_profile_img_id
-    self.profile_img_id ||= "image/upload/c_fill,w_168/v1439329855/alien_head_img.jpg"
+    self.profile_img_id ||= "image/upload/v1439329855/alien_head_img.jpg"
   end
 
   def have_background_img_id
-    self.background_img_id ||= "image/upload/c_fill,h_273,w_851/v1439329874/blue_space_background.jpg"
+    self.background_img_id ||= "image/upload/v1439329874/blue_space_background.jpg"
   end
 
   def profile_img_url
