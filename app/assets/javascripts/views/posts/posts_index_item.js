@@ -3,6 +3,11 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   tagName: "li",
 
+  events: {
+    "click .post-edit-button" : "editPost",
+    "click .post-delete-button" : "deletePost"
+  },
+
   initialize: function () {
     this.listenTo(this.model, "sync change", this.render);
     this.addPostsIndexItemHeaderView();
@@ -28,5 +33,13 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
       model: this.model
     });
     this.addSubview(".post-index-item-body", subview);
+  },
+
+  editPost: function (event) {
+
+  },
+
+  deletePost: function (event) {
+
   }
 });

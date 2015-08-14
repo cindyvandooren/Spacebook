@@ -6,3 +6,11 @@
   <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().get('username') %></a> >
   <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.get('receiver_name') %></a>
 <% } %>
+
+<div class="post-change-buttons">
+  <% if (post.escape('author_id') == Spacebook.CURRENT_USER_ID) { %>
+    <div class="post-change-buttons">
+      <button class="post-edit-button">Edit</button>
+      <button class="post-delete-button">Delete</button>
+  <% } %>
+</div>
