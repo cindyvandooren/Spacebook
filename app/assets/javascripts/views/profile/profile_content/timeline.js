@@ -2,9 +2,8 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   template: JST["profile/profile_content/timeline"],
 
   initialize: function (options) {
-    // this.listenTo(this.collection, "sync", this.render);
+    this.listenTo(this.collection, "add", this.render);
     this.userId = options.userId;
-    this.userName = options.userName;
     this.addPostsIndexView();
     this.addPostFormView();
   },

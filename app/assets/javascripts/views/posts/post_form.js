@@ -9,10 +9,11 @@ Spacebook.Views.PostForm = Backbone.View.extend({
 
   initialize: function (options) {
     this.userId = options.userId;
-    this.listenTo(this.collection, "sync add", this.render);
+    this.listenTo(this.model, "sync", this.render);
   },
 
   render: function () {
+    // View does get rerendered when posting, but no new model is created.
     var renderedContent = this.template({
       post: this.model,
       timeline_id: this.userId
@@ -32,6 +33,8 @@ Spacebook.Views.PostForm = Backbone.View.extend({
       success: function () {
         $("textarea").val("");
         that.collection.add(that.model, { merge: true });
+        that.model = new Spacebook.Models.Post();
+        that.render();
       },
       //TODO: Make this a helpful message for the user
       error: function () {
