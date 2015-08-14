@@ -578,3 +578,26 @@
 [08/14/15 11:26:05 -0700 Cindys-MacBook-Pro.local (39713)] INFO : Installing Rails 4 Error instrumentation
 [08/14/15 11:26:05 -0700 Cindys-MacBook-Pro.local (39713)] INFO : Finished instrumentation
 [08/14/15 11:26:06 -0700 Cindys-MacBook-Pro.local (39713)] INFO : Doing deferred dependency-detection before Rack startup
+[08/14/15 11:45:20 -0700 Cindys-MacBook-Pro.local (31475)] INFO : Starting Agent shutdown
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Starting the New Relic agent in "development" environment.
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Environment: development
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Dispatcher: webrick
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Application: development
+[08/14/15 11:45:27 -0700 Cindys-MacBook-Pro.local (40852)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing ActiveJob instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing ActiveRecord 4 instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Net instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing deferred Rack instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Rack::Builder middleware instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Rails 3+ middleware instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Rails 4 Controller instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Rails 4 view instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Installing Rails 4 Error instrumentation
+[08/14/15 11:45:28 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Finished instrumentation
+[08/14/15 11:45:29 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Doing deferred dependency-detection before Rack startup
+[08/14/15 11:46:34 -0700 Cindys-MacBook-Pro.local (40852)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[08/14/15 11:46:34 -0700 Cindys-MacBook-Pro.local (40852)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[08/14/15 11:46:34 -0700 Cindys-MacBook-Pro.local (40852)] INFO : Will re-attempt in 60 seconds

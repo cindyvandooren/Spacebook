@@ -73,6 +73,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
         that.changeToPostsIndexItemBody(event);
       },
 
+      //TODO: Make this a helpful message for the user.
       error: function () {
         console.log("Something went wrong!");
       }
@@ -80,9 +81,17 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   },
 
   deletePost: function (event) {
+    var that = this;
     event.preventDefault();
-    debugger;
-    //Destroy the model and remove it from the collection
+    this.model.destroy({
+      success: function () {
+        that.collection.remove(that.model);
+      },
 
+      //TODO: Make this a helpful message for the user.
+      error: function () {
+        console.log("Something went wrong!");
+      }
+    });
   }
 });
