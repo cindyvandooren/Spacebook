@@ -1,5 +1,5 @@
 Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
-  template: JST["profile/show"],
+  template: JST["profile/profile_show"],
 
   className: "profile-main-box",
 

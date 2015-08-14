@@ -6,19 +6,29 @@ Spacebook.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "" : "show",
-    "profiles/:id" : "show",
+    "profiles/:id" : "showProfile",
+    "feeds/:id" : "showFeed"
   },
 
-  show: function (id) {
+  showProfile: function (id) {
     if (!id) {
       id = Spacebook.CURRENT_USER_ID;
     }
     var user = this.collection.getOrFetch(id);
-    var showView = new Spacebook.Views.ProfileShow({
+    var showProfileView = new Spacebook.Views.ProfileShow({
       model: user,
       collection: this.collection
     });
-    this.swapView(showView);
+    this.swapView(showProfileView);
+  },
+
+  showFeed: function (id) {
+    var user = this.collection.getOrFetch(id);
+    var showFeedView = new Spacebook.Views.FeedShow({
+      model: user,
+      collection: this.collection
+    });
+    this.swapView(showFeedView);
   },
 
   swapView: function (view) {
