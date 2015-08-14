@@ -3,8 +3,9 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.userName = options.userName;
-    this.listenTo(this.collection, "sync remove", this.render);
+    this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addPostsIndexItemView);
+    this.listenTo(this.collection, "remove", this.removePostsIndexItemView);
     this.collection.each(this.addPostsIndexItemView.bind(this));
   },
 
@@ -22,5 +23,9 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
       collection: this.collection,
     });
     this.addSubview(".posts-index", subview, true);
-  }
+  },
+
+  removePostsIndexItemView: function (post) {
+  this.removeModelSubview('.posts-index', post);
+}
 });
