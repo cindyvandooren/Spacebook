@@ -1,10 +1,10 @@
 <p><%= post.escape('created_at') %> ago</p>
-<img src="<%= post.author_details().get('thumbnail_img_url') %>">
+<img src="<%= post.author_details().escape('thumbnail_img_url') %>">
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
-  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().get('username') %></a>
+  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a>
 <% } else { %>
-  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().get('username') %></a> >
-  <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.get('receiver_name') %></a>
+  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> >
+  <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.escape('receiver_name') %></a>
 <% } %>
 
 <div class="post-change-buttons">
