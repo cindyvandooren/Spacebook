@@ -1,10 +1,15 @@
 class Api::UsersController < ApplicationController
   before_action :require_signed_in
-  # before_action :require_own_profile, only: [:update]
-  # TODO: validate that the user can only edit his own page
+  before_action :require_own_profile, only: [:update]
 
   def index
-    @users = User.all
+    if params[:query]
+      @users = User.where("username ~ ?", params[:query])
+    else
+      @users = User.all
+    end
+
+    render :index
   end
 
   def show
@@ -33,5 +38,12 @@ class Api::UsersController < ApplicationController
                                   :profile_img_id,
                                   :background_img_id
                                  )
+  end
+
+  def require_own_profile
+    user = User.find(params[:id])
+    unless current_user.id == user.id
+      render json: "You can't change other user's profiles."
+    end
   end
 end
