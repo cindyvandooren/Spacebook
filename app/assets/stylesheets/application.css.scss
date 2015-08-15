@@ -52,7 +52,7 @@ ul {
 .profile-header-name {
   width: 200px;
   height: 40px;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 500;
   color: white;
   margin-left: 250px;
@@ -84,8 +84,15 @@ textarea#body.create-post-body {
   margin-left: 700px;
 }
 
-.profile-sidebar .container {
-  width: 100px;
+.sidebar-navigation {
+  height: 128px;
+  font-size: 16px;
+  font-family: 'Freight Sans Bold', 'lucida grande',
+               tahoma,verdana,arial,sans-serif;
+  margin-top: 20px;
+  border: 1px #3a5795 solid;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .about-table {
@@ -120,6 +127,9 @@ textarea#body.create-post-body {
 h2 {
   font-family: 'Freight Sans Bold', 'lucida grande',
                tahoma,verdana,arial,sans-serif;
+  font-size: 24px;
+  color: #3a5795;
+  text-align: center;
 }
 
 .navbar {
@@ -216,10 +226,8 @@ h2 {
 }
 
 .home-img {
-  // padding-top: 132px;
   margin-top: 132px;
   margin-left: 45px;
-  // padding-left: 45px;
   float: left;
   position: absolute;
   border: 1px white solid;
