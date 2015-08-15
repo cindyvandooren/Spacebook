@@ -47,7 +47,7 @@ class Api::PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.destroy
-      render json: "Post has been successfully destroyed."
+      render :show
     else
       render json: @post.errors_full_messages,
                    status: :unprocessable_entity

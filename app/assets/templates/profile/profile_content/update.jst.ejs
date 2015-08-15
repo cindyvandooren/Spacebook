@@ -1,35 +1,42 @@
-<label id="user_birthday">Birthday</label>
-<input type="date"
-       id="user_birthday"
-       name="birthday"
-       value="<%= user.escape('birthday') %>">
-<br>
-<label id="user_interests">Interests</label>
-<input type="text"
-       name="interests"
-       id="user_interests"
-       value="<%= user.escape('interests') %>">
-<br>
-<label id="user_home_planet">Home Planet</label>
-<input type="text"
-       name="home_planet"
-       id="user_home_planet"
-       value="<%= user.escape('home_planet') %>">
-<br>
-<label id="user_planet_of_birth">Planet of Birth</label>
-<input type="text"
-       name="planet_of_birth"
-       id="user_planet_of_birth"
-       value="<%= user.escape('planet_of_birth') %>">
-<br>
-<input type="submit"
-       value="Update Profile"
-       class="btn btn-primary update-profile">
-<br>
-<input type="submit"
-       value="Change Profile Picture..."
-       class="btn btn-primary update-profile-picture">
-<br>
-<input type="submit"
-       value="Change Background Picture..."
-       class="btn btn-primary update-background-picture">
+<h2>Update Profile</h2>
+
+<div class = "form-input">
+  <label id="user_birthday">Birthday</label>
+  <br>
+  <input type="date"
+         id="user_birthday"
+         name="birthday"
+         value="<%= user.escape('birthday') %>">
+  <br>
+  <label id="user_home_planet">Home Planet</label>
+  <br>
+  <input type="text"
+         name="home_planet"
+         id="user_home_planet"
+         value="<%= user.escape('home_planet') %>">
+  <br>
+  <label id="user_planet_of_birth">Planet of Birth</label>
+  <br>
+  <input type="text"
+         name="planet_of_birth"
+         id="user_planet_of_birth"
+         value="<%= user.escape('planet_of_birth') %>">
+  <br>
+  <label id="user_interests">Interests</label>
+  <br>
+  <textarea
+         name="interests"
+         id="user_interests"><%= user.escape('interests') %></textarea>
+  <br>
+  <input type="submit"
+         value="Change Profile Picture..."
+         class="btn btn-primary update-profile-picture">
+  <br>
+  <input type="submit"
+         value="Change Background Picture..."
+         class="btn btn-primary update-background-picture">
+  <br>
+  <input type="submit"
+         value="Update Profile"
+         class="btn btn-primary update-profile">
+</div>

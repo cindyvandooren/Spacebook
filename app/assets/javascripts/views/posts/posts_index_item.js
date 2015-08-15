@@ -71,6 +71,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
       success: function () {
         that.collection.add(that.model, {merge: true});
         that.changeToPostsIndexItemBody(event);
+        console.log("test");
       },
 
       //TODO: Make this a helpful message for the user.
@@ -86,6 +87,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
     this.model.destroy({
       success: function () {
         that.collection.remove(that.model);
+        console.log("test");
       },
 
       //TODO: Make this a helpful message for the user.
