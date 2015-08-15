@@ -1,14 +1,15 @@
-<form>
-<textarea name="body"
-          id="body"
-          class="create-post-body"
-          placeholder="What's on your mind?"><%= post.escape('body') %></textarea>
-<br>
+<form class="change-post-form">
+  <img src="<%= Spacebook.CURRENT_USER_THUMB_URL %>"/>
+  <textarea name="body"
+            id="body"
+            class="create-post-body"
+            placeholder="What's on your mind?"><%= post.escape('body') %></textarea>
+  <br>
 
-<% if (post.isNew()){ %>
-  <input class="btn btn-primary create-post" value="Post">
-  <input type="hidden" name="timeline_id" value="<%= timeline_id %>">
-<% } else { %>
-  <input class="btn btn-primary edit-post" value="Done">
-<% } %>
+  <% if (post.isNew()){ %>
+    <input class="btn btn-primary btn-default create-post" value="Post">
+    <input type="hidden" name="timeline_id" value="<%= timeline_id %>">
+  <% } else { %>
+    <input class="btn btn-primary btn-default edit-post" value="Done">
+  <% } %>
 </form>

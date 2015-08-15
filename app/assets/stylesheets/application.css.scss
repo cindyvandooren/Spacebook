@@ -60,15 +60,41 @@ ul {
 }
 
 .create-post {
-  width: 425px;
-  padding-top: 12px;
-  padding-left: 12px;
-  padding-right: 12px;
+  width: 100%;
 }
 
+.change-post-form {
+  width: 510px;
+  position: relative;
+}
+
+.btn-primary.btn-default.create-post {
+  width: 60px;
+  height: 20px;
+}
+//
+// .change-post-form:after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
+//
+// .change-post-form > img {
+//   position: absolute;
+//   float: left;
+// }
+//
+// .change-post-form > textarea {
+//   position: absolute;
+//   float: right;
+// }
+
 textarea#body.create-post-body {
-  width: 425px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 450px;
   height: 60px;
+  border-radius: 5px;
 }
 
 .alert.alert-danger {
@@ -168,7 +194,6 @@ h2 {
   padding-left: 0px;
   margin-left: -15px;
 }
-
 
 .navbar-default .navbar-nav > li > a {
   color: white;

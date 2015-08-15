@@ -1,6 +1,8 @@
 Spacebook.Views.PostForm = Backbone.View.extend({
   template: JST["posts/post_form"],
 
+  className: "edit-create-post",
+
   events: {
     "click .create-post" : "createPost"
   },

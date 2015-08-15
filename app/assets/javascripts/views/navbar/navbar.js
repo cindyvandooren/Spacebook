@@ -2,7 +2,7 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   template: JST["navbar/navbar"],
 
   events: {
-    'submit form': 'searchUsers'
+    'submit .search-form': 'searchUsers'
   },
 
   initialize: function () {
@@ -10,7 +10,7 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   },
 
   searchUsers: function () {
-    
+    debugger;
   },
 
   render: function () {
