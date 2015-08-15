@@ -694,3 +694,6 @@
 [08/14/15 12:02:15 -0700 Cindys-MacBook-Pro.local (2360)] INFO : Will re-attempt in 120 seconds
 [08/14/15 12:04:16 -0700 Cindys-MacBook-Pro.local (2360)] ERROR : Invalid license key, please contact support@newrelic.com
 [08/14/15 12:04:16 -0700 Cindys-MacBook-Pro.local (2360)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/15/15 09:21:47 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/users_controller.rb:7: syntax error, unexpected ')'
+[08/15/15 10:32:05 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `downcase' for {"username"=>"n"}:ActionController::Parameters
+[08/15/15 10:39:26 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `downcase' for {"username"=>"n"}:ActionController::Parameters

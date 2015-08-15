@@ -2,15 +2,22 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   template: JST["navbar/navbar"],
 
   events: {
-    'submit .search-form': 'searchUsers'
+    'submit .navbar-form': 'searchUsers'
   },
 
   initialize: function () {
     this.listenTo(this.model, "sync", this.render);
   },
 
-  searchUsers: function () {
-    debugger;
+  searchUsers: function (event) {
+    event.preventDefault();
+    var formData = $(event.currentTarget).find('input').val();
+    var foundUsers = new Spacebook.Collections.Users();
+    foundUsers.fetch({data: { query: formData} });
+    var modal = new Spacebook.Views.SearchResult({
+      collection: foundUsers
+    });
+    $('body').append(modal.render().$el);
   },
 
   render: function () {
