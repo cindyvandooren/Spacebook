@@ -12,12 +12,19 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   searchUsers: function (event) {
     event.preventDefault();
     var formData = $(event.currentTarget).find('input').val();
+    if (formData.length === 0) {
+      return;
+    }
+
     var foundUsers = new Spacebook.Collections.Users();
     foundUsers.fetch({data: { query: formData} });
     var modal = new Spacebook.Views.SearchResult({
       collection: foundUsers
     });
     $('body').append(modal.render().$el);
+
+    $(event.currentTarget).find('input').val("");
+
   },
 
   render: function () {
