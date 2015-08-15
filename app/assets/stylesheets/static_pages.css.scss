@@ -1,3 +1,59 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.alert.alert-danger {
+   width: 368px;
+   height: 70px;
+   position: absolute;
+   margin-left: 725px;
+   font-size: 16px;
+ }
+
+.navbar.landing {
+   height: 82px;
+ }
+
+.navbar-brand.landing {
+   font-size: 36px;
+ }
+
+.navbar-brand.landing {
+   padding: 30px;
+ }
+
+#signin {
+   margin: 25px;
+ }
+
+.home-img {
+   margin-top: 132px;
+   margin-left: 45px;
+   float: left;
+   position: absolute;
+   border: 1px white solid;
+   border-radius: 5px;
+ }
+
+#loginbox {
+   margin-top: 30px;
+   width: 400px;
+   padding-top: 100px;
+   float: right;
+   position: absolute;
+ }
+
+#loginbox > div:first-child {
+   padding-bottom: 10px;
+   float: left;
+ }
+
+.container.landing-content {
+   position: relative;
+ }
+
+.container.landing-content:after {
+   content: "";
+   display: block;
+   clear: both;
+ }

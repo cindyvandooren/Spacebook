@@ -2,6 +2,9 @@
 
 <div class="m-content">
   <h2>Search results</h2>
-   <button class="close-button">&times;</button>
+  <button class="close-button">&times;</button>
+  <% if (users.length < 1) { %>
+    <%= "No match found." %>
+  <% } %>
    <ul class="search-result-list"></ul>
 </div>

@@ -1,0 +1,33 @@
+.profile-content {
+  float:right;
+  width: 510px;
+  position: absolute;
+  margin-left: 341px;
+}
+
+.about-table {
+  width: 510px;
+  padding: 0px;
+}
+
+.create-post {
+  width: 100%;
+}
+
+.change-post-form {
+  width: 510px;
+  position: relative;
+}
+
+.btn-primary.btn-default.create-post {
+  width: 60px;
+  height: 20px;
+}
+
+textarea#body.create-post-body {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 450px;
+  height: 60px;
+  border-radius: 5px;
+}

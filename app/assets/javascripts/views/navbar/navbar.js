@@ -6,7 +6,7 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   },
 
   initialize: function () {
-    this.listenTo(this.model, "sync", this.render);
+    this.listenTo(this.model, "sync change", this.render);
   },
 
   searchUsers: function (event) {

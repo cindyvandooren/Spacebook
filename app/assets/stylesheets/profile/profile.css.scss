@@ -1,0 +1,10 @@
+.profile-non-header {
+  position: relative;
+  width: 851px;
+}
+
+.profile-non-header:after {
+  content: "";
+  display: block;
+  clear: both;
+}

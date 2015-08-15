@@ -18,11 +18,11 @@ Spacebook is a clone of Facebook built on Rails and Backbone. Users can:
 - [x] Implement authentication
 - [x] Have an about page for user
 - [x] Have a page to update profile
-- [ ] Create posts
-- [ ] Delete posts
-- [ ] Edit posts
-- [ ] View posts
-- [ ] Search and find other users
+- [x] Create posts
+- [x] Delete posts
+- [x] Edit posts
+- [x] View posts
+- [x] Search and find other users
 - [ ] Send friendship invitations
 - [ ] Accept friendship invitations
 - [ ] Show friends on page
