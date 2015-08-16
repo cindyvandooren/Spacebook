@@ -12,6 +12,7 @@
   border-radius: 5px;
   border: 1px solid #3a5795;
   margin-top: 20px;
+  box-shadow: 2px 2px 2px #ADA8A8;
 }
 
 .update-profile {
@@ -21,6 +22,7 @@
   border-radius: 5px;
   border: 1px solid #3a5795;
   margin-top: 20px;
+  box-shadow: 2px 2px 2px #ADA8A8;
 }
 
 .form-input {
@@ -55,7 +57,6 @@
   height: 40px;
   margin-left: 175px;
   width: 160px;
-
 }
 
 .form-input > textarea {
@@ -88,4 +89,66 @@ textarea#body.create-post-body {
   width: 450px;
   height: 60px;
   border-radius: 5px;
+}
+
+.posts {
+  width: 510px;
+}
+
+ul.posts-index {
+  padding: 0px;
+}
+
+.posts-index > li {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #3a5795;
+  margin-top: 10px;
+  padding: 0px;
+  box-shadow: 2px 2px 2px #ADA8A8;
+}
+
+.post-index-item-header {
+  height: 80px;
+  padding-bottom: 20px;
+}
+
+.post-index-item-body {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.post-heading {
+  position: relative;
+  margin-top: 10px;
+}
+
+.header-image {
+  margin: 10px;
+  margin-top: 10px;
+}
+
+.post-heading > p {
+  margin-left: 60px;
+  margin-top: -25px;
+  font-size: 14px;
+}
+
+.post-heading > div {
+  margin-left: 440px;
+  margin-top: -45px;
+}
+
+.post-edit-button {
+  background-color: white;
+  color: grey;
+  border: none;
+  font-size: 16px;
+}
+
+.post-delete-button {
+  background-color: white;
+  color: grey;
+  border: none;
+  font-size: 16px;
 }

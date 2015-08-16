@@ -1,16 +1,14 @@
-<p><%= post.escape('created_at') %> ago</p>
-<img src="<%= post.author_details().escape('thumbnail_img_url') %>">
+<a href="#/profiles/<%= post.author_details().escape('id') %>" class="header-image"><img src="<%= post.author_details().escape('thumbnail_img_url') %>"/></a>
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
-  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a>
+  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
 <% } else { %>
-  <a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> >
-  <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.escape('receiver_name') %></a>
+  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.escape('receiver_name') %></a> <%= post.escape('created_at') %> ago</p>
 <% } %>
 
 <div class="post-change-buttons">
   <% if (post.escape('author_id') == Spacebook.CURRENT_USER_ID) { %>
     <div class="post-change-buttons">
-      <button class="post-edit-button">Edit</button>
-      <button class="post-delete-button">Delete</button>
+      <button class="post-edit-button"><i class="glyphicon glyphicon-pencil"></i></button>
+      <button class="post-delete-button"><i class="glyphicon glyphicon-trash"></i></button>
   <% } %>
 </div>
