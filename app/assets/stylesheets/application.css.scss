@@ -24,6 +24,10 @@
    font-size: 12px;
  }
 
+ body.modal-scroll {
+   overflow: hidden;
+ }
+
  ul {
    list-style-type: none;
  }

@@ -1,7 +1,7 @@
 Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   template: JST["navbar/search_result"],
 
-  className: "search-result",
+  className: "search-box",
 
   initialize: function () {
     $(document).on('keyup', this.handleKey.bind(this));
@@ -47,9 +47,11 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   removeAndDisable: function () {
     this.remove();
     $(".search-form").prop("disabled", false);
+    $("body").removeClass("modal-scroll");
   },
 
   onRender: function () {
+    $("body").addClass("modal-scroll");
     $(".search-form").prop("disabled",true);
   }
 });

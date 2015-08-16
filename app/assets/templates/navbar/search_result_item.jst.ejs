@@ -1,2 +1,2 @@
-<img src="<%= user.escape('thumbnail_img_url') %>">
+<a href="#/profiles/<%= user.escape('id') %>"><img src="<%= user.escape('thumbnail_img_url') %>"></a>
 <a href="#/profiles/<%= user.escape('id') %>" class="user-profile"><%= user.escape('username') %></a>
