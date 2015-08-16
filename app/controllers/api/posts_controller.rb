@@ -16,6 +16,8 @@ class Api::PostsController < ApplicationController
   end
 
   def show
+    # TODO: Not in use yet. Will probably use this with notifications.
+    # Think about use of includes in this case.
     @post = Post.find(params[:id])
   end
 

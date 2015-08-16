@@ -731,3 +731,26 @@ Migrations are pending. To resolve this issue, run:
 [08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 4 view instrumentation
 [08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 4 Error instrumentation
 [08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Finished instrumentation
+[08/16/15 12:48:28 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/invitations/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Cindy/Desktop/Spacebook/app/views"
+
+[08/16/15 12:50:55 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for 1:Fixnum
+[08/16/15 12:51:21 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/views/api/users/_user.json.jbuilder:1: syntax error, unexpected ':', expecting ')'
+...ew(self); json.extract!(user  :id,
+...                               ^
+/Users/Cindy/Desktop/Spacebook/app/views/api/users/_user.json.jbuilder:2: syntax error, unexpected ',', expecting :: or '[' or '.'
+/Users/Cindy/Desktop/Spacebook/app/views/api/users/_user.json.jbuilder:12: syntax error, unexpected ')', expecting keyword_end
+[08/16/15 12:51:33 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for 1:Fixnum
+[08/16/15 12:54:02 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for 1:Fixnum
+[08/16/15 12:54:43 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `id' for 1:Fixnum
+[08/16/15 12:59:18 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial api/users/_limited_user_info with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/Cindy/Desktop/Spacebook/app/views"
+
+[08/16/15 13:00:16 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing partial api/users/_limited_info with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/Cindy/Desktop/Spacebook/app/views"
+
+[08/16/15 13:01:07 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/views/api/users/_limited_info.json.jbuilder:2: syntax error, unexpected tSYMBEG, expecting ')'
+                     :username,
+                      ^
+/Users/Cindy/Desktop/Spacebook/app/views/api/users/_limited_info.json.jbuilder:4: syntax error, unexpected ')', expecting keyword_end
+[08/16/15 13:01:36 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `thumnail_img_url' for #<User:0x007fe491fce3b0>

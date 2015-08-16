@@ -15,6 +15,7 @@ class Post < ActiveRecord::Base
   validates :body, length: { maximum: 240 }
 
   belongs_to :author, class_name: :User
+  
   belongs_to :receiver,
              class_name: :User,
              primary_key: :id,
