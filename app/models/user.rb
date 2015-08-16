@@ -46,6 +46,11 @@ class User < ActiveRecord::Base
            primary_key: :id,
            foreign_key: :invitee_id
 
+  has_many :friends,
+           class_name: :Friendship,
+           primary_key: :id,
+           foreign_key: :own_id
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
