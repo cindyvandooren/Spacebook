@@ -50,7 +50,7 @@ class Api::PostsController < ApplicationController
     if @post.destroy
       render json: {}
     else
-      render json: @post.errors_full_messages,
+      render json: @post.errors.full_messages,
                    status: :unprocessable_entity
     end
   end

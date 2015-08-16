@@ -6,7 +6,8 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
   className: "invitation-index-item",
 
   events: {
-    "click .withdraw-invitation" : "deleteInvitation"
+    "click .withdraw-invitation" : "deleteInvitation",
+    "click .deny-invitation" : "deleteInvitation"
   },
 
   initialize: function (options) {
