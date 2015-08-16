@@ -699,3 +699,35 @@
 [08/15/15 10:39:26 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `downcase' for {"username"=>"n"}:ActionController::Parameters
 [08/15/15 14:06:29 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Invalid CSS after " }": expected selector or at-rule, was "}"
 [08/15/15 14:39:19 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Invalid CSS after "  background-color": expected "{", was ";"
+[08/16/15 10:30:35 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+
+[08/16/15 10:35:25 -0700 Cindys-MacBook-Pro.local (2360)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Starting the New Relic agent in "development" environment.
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Environment: development
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : No known dispatcher detected.
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Application: development
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing ActiveJob instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing ActiveRecord 4 instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Net instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing deferred Rack instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rack::Builder middleware instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 3+ middleware instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 4 Controller instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 4 view instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Installing Rails 4 Error instrumentation
+[08/16/15 10:38:43 -0700 Cindys-MacBook-Pro.local (23144)] INFO : Finished instrumentation

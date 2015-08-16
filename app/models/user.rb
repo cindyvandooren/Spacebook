@@ -29,10 +29,22 @@ class User < ActiveRecord::Base
   before_save :have_background_img_id
 
   has_many :posts, foreign_key: :author_id, dependent: :destroy
+
   has_many :timeline_posts,
            class_name: :Post,
            primary_key: :id,
            foreign_key: :timeline_id
+
+  has_many :sent_invitations,
+           class_name: :Invitation,
+           primary_key: :id,
+           foreign_key: :inviter_id,
+           dependent: :destroy
+
+  has_many :received_invitations,
+           class_name: :Invitation,
+           primary_key: :id,
+           foreign_key: :invitee_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

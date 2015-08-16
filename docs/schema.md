@@ -45,7 +45,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 inviter_id  | integer   | not null
-invitee_id  | integer  | not null
+invitee_id  | integer   | not null
 
 ## friendships
 column name | data type | details
