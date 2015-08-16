@@ -8,8 +8,6 @@ class Api::UsersController < ApplicationController
     else
       @users = User.all
     end
-
-    render :index
   end
 
   def show
