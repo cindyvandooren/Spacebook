@@ -57,3 +57,9 @@
    display: block;
    clear: both;
  }
+
+ @media only screen and (max-width: 768px){
+   .home-img{
+     display: none;
+   }
+ }
