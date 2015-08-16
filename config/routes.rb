@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:index, :show, :update]
     resources :posts, only: [:index, :show, :create, :update, :destroy]
+    resources :invitations, only: [:index, :show, :create, :destroy]
+    resources :friendships, only: [:index, :show, :create, :destroy]
   end
 end

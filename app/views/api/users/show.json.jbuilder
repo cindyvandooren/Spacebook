@@ -1,1 +1,1 @@
-json.partial!('user', user: @user, show_timeline_posts: true)
+json.partial!('user', user: @user)
