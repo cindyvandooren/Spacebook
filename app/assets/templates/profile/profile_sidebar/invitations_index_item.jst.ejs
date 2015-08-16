@@ -1,0 +1,10 @@
+<% if (userId == invitation.inviter_details().escape('id')) { %>
+  <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><img src="<%= invitation.invitee_details().escape('thumbnail_img_url') %>"/></a>
+  <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><%= invitation.invitee_details().escape('username') %></a> has not accepted your invitation yet.
+  <button class="btn btn-primary">Withdraw</button>
+<% } else { %>
+  <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><img src="<%= invitation.inviter_details().escape('thumbnail_img_url') %>"/></a>
+  <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><%= invitation.inviter_details().escape('username') %></a> would like to be your friend.
+  <button class="btn btn-primary">Approve</button>
+  <button class="btn btn-primary">Deny</button>
+<% } %>
