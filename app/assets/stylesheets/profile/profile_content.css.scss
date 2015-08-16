@@ -51,12 +51,14 @@
   height: 30px;
   width: 220px;
   margin: 10px;
+  font-size: 12px;
 }
 
 .form-input > input.btn.update-profile {
   height: 40px;
   margin-left: 175px;
   width: 160px;
+  font-size: 14px;
 }
 
 .form-input > textarea {
@@ -73,22 +75,25 @@
   width: 100%;
 }
 
-.change-post-form {
-  width: 510px;
-  position: relative;
-}
-
-.btn-primary.btn-default.create-post {
-  width: 60px;
-  height: 20px;
-}
-
 textarea#body.create-post-body {
   margin-top: 20px;
-  margin-left: 20px;
-  width: 450px;
+  width: 100%;
   height: 60px;
   border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 2px 2px 2px #ADA8A8;
+}
+
+input.edit-post {
+  margin-left: 87%;
+  margin-top: 5px;
+}
+
+input.create-post {
+  margin-left: 450px;
+  margin-top: 5px;
+  padding-bottom: 6px;
+  width: 60px;
 }
 
 .posts {
@@ -97,6 +102,7 @@ textarea#body.create-post-body {
 
 ul.posts-index {
   padding: 0px;
+  margin-top: 10px;
 }
 
 .posts-index > li {
@@ -109,8 +115,10 @@ ul.posts-index {
 }
 
 .post-index-item-header {
-  height: 80px;
-  padding-bottom: 20px;
+  height: 50px;
+  border-bottom: 1px solid grey;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .post-index-item-body {
@@ -135,7 +143,7 @@ ul.posts-index {
 }
 
 .post-heading > div {
-  margin-left: 440px;
+  margin-left: 430px;
   margin-top: -45px;
 }
 

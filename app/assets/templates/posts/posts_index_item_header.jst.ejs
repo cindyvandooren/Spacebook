@@ -5,6 +5,8 @@
   <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.escape('receiver_name') %></a> <%= post.escape('created_at') %> ago</p>
 <% } %>
 
+<span class="post-header-divider"/>
+
 <div class="post-change-buttons">
   <% if (post.escape('author_id') == Spacebook.CURRENT_USER_ID) { %>
     <div class="post-change-buttons">
