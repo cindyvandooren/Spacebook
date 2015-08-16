@@ -5,6 +5,10 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   className: "invitation-index-item",
 
+  events: {
+    "click .withdraw-invitation" : "deleteInvitation"
+  },
+
   initialize: function (options) {
     this.userId = options.userId;
     this.listenTo(this.model, "sync", this.render);
@@ -17,5 +21,21 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
      });
     this.$el.html(renderedContent);
     return this;
+  },
+
+  deleteInvitation: function (event) {
+    var that = this;
+    event.preventDefault();
+
+    this.model.destroy({
+      success: function () {
+        that.collection.remove(that.model);
+      },
+
+      //TODO: Make this a helpful message for the user.
+      error: function () {
+        console.log("Something went wrong!");
+      }
+    });
   }
 });

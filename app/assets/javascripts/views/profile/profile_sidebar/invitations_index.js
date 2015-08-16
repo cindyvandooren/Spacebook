@@ -22,6 +22,7 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
   addInvitationsIndexItemView: function (invitation) {
     var subview = new Spacebook.Views.InvitationsIndexItem({
       model: invitation,
+      collection: this.collection,
       userId: this.userId
     });
     this.addSubview(".invitations-list", subview);
