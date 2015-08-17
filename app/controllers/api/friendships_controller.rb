@@ -9,7 +9,7 @@ class Api::FriendshipsController < ApplicationController
     end
   end
 
-  def created
+  def create
     @friendship = Friendship.new(friendship_params)
 
     if @friendship.save

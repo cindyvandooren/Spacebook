@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand root" href="#/profiles/<%= Spacebook.CURRENT_USER_ID %>">S</a>
+    <a class="navbar-brand root" href="#/profiles/<%= user.escape('id') %>">S</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,10 +24,10 @@
     </div>
     <ul class="nav navbar-nav menu-root">
       <li>
-          <a href="#/profiles/<%= Spacebook.CURRENT_USER_ID %>" class="thumbnail-link"><img src="<%= Spacebook.CURRENT_USER_TINY_THUMB_URL %>" /></a>
-          <a href="#/profiles/<%= Spacebook.CURRENT_USER_ID %>" class="username-link"><%= Spacebook.CURRENT_USER_NAME %></a>
+          <a href="#/profiles/<%= user.escape('id') %>" class="thumbnail-link"><img src="<%= user.escape('tiny_thumbnail_img_url') %>" /></a>
+          <a href="#/profiles/<%= user.escape('id') %>" class="username-link"><%= user.escape('username') %></a>
       </li>
-      <li><a href="#/feeds/<%= Spacebook.CURRENT_USER_ID %>">Feed</a></li>
+      <li><a href="#/feeds/<%= user.escape('id') %>">Feed</a></li>
       <li><a href="#">Notifications</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">

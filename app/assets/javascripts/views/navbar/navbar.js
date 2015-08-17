@@ -9,6 +9,12 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     this.listenTo(this.model, "sync change", this.render);
   },
 
+  render: function () {
+    var renderedContent = this.template({ user: this.model });
+    this.$el.html(renderedContent);
+    return this;
+  },
+
   searchUsers: function (event) {
     event.preventDefault();
     var formData = $(event.currentTarget).find('input').val();
@@ -25,11 +31,5 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     $('body').append(modal.render().$el);
 
     $(event.currentTarget).find('input').val("");
-  },
-
-  render: function () {
-    var renderedContent = this.template({ user: this.model });
-    this.$el.html(renderedContent);
-    return this;
   }
 });

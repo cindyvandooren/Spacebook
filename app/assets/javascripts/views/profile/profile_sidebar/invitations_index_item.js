@@ -7,11 +7,13 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   events: {
     "click .withdraw-invitation" : "deleteInvitation",
-    "click .deny-invitation" : "deleteInvitation"
+    "click .deny-invitation" : "deleteInvitation",
+    "click .approve-invitation" : "becomeFriends"
   },
 
   initialize: function (options) {
     this.userId = options.userId;
+    this.friends = options.friends;
     this.listenTo(this.model, "sync", this.render);
   },
 
@@ -38,5 +40,11 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
         console.log("Something went wrong!");
       }
     });
+  },
+
+  becomeFriends: function (event) {
+    event.preventDefault();
+    debugger;
+    //Make two new Friends models and save them
   }
 });

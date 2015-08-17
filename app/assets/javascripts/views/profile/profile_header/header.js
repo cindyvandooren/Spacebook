@@ -29,7 +29,7 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
       subview = new Spacebook.Views.HeaderInfo({ model: this.model });
     } else if (this.model.get("is_a_friend")) {
       subview = new Spacebook.Views.HeaderUnFriender({ model: this.model });
-    } else if (this.model.get("is_invited") === "true") {
+    } else if (this.model.get("is_invited") === true) {
       subview = new Spacebook.Views.HeaderWaitingResponse({ model: this.model });
     } else {
       subview = new Spacebook.Views.HeaderFriender({

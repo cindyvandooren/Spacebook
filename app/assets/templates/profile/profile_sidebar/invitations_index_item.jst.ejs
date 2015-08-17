@@ -5,6 +5,6 @@
 <% } else { %>
   <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><img src="<%= invitation.inviter_details().escape('thumbnail_img_url') %>"/></a>
   <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><%= invitation.inviter_details().escape('username') %></a> would like to be your friend.
-  <button class="btn btn-primary">Approve</button>
+  <button class="btn btn-primary approve-invitation">Approve</button>
   <button class="btn btn-primary deny-invitation">Deny</button>
 <% } %>
