@@ -1,0 +1,24 @@
+.feed-main {
+  position: relative;
+  width: 851px;
+  margin-left: 75px;
+}
+
+.feed-main:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.feed-content {
+  position: absolute;
+  float: right;
+  width: 510px;
+  margin-left: 341px;
+}
+
+.feed-sidebar {
+  position: absolute;
+  float: left;
+  width: 323px;
+}
