@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
   def index
     if params[:query]
       @users = User.where("lower(username) LIKE ?", params[:query].downcase + "%")
-    else
+    elsif params[:all]
       @users = User.all
     end
   end
