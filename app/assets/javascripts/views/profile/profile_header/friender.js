@@ -1,7 +1,8 @@
 Spacebook.Views.HeaderFriender = Backbone.View.extend({
   template: JST["profile/profile_header/friender"],
 
-  initialize: function () {
+  initialize: function (options) {
+    this.invitations = options.invitations;
     this.listenTo(this.model, "sync change", this.render);
   },
 
@@ -16,7 +17,20 @@ Spacebook.Views.HeaderFriender = Backbone.View.extend({
   },
 
   sendFriendInvitation: function () {
+    var that = this;
     event.preventDefault();
-    debugger;
+    var newInvitation = new Spacebook.Models.Invitation();
+    newInvitation.save({
+      inviter_id: Spacebook.CURRENT_USER_ID,
+      invitee_id: this.model.id
+    }, {
+      success: function () {
+        that.invitations.add(newInvitation);
+      },
+
+      error: function () {
+        console.log("Something went wrong");
+      }
+    });
   }
 });

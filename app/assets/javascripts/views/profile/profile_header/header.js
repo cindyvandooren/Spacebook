@@ -3,7 +3,8 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
 
   className: "profile-header",
 
-  initialize: function () {
+  initialize: function (options) {
+    this.invitations = options.invitations;
     this.listenTo(this.model, "sync change", this.render);
     this.addHeaderPictureView();
     this.addHeaderNameView();
@@ -28,10 +29,13 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
       subview = new Spacebook.Views.HeaderInfo({ model: this.model });
     } else if (this.model.get("is_a_friend")) {
       subview = new Spacebook.Views.HeaderUnFriender({ model: this.model });
-    } else if (this.model.get("invited")) {
+    } else if (this.model.get("is_invited") === "true") {
       subview = new Spacebook.Views.HeaderWaitingResponse({ model: this.model });
     } else {
-      subview = new Spacebook.Views.HeaderFriender({ model: this.model });
+      subview = new Spacebook.Views.HeaderFriender({
+        model: this.model,
+        invitations: this.invitations
+       });
     }
     this.addSubview(".profile-header-info", subview);
   },

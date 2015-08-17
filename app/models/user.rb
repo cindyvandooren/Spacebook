@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
 
   attr_reader :password
   after_initialize :ensure_session_token
-  before_save :have_profile_img_id
-  before_save :have_background_img_id
+  after_initialize :have_profile_img_id
+  after_initialize :have_background_img_id
 
   has_many :posts, foreign_key: :author_id, dependent: :destroy
 

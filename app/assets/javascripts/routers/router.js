@@ -3,9 +3,7 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     this.$rootEl = $("#content");
     this.collection = options.collection;
     this.friends = new Spacebook.Collections.Friends();
-    this.sentInvitations = new Spacebook.Collections.Invitations();
-    this.receivedInvitations = new Spacebook.Collections.Invitations();
-
+    this.invitations = new Spacebook.Collections.Invitations();
   },
 
   routes: {
@@ -20,11 +18,8 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     }
 
     this.friends.fetch({ data: { id: id } });
-    this.sentInvitations.fetch({
-      data: { id: id, sent_invitations: true }
-    });
-    this.receivedInvitations.fetch({
-      data: { id: id, received_invitations: true }
+    this.invitations.fetch({
+      data: { id: id }
     });
 
     var user = this.collection.getOrFetch(id);
@@ -32,19 +27,15 @@ Spacebook.Routers.Router = Backbone.Router.extend({
       model: user,
       collection: this.collection,
       friends: this.friends,
-      sentInvitations: this.sentInvitations,
-      receivedInvitations: this.receivedInvitations
+      invitations: this.invitations,
     });
     this.swapView(showProfileView);
   },
 
   showFeed: function (id) {
     this.friends.fetch({ data: { id: id } });
-    this.sentInvitations.fetch({
-      data: { id: id, sent_invitations: true }
-    });
-    this.receivedInvitations.fetch({
-      data: { id: id, received_invitations: true }
+    this.invitations.fetch({
+      data: { id: id }
     });
 
     var user = this.collection.getOrFetch(id);
@@ -52,8 +43,7 @@ Spacebook.Routers.Router = Backbone.Router.extend({
       model: user,
       collection: this.collection,
       friends: this.friends,
-      sentInvitations: this.sentInvitations,
-      receivedInvitations: this.receivedInvitations
+      invitations: this.invitations,
     });
     this.swapView(showFeedView);
   },

@@ -5,8 +5,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.friends = options.friends;
-    this.sentInvitations = options.sentInvitations;
-    this.receivedInvitations = options.sentInvitations;
+    this.invitations = options.invitations;
     this.timelinePosts = new Spacebook.Collections.Posts();
     this.listenTo(this.model, "sync change", this.render);
     this.addProfileSideBarView();
@@ -32,15 +31,15 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     var subview = new Spacebook.Views.ProfileSideBar({
       model: this.model,
       friends: this.friends,
-      sentInvitations: this.sentInvitations,
-      receivedInvitations: this.receivedInvitations
+      invitations: this.invitations,
     });
     this.addSubview(".profile-sidebar", subview);
   },
 
   addProfileHeaderView: function () {
     var subview = new Spacebook.Views.ProfileHeader({
-      model: this.model
+      model: this.model,
+      invitations: this.invitations
     });
     this.addSubview(".profile-header", subview);
   },

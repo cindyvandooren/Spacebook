@@ -2,14 +2,9 @@ class Api::InvitationsController < ApplicationController
   before_action :require_signed_in
 
   def index
-    if params[:received_invitations]
-      @invitations = User.find(params[:id])
-                         .received_invitations
-                         .includes(:inviter)
-    elsif params[:sent_invitations]
-      @invitations = User.find(params[:id])
-                         .sent_invitations
-                         .includes(:invitee)
+    if params[:id]
+      @invitations = Invitation.where("invitee_id = ? or inviter_id = ?", params[:id], params[:id])
+                               .includes(:invitee, :inviter)
     else
       @invitations = Invitation.all
     end
