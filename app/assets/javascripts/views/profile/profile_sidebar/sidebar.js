@@ -4,8 +4,8 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
   className: "sidebar-navigation",
 
   initialize: function (options) {
-    this.sentInvitations = new Spacebook.Collections.Invitations();
-    this.receivedInvitations = new Spacebook.Collections.Invitations();
+    this.sentInvitations = options.sentInvitations;
+    this.receivedInvitations = options.receivedInvitations;
     this.friends = options.friends;
     this.addSentInvitationsIndexView();
     this.addreceivedInvitationsIndexView();
@@ -20,20 +20,14 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
   },
 
   addSentInvitationsIndexView: function () {
-    this.sentInvitations.fetch({
-      data: { id: this.model.id, sent_invitations: true }
-    });
     var subview = new Spacebook.Views.InvitationsIndex({
       collection: this.sentInvitations,
-      userId: this.model.id
+      userId: this.model.id,
     });
     this.addSubview(".sent-invitations", subview);
   },
 
   addreceivedInvitationsIndexView: function () {
-    this.receivedInvitations.fetch({
-      data: { id: this.model.id, received_invitations: true }
-    });
     var subview = new Spacebook.Views.InvitationsIndex({
       collection: this.receivedInvitations,
       userId: this.model.id

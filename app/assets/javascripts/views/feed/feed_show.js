@@ -5,6 +5,8 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.friends = options.friends;
+    this.sentInvitations = options.sentInvitations;
+    this.receivedInvitations = options.receivedInvitations;
     this.listenTo(this.model, "sync change", this.render);
     this.addFeedSideBarView();
     this.addFeedContentView();
@@ -20,7 +22,9 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
   addFeedSideBarView: function () {
     var subview = new Spacebook.Views.FeedSideBar({
       model: this.model,
-      friends: this.friends
+      friends: this.friends,
+      sentInvitations: this.sentInvitations,
+      receivedInvitations: this.receivedInvitations
     });
     this.addSubview(".feed-sidebar", subview);
   },
