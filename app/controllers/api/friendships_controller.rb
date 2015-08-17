@@ -2,7 +2,11 @@ class Api::FriendshipsController < ApplicationController
   before_action :require_signed_in
 
   def index
-    @friendships = User.find(params[:id]).friends.includes(:friend)
+    if params[:id]
+      @friendships = User.find(params[:id]).friends.includes(:friend)
+    else
+      @friendships = Friendship.all
+    end
   end
 
   def created
