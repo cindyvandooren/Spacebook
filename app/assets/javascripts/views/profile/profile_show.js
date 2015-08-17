@@ -88,7 +88,8 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   changeToFriends: function (event) {
     this.changeProfileContentViews(event);
     var friendsView = new Spacebook.Views.ProfileFriends({
-      model: this.model
+      model: this.model,
+      userId: this.model.id
     });
     this.addSubview(".profile-content", friendsView);
   },

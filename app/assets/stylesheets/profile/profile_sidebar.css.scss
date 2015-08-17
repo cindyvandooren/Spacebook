@@ -15,3 +15,27 @@
   background-color: white;
   box-shadow: 2px 2px 2px #ADA8A8;
 }
+
+.sidebar-friends-list {
+  border: 1px #3a5795 solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #ADA8A8;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.sidebar-invitations-list {
+  border: 1px #3a5795 solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #ADA8A8;
+  background-color: white;
+  margin-top: 20px;
+}
+
+ul.friends-list {
+  padding-left: 10px;
+}
+
+.friends-list > li {
+  padding-top: 10px;
+}
