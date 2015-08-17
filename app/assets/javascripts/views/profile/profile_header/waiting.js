@@ -1,4 +1,4 @@
-Spacebook.Views.WaitingResponse = Backbone.View.extend({
+Spacebook.Views.HeaderWaitingResponse = Backbone.View.extend({
   template: JST["profile/profile_header/waiting"],
 
   render: function () {

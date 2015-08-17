@@ -52,6 +52,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
       collection: this.timelinePosts,
       userId: this.model.id,
       userName: this.model.get('username'),
+      user: this.model
     });
     this.addSubview(".profile-content", subview);
   },
@@ -86,6 +87,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
       collection: this.timelinePosts,
       userId: this.model.id,
       userName: this.model.get('username'),
+      user: this.model
     });
     this.addSubview(".profile-content", timelineView);
   },
