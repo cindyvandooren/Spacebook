@@ -14,7 +14,7 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     var formData = $(event.currentTarget).find('input').val();
 
     var foundUsers = new Spacebook.Collections.Users();
-    if (formData.length === 1) {
+    if (formData.length === 0) {
       foundUsers.fetch();
     } else {
       foundUsers.fetch({ data: { query: formData } });
