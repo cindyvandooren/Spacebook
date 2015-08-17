@@ -11,12 +11,12 @@ User.create!(
   username: "Robot_Octopussy",
   password: "password",
   birthday: Time.now - 27.years - 3.months - 11.days,
-  interests: "Space Cookies, Hide and Seek, Sunglassess,
+  interests: "Space cookies, hide and seek, sunglassess,
               Men in Black, The Astronauts Wive, Radiohead, Blof",
   home_planet: "Earth",
   planet_of_birth: "Venus",
-  profile_img_id: "image/upload/v1439592903/alien_voor_Cindy_x8vmdf.jpg",
-  background_img_id: "image/upload/v1439593323/Achtergrondplaatje_voor_Cindy_def_a7cdw7.jpg"
+  profile_img_id: "image/upload/vrgrnfvl5utebidrpj4x",
+  background_img_id: "image/upload/fngtjl6eiit6tsqwt8g5"
 )
 
 Post.create!(
@@ -29,11 +29,11 @@ User.create!(
   username: "Vicci_Carillium",
   password: "password",
   birthday: Time.now + 500.years,
-  interests: "Food, Being Cute, Cuddling, Hugging",
+  interests: "Food, being cute, cuddling, hugging",
   home_planet: "Earth",
   planet_of_birth: "Raxacoricofallapatorius",
-  profile_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439609314/alien2_d4aune.jpg",
-  background_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439609201/alienlandscape3_qinqgw.jpg"
+  profile_img_id: "image/upload/gi00dhssruvsb5qaskgv",
+  background_img_id: "image/upload/gponnoiujrbe525fmyy6"
 )
 
 Post.create!(
@@ -58,11 +58,11 @@ User.create!(
   username: "ET",
   password: "password",
   birthday: Time.now - 35.years - 7.months - 23.days,
-  interests: "Flying, Riding Bicycles, Travelling to Other Galaxies",
+  interests: "Flying, riding bicycles, travelling to other galaxies",
   home_planet: "Brodo Asogi",
   planet_of_birth: "Brodo Asogi",
-  profile_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439609871/ET_profile_h73jkc.jpg",
-  background_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439609905/ET_smwro0.jpg"
+  profile_img_id: "image/upload/hdpljcvpy2eueusodnvi",
+  background_img_id: "image/upload/ulaum0gwbbqqqdw1kjrv"
 )
 
 Post.create!(
@@ -75,9 +75,11 @@ User.create!(
   username: "Wall-e",
   password: "password",
   birthday: Time.now + 745.years + 3.months + 1.day,
-  interests: "Eve e, Collecting Garbage, Looking at the Stars",
-  profile_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439610103/walle_profile_exwgef.jpg",
-  background_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439610212/eve_e_background_obuoj5.png"
+  interests: "Eve e, collecting garbage, looking at the stars",
+  home_planet: "Earth",
+  planet_of_birth: "Axiom",
+  profile_img_id: "image/upload/kjdxtqniuooobbajfobu",
+  background_img_id: "image/upload/v1439783452/btvjwnra0e27dskw8gmb.png"
 )
 
 Post.create!(
@@ -102,9 +104,11 @@ User.create!(
   username: "Eve-e",
   password: "password",
   birthday: Time.now + 780.years + 2.months + 7.days,
-  interests: "Love, White, Stargazing",
-  profile_img_id: "http://res.cloudinary.com/dpoog0ebg/image/upload/v1439610526/eve_e_profile_xpo8fl.jpg",
-  background_img_id: "https://cloudinary.com/console/media_library#/dialog/image/upload/eve_e_background_b5lhnc"
+  home_planet: "Earth",
+  planet_of_birth: "Axiom",
+  interests: "Love, white, stargazing",
+  profile_img_id: "image/upload/rpvtpb4xjptrg2zyzo0g",
+  background_img_id: "image/upload/v1439783452/btvjwnra0e27dskw8gmb.png"
 )
 
 Post.create!(
@@ -118,3 +122,67 @@ Post.create!(
   timeline_id: 5,
   body: "Wall-e is my favorite Spacebook friend!"
 )
+
+User.create!(
+  username: "Neytiri",
+  password: "password",
+  birthday: Time.now - 27.years - 6.months - 2.days,
+  home_planet: "Pandora",
+  planet_of_birth: "Pandora",
+  interests: "Fighting viperwolves, visiting the tree of voices, flying, swinging ropes",
+  profile_img_id: "image/upload/ylpr6zzyq7e3doqljt7f",
+  background_img_id: "image/upload/gd0nfztluirdqslxjg7t"
+)
+
+User.create!(
+  username: "Jake",
+  password: "password",
+  birthday: Time.now - 30.years - 2.months - 7.days,
+  home_planet: "Pandora",
+  planet_of_birth: "Earth",
+  interests: "Visiting the tree of voices, wandering through the forest, spending time with Neytiri",
+  profile_img_id: "image/upload/lho2tjxpdpcnktssiydy",
+  background_img_id: "image/upload/enhjbh1hzllzgglwxuqj"
+)
+
+Post.create!(
+  author_id: 8,
+  timeline_id: 7,
+  body: "I see you!"
+)
+
+Post.create!(
+  author_id: 8,
+  timeline_id: 8,
+  body: "I grew up hearing about Pandora. I never figured I'd be going there."
+)
+
+User.create!(
+  username: "Dr. Grace",
+  password: "password",
+  birthday: Time.now - 47.years - 8.months - 9.days,
+  home_planet: "Earth",
+  planet_of_birth: "Earth",
+  interests: "Research, coaching, visiting Pandora, reading, knitting",
+  profile_img_id: "image/upload/xkmeplqxhbr0irgw2gl6",
+  background_img_id: "image/upload/v3ep2tol2qkw67dm4a7w"
+)
+
+Post.create!(
+  author_id: 9,
+  timeline_id: 8,
+  body: "Is the avatar safe?"
+)
+
+Post.create!(
+  author_id: 8,
+  timeline_id: 9,
+  body: "The avatar is safe. You won't believe where I am."
+)
+
+Friendship.create!(own_id: 4, friend_id: 5)
+Friendship.create!(own_id: 5, friend_id: 4)
+Friendship.create!(own_id: 9, friend_id: 8)
+Friendship.create!(own_id: 8, friend_id: 9)
+Friendship.create!(own_id: 9, friend_id: 7)
+Friendship.create!(own_id: 7, friend_id: 9)
