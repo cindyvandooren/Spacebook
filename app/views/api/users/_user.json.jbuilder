@@ -10,3 +10,6 @@ json.extract!(user, :id,
                     :thumbnail_img_url,
                     :tiny_thumbnail_img_url
               )
+
+json.is_a_friend current_user.friends.include?(user.id)
+json.invited current_user.received_invitations.include?(user.id) || current_user.sent_invitations.include?(user.id)

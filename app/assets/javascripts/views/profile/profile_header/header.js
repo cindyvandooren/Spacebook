@@ -22,10 +22,18 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
   },
 
   addHeaderInfoView: function () {
-    if (this.model.get('id') == Spacebook.CURRENT_USER_ID) {
-      var subview = new Spacebook.Views.HeaderInfo({ model: this.model });
-      this.addSubview(".profile-header-info", subview);
+    var subview;
+
+    if (this.model.get("id") == Spacebook.CURRENT_USER_ID) {
+      subview = new Spacebook.Views.HeaderInfo({ model: this.model });
+    } else if (this.model.get("is_a_friend")) {
+      subview = new Spacebook.Views.HeaderUnFriender({ model: this.model });
+    } else if (this.model.get("invited")) {
+      subview = new Spacebook.Views.HeaderWaitingResponse({ model: this.model });
+    } else {
+      subview = new Spacebook.Views.HeaderFriender({ model: this.model });
     }
+    this.addSubview(".profile-header-info", subview);
   },
 
   addHeaderPictureView: function () {

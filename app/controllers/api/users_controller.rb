@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  before_action :require_signed_in, except: [:index]
+  before_action :require_signed_in
   before_action :require_own_profile, only: [:update]
 
   def index
