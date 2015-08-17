@@ -4,7 +4,9 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   className: "profile-timeline",
 
   initialize: function (options) {
-    this.listenTo(this.collection, "add remove", this.render);
+    this.user = options.user;
+    this.listenTo(this.collection, "add remove sync", this.render);
+    this.listenTo(this.user, "change:[profile_img_url]", this.fetchPosts);
     this.userId = options.userId;
     this.userName = options.userName;
     this.addPostsIndexView();
@@ -16,6 +18,14 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
+  },
+
+  fetchPosts: function () {
+    debugger;
+    this.collection.fetch({
+      data: { id: this.user.id, profile: true }
+    });
+    this.render();
   },
 
   addPostsIndexView: function () {
