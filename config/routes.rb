@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "static_pages#root"
   get "landing" => "static_pages#landing", as: "landing"
+  get "session/guest_signin" => "sessions#guest_signin", as: "guest_signin"
 
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
