@@ -42,6 +42,11 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
       model: newPost,
       userId: this.userId
     });
-    this.addSubview(".create-post", subview);
+
+    if (this.user.get("id") === Spacebook.CURRENT_USER_ID) {
+      this.addSubview(".create-post", subview);
+    } else if (this.user.get("is_a_friend")) {
+      this.addSubview(".create-post", subview);
+    }
   }
 });
