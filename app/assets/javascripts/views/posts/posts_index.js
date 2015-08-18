@@ -4,7 +4,7 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.user = options.user;
     this.userName = options.userName;
-    this.listenTo(this.user, "change:profile_img_id", this.refetchPosts);
+    this.listenTo(this.user, "change:profile_img_url", this.refetchPosts);
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addPostsIndexItemView);
     this.listenTo(this.collection, "remove", this.removePostsIndexItemView);

@@ -43,8 +43,33 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
   },
 
   becomeFriends: function (event) {
+    var that = this;
     event.preventDefault();
-    debugger;
-    //Make two new Friends models and save them
+
+    var friend = new Spacebook.Models.Friend();
+    friend.save({
+      own_id: Spacebook.CURRENT_USER_ID,
+      friend_id: this.userId },
+      {
+        success: function () {
+          that.collection.add(friend);
+      }
+    });
+
+    var otherFriend = new Spacebook.Models.Friend();
+    otherFriend.save({
+      own_id: this.userId,
+      friend_id: Spacebook.CURRENT_USER_ID },
+      {
+        success: function () {
+          that.collection.add(friend);
+      }
+    });
+
+    this.model.destroy({
+      success: function () {
+        that.collection.remove(that.model);
+      }
+    });
   }
 });

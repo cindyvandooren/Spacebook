@@ -33,6 +33,6 @@ class Api::FriendshipsController < ApplicationController
 
   private
   def friendship_params
-    params.require(:friendships).permit(:friend_id, :own_id)
+    params.require(:friendship).permit(:friend_id, :own_id)
   end
 end

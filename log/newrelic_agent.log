@@ -785,3 +785,5 @@ Migrations are pending. To resolve this issue, run:
 [08/16/15 21:44:14 -0700 Cindys-MacBook-Pro.local (36597)] INFO : Doing deferred dependency-detection before Rack startup
 [08/16/15 21:44:22 -0700 Cindys-MacBook-Pro.local (36597)] ERROR : Invalid license key, please contact support@newrelic.com
 [08/16/15 21:44:22 -0700 Cindys-MacBook-Pro.local (36597)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/17/15 15:59:58 -0700 Cindys-MacBook-Pro.local (36597)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: friendships
+[08/17/15 15:59:58 -0700 Cindys-MacBook-Pro.local (36597)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: friendships

@@ -8,9 +8,9 @@ class Api::PostsController < ApplicationController
 
     if params[:profile]
       @posts = User.find(params[:id]).timeline_posts.includes(:author)
+    elsif params[:feed]
+      @posts = User.find(params[:id])
     else
-      # TODO: Eventually the feed posts should go here, but I don't
-      # have a feed page yet.
       @posts = Post.all
     end
   end

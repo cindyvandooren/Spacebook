@@ -23,6 +23,7 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
   },
 
   addHeaderInfoView: function () {
+    this.removeHeaderInfoView();
     var subview;
 
     if (this.model.get("id") == Spacebook.CURRENT_USER_ID) {
@@ -38,6 +39,14 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
        });
     }
     this.addSubview(".profile-header-info", subview);
+  },
+
+  removeHeaderInfoView: function () {
+    var view = this;
+    if (view.subviews(".profile-header-info").length > 0) {
+      var firstView = this.subviews(".profile-header-info").first();
+      view.removeSubview(".profile-header-info", firstView);
+    }
   },
 
   addHeaderPictureView: function () {
