@@ -19,6 +19,14 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
     return this;
   },
 
+  fetchPosts: function () {
+    debugger;
+    this.collection.fetch({
+      data: { id: this.user.id, profile: true }
+    });
+    this.render();
+  },
+
   addPostsIndexView: function () {
     var subview = new Spacebook.Views.PostsIndex({
       collection: this.collection,
