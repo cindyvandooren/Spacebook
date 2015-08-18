@@ -8,7 +8,6 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync change", this.render);
     this.addHeaderPictureView();
     this.addHeaderNameView();
-    this.addHeaderInfoView();
   },
 
   render: function () {
@@ -18,6 +17,7 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
       "background-image": "url(" + this.model.escape("background_img_url") + ")",
       "background-size": "851px 273px"
     });
+    this.onRender();
     this.attachSubviews();
     return this;
   },
@@ -41,10 +41,14 @@ Spacebook.Views.ProfileHeader = Backbone.CompositeView.extend({
     this.addSubview(".profile-header-info", subview);
   },
 
+  onRender: function () {
+    this.addHeaderInfoView();
+  },
+
   removeHeaderInfoView: function () {
     var view = this;
-    if (view.subviews(".profile-header-info").length > 0) {
-      var firstView = this.subviews(".profile-header-info").first();
+    var firstView = this.subviews(".profile-header-info").first();
+    if (firstView) {
       view.removeSubview(".profile-header-info", firstView);
     }
   },

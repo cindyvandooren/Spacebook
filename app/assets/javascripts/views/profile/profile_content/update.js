@@ -43,7 +43,6 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
 
   updatePicture: function (event) {
     event.preventDefault();
-    debugger;
 
     var clickedClass = $(event.currentTarget).attr('class');
     var image_type = "";
