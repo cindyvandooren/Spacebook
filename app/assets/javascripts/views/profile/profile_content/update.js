@@ -43,6 +43,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
 
   updatePicture: function (event) {
     event.preventDefault();
+    debugger;
 
     var clickedClass = $(event.currentTarget).attr('class');
     var image_type = "";
@@ -52,6 +53,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
       image_type = "background_img_id";
     }
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
+      var that = this;
       if (error) {
         alert("Your picture was not saved. Please try again!");
       } else {
@@ -59,10 +61,10 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         var uploaded_picture_id = data.url.substring(36);
         var options = {};
         options[image_type] = uploaded_picture_id;
-        this.model.set(options);
-        this.model.save({}, {
-          error: function () {
-            alert("Your picture was not saved. Please try again!");
+        that.model.set(options);
+        that.model.save({}, {
+          success: function () {
+            that.model.fetch();
           }
         });
       }

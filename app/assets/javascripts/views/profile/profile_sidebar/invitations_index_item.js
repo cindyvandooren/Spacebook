@@ -44,6 +44,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   becomeFriends: function (event) {
     var that = this;
+    debugger;
     event.preventDefault();
 
     var friend = new Spacebook.Models.Friend();
@@ -66,10 +67,10 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
       }
     });
 
-    this.model.destroy({
-      success: function () {
-        that.collection.remove(that.model);
-      }
-    });
+    // this.model.destroy({
+    //   success: function () {
+    //     that.collection.remove(that.model);
+    //   }
+    // });
   }
 });

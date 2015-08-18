@@ -8,6 +8,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.invitations = options.invitations;
     this.timelinePosts = new Spacebook.Collections.Posts();
     this.listenTo(this.model, "sync change", this.render);
+    this.listenTo(this.model, "sync change", this.changeToTimeline);
     this.addProfileSideBarView();
     this.addProfileHeaderView();
     this.addProfileTimelineView();
@@ -79,8 +80,13 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   },
 
   changeToTimeline: function (event) {
+    var that = this;
     this.timelinePosts.fetch({
       data: { id: this.model.id, profile: true }
+    }, {
+      success: function () {
+        that.render();
+      }
     });
     this.changeProfileContentViews(event);
     var timelineView = new Spacebook.Views.ProfileTimeline({
