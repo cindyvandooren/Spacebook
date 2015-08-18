@@ -1,0 +1,2 @@
+<a href="/#/profiles/<%= friend.friend_details().escape('id') %>"><img src="<%= friend.friend_details().escape('thumbnail_img_url') %>"/></a>
+<a href="/#/profiles/<%= friend.friend_details().escape('id') %>"><%= friend.friend_details().escape('username') %></a><p>Friends since <%= friend.escape('created_at') %> ago</p>

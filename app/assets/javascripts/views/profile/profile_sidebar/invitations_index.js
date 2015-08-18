@@ -10,6 +10,7 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    debugger;
     var renderedContent = this.template({
       invitation: this.model,
       userId: this.userId
