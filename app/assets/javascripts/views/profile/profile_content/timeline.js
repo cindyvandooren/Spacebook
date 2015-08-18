@@ -20,7 +20,6 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   },
 
   fetchPosts: function () {
-    debugger;
     this.collection.fetch({
       data: { id: this.user.id, profile: true }
     });
