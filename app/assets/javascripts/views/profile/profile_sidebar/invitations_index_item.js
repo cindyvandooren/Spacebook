@@ -63,7 +63,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
           that.friends.add(friend);
       }
     });
-    
+
     this.model.destroy({
       success: function () {
         that.collection.remove(that.model);

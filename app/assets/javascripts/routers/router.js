@@ -16,7 +16,7 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     if (!id) {
       id = Spacebook.CURRENT_USER_ID;
     }
-
+    
     this.friends.fetch({ data: { id: id } });
     this.invitations.fetch({
       data: { id: id }

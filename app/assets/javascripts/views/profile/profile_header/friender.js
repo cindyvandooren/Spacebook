@@ -22,7 +22,7 @@ Spacebook.Views.HeaderFriender = Backbone.View.extend({
     var newInvitation = new Spacebook.Models.Invitation();
     newInvitation.save({
       inviter_id: Spacebook.CURRENT_USER_ID,
-      invitee_id: this.model.id
+      invitee_id: that.model.id
     }, {
       success: function () {
         that.invitations.add(newInvitation);
