@@ -3,6 +3,7 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.userId = options.userId;
+    this.friends = options.friends;
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addInvitationsIndexItemView);
     this.listenTo(this.collection, "remove", this.removeInvitationsIndexItemView);
@@ -10,7 +11,6 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    debugger;
     var renderedContent = this.template({
       invitation: this.model,
       userId: this.userId
@@ -24,7 +24,8 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
     var subview = new Spacebook.Views.InvitationsIndexItem({
       model: invitation,
       collection: this.collection,
-      userId: this.userId
+      userId: this.userId,
+      friends: this.friends
     });
     this.addSubview(".invitations-list", subview);
   },

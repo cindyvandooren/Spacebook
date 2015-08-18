@@ -44,16 +44,14 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   becomeFriends: function (event) {
     var that = this;
-    debugger;
     event.preventDefault();
 
     var friend = new Spacebook.Models.Friend();
     friend.save({
       own_id: Spacebook.CURRENT_USER_ID,
       friend_id: this.userId },
-      {
-        success: function () {
-          that.collection.add(friend);
+      { success: function () {
+            that.friends.add(friend);
       }
     });
 
@@ -61,16 +59,20 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
     otherFriend.save({
       own_id: this.userId,
       friend_id: Spacebook.CURRENT_USER_ID },
-      {
-        success: function () {
-          that.collection.add(friend);
+      { success: function () {
+          that.friends.add(friend);
       }
     });
+    
+    this.model.destroy({
+      success: function () {
+        that.collection.remove(that.model);
+      },
 
-    // this.model.destroy({
-    //   success: function () {
-    //     that.collection.remove(that.model);
-    //   }
-    // });
+      //TODO: Make this a helpful message for the user.
+      error: function () {
+        console.log("Something went wrong!");
+      }
+    });
   }
 });

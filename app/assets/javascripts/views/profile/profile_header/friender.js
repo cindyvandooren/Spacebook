@@ -19,7 +19,6 @@ Spacebook.Views.HeaderFriender = Backbone.View.extend({
   sendFriendInvitation: function () {
     var that = this;
     event.preventDefault();
-    debugger;
     var newInvitation = new Spacebook.Models.Invitation();
     newInvitation.save({
       inviter_id: Spacebook.CURRENT_USER_ID,
