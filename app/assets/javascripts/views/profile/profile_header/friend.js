@@ -1,7 +1,7 @@
-Spacebook.Views.HeaderUnFriender = Backbone.View.extend({
-  template: JST["profile/profile_header/unfriender"],
+Spacebook.Views.HeaderFriend = Backbone.View.extend({
+  template: JST["profile/profile_header/friend"],
 
-  initialize: function () {
+  initialize: function (options) {
     this.listenTo(this.model, "sync change", this.render);
   },
 

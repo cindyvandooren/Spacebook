@@ -40,7 +40,8 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   addProfileHeaderView: function () {
     var subview = new Spacebook.Views.ProfileHeader({
       model: this.model,
-      invitations: this.invitations
+      invitations: this.invitations,
+      friends: this.friends
     });
     this.addSubview(".profile-header", subview);
   },
