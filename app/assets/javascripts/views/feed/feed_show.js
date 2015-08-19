@@ -4,7 +4,8 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
   className: "feed-main",
 
   initialize: function (options) {
-    this.friends = options.friends;
+    debugger;
+    this.user = options.user;
     this.invitations = options.invitations;
     this.listenTo(this.model, "sync change", this.render);
     this.addFeedSideBarView();
@@ -12,7 +13,7 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({ user: this.model });
+    var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
@@ -20,16 +21,14 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
 
   addFeedSideBarView: function () {
     var subview = new Spacebook.Views.FeedSideBar({
-      model: this.model,
-      friends: this.friends,
-      invitations: this.invitations,
+      user: this.user
     });
     this.addSubview(".feed-sidebar", subview);
   },
 
   addFeedContentView: function () {
     var subview = new Spacebook.Views.FeedContent({
-      model: this.model
+      user: this.user
     });
     this.addSubview(".feed-content", subview);
   }

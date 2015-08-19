@@ -4,7 +4,9 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   className: "profile-main-box",
 
   initialize: function (options) {
-    this.friends = options.friends;
+    // TODO: Refactor later, so that everywhere this.user gets used.
+    this.user = options.user;
+    this.model = options.user;
     this.invitations = options.invitations;
     this.timelinePosts = new Spacebook.Collections.Posts();
     this.listenTo(this.model, "sync change", this.render);
@@ -45,8 +47,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
 
   addProfileSideBarView: function () {
     var subview = new Spacebook.Views.ProfileSideBar({
-      model: this.model,
-      friends: this.friends,
+      user: this.model,
       invitations: this.invitations,
     });
     this.addSubview(".profile-sidebar", subview);
@@ -117,9 +118,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
   changeToFriends: function (event) {
     this.changeProfileContentViews(event);
     var friendsView = new Spacebook.Views.ProfileFriends({
-      model: this.model,
-      userId: this.model.id,
-      friends: this.friends
+      user: this.model
     });
     this.addSubview(".profile-content", friendsView);
   },

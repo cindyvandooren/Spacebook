@@ -25,7 +25,7 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
     var subview = new Spacebook.Views.NotificationsIndexItem({
       model: notification
     });
-    this.addSubview(".notifications-index-item", subview);
+    this.addSubview(".notifications-index-item", subview, true);
   },
 
   closeModalView: function (event) {

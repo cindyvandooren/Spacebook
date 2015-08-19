@@ -51,6 +51,7 @@ class User < ActiveRecord::Base
            primary_key: :id,
            foreign_key: :own_id
 
+  has_many :new_friends, through: :friends, source: :friend
   has_many :notifications
 
   def self.find_by_credentials(username, password)

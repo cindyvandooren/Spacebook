@@ -11,11 +11,18 @@ json.extract!(user, :id,
                     :tiny_thumbnail_img_url
               )
 
-json.is_a_friend current_user.friends.pluck(:friend_id).include?(user.id)
+# json.is_a_friend current_user.friends.pluck(:friend_id).include?(user.id)
+json.is_a_friend current_user.new_friends.include?(user.id)
 json.is_invited current_user.sent_invitations.pluck(:invitee_id).include?(user.id) || current_user.received_invitations.pluck(:inviter_id).include?(user.id)
 
 json.notifications do
   json.array!(user.show_notifications) do |notification|
     json.partial!("api/notifications/notification", notification: notification)
+  end
+end
+
+json.friends do
+  json.array!(user.new_friends) do |friend|
+    json.partial!("api/users/limited_info", user: friend)
   end
 end

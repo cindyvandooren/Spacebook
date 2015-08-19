@@ -3,8 +3,8 @@ Spacebook.Views.FeedContent = Backbone.CompositeView.extend({
 
   className: "feed-content",
 
-  initialize: function () {
-    this.user = this.model;
+  initialize: function (options) {
+    this.user = options.user;
     this.collection = new Spacebook.Collections.Posts();
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.model, "sync change", this.render);

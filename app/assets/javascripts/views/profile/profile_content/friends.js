@@ -2,8 +2,7 @@ Spacebook.Views.ProfileFriends = Backbone.CompositeView.extend({
   template: JST["profile/profile_content/friends"],
 
   initialize: function (options) {
-    this.userId = options.userId;
-    this.friends = options.friends;
+    this.user = options.user;
     this.addFriendsIndexView();
   },
 
@@ -16,9 +15,7 @@ Spacebook.Views.ProfileFriends = Backbone.CompositeView.extend({
 
   addFriendsIndexView: function () {
     var subview = new Spacebook.Views.FriendsIndex({
-      collection: this.friends,
-      userId: this.userId,
-      itemTemplate: JST["profile/profile_content/friends_index_item"]
+      user: this.user
     });
     this.addSubview(".profile-content-friends-list", subview);
   }
