@@ -40,6 +40,10 @@ ul.friends-list {
   padding-left: 15px;
 }
 
+.friends-list > li:first-child {
+  padding-top: 0px;
+}
+
 .friends-list > li {
   padding-top: 10px;
 }
