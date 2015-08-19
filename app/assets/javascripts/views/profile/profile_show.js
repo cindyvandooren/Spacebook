@@ -9,7 +9,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     this.timelinePosts = new Spacebook.Collections.Posts();
     this.listenTo(this.model, "sync change", this.render);
     this.listenTo(this.model, "sync change", this.changeToTimeline);
-    this.listenTo(this.invitations, "add remove", this.tryOut);
+    this.listenTo(this.invitations, "add remove", this.syncProfile);
     this.addProfileSideBarView();
     this.addProfileHeaderView();
     this.addProfileTimelineView();
@@ -22,7 +22,7 @@ Spacebook.Views.ProfileShow = Backbone.CompositeView.extend({
     "click .update-info" : "changeToUpdate"
   },
 
-  tryOut: function () {
+  syncProfile: function () {
     this.model.fetch();
     this.removeHeaderView();
     this.addProfileHeaderView();
