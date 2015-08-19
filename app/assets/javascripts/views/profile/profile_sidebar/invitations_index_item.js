@@ -44,12 +44,13 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   becomeFriends: function (event) {
     var that = this;
+    var inviterId = this.model.get('inviter_id');
     event.preventDefault();
 
     var friend = new Spacebook.Models.Friend();
     friend.save({
       own_id: Spacebook.CURRENT_USER_ID,
-      friend_id: this.userId },
+      friend_id: inviterId },
       { success: function () {
             that.friends.add(friend);
       }
@@ -57,10 +58,10 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
     var otherFriend = new Spacebook.Models.Friend();
     otherFriend.save({
-      own_id: this.userId,
+      own_id: inviterId,
       friend_id: Spacebook.CURRENT_USER_ID },
       { success: function () {
-          that.friends.add(friend);
+          that.friends.add(otherFriend);
       }
     });
 
