@@ -26,7 +26,8 @@ Spacebook.Views.FeedSideBar = Backbone.CompositeView.extend({
   addFriendsIndexView: function () {
     var subview = new Spacebook.Views.FriendsIndex({
       collection: this.friends,
-      userId: this.model.id
+      userId: this.model.id,
+      itemTemplate: JST["profile/profile_sidebar/friends_index_item"]
     });
     this.addSubview(".friends", subview);
   }
