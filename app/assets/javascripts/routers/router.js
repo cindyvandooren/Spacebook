@@ -1,7 +1,7 @@
 Spacebook.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = $("#content");
-    this.collection = options.collection;
+    this.users = options.collection;
     this.friends = new Spacebook.Collections.Friends();
     this.invitations = new Spacebook.Collections.Invitations();
   },
@@ -16,16 +16,16 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     if (!id) {
       id = Spacebook.CURRENT_USER_ID;
     }
-    
+
     this.friends.fetch({ data: { id: id } });
     this.invitations.fetch({
       data: { id: id }
     });
 
-    var user = this.collection.getOrFetch(id);
+    var user = this.users.getOrFetch(id);
     var showProfileView = new Spacebook.Views.ProfileShow({
       model: user,
-      collection: this.collection,
+      collection: this.users,
       friends: this.friends,
       invitations: this.invitations,
     });
@@ -38,10 +38,10 @@ Spacebook.Routers.Router = Backbone.Router.extend({
       data: { id: id }
     });
 
-    var user = this.collection.getOrFetch(id);
+    var user = this.users.getOrFetch(id);
     var showFeedView = new Spacebook.Views.FeedShow({
       model: user,
-      collection: this.collection,
+      collection: this.users,
       friends: this.friends,
       invitations: this.invitations,
     });
