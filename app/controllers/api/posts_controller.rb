@@ -11,7 +11,7 @@ class Api::PostsController < ApplicationController
                    .timeline_posts
                    .includes(:author, :receiver)
     elsif params[:feed]
-      friends = current_user.friends.pluck(:id)
+      friends = current_user.friends.pluck(:friend_id)
       @posts = Post.where(author_id: friends)
                    .includes(:author, :receiver)
     else
