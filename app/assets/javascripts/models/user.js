@@ -3,7 +3,7 @@ Spacebook.Models.User = Backbone.Model.extend({
 
   notifications: function () {
     if (!this._notifications) {
-      this._notifications = new Spacebook.Models.Notification();
+      this._notifications = new Spacebook.Collections.Notifications();
     }
     return this._notifications;
   },
@@ -13,7 +13,7 @@ Spacebook.Models.User = Backbone.Model.extend({
       this.notifications().set(response.notifications);
       delete response.notifications;
     }
-    
+
     return response;
   }
 });

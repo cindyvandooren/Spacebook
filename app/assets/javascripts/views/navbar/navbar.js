@@ -2,7 +2,8 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   template: JST["navbar/navbar"],
 
   events: {
-    'submit .navbar-form': 'searchUsers'
+    'submit .navbar-form': 'searchUsers',
+    "click .notification-button" : "showNotifications"
   },
 
   initialize: function () {
@@ -31,5 +32,13 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     $('body').append(modal.render().$el);
 
     $(event.currentTarget).find('input').val("");
+  },
+
+  showNotifications: function () {
+    var notesModal = new Spacebook.Views.NotificationsIndex({
+      collection: this.model.notifications()
+    });
+
+    $("body").append(notesModal.render().$el);
   }
 });

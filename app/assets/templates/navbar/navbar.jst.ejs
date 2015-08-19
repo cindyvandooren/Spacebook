@@ -28,7 +28,7 @@
           <a href="#/profiles/<%= user.escape('id') %>" class="username-link"><%= user.escape('username') %></a>
       </li>
       <li><a href="#/feeds/<%= user.escape('id') %>">Feed</a></li>
-      <li><a href="#">Notifications</a></li>
+      <li><a href="javascript:void(0)" class="notification-button">Notifications</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <form action="/session" method="post" class="logout-form">

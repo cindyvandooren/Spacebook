@@ -25,7 +25,6 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   },
 
   addSearchResultItemView: function (result) {
-    this.collection.getOrFetch(result.id);
     var subview = new Spacebook.Views.SearchResultItem({
       model: result,
       collection: this.collection
