@@ -24,8 +24,9 @@ Spacebook.Views.FeedContent = Backbone.CompositeView.extend({
     var subview = new Spacebook.Views.PostForm({
       collection: this.collection,
       model: newPost,
-      user: this.user
+      userId: this.user.id
     });
+    this.addSubview(".create-feed-post", subview);
   },
 
   addPostsIndexView: function () {

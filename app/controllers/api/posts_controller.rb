@@ -3,12 +3,8 @@ class Api::PostsController < ApplicationController
   before_action :require_own_post, only: [:update, :destroy]
 
   def index
-    # TODO: Does this need to be changed? Right now everyone can access
-    # the index of all posts via the api.
-
     if params[:profile]
-      @posts = User.find(params[:id])
-                   .timeline_posts
+      @posts = Post.where(timeline_id: params[:id])
                    .includes(:author, :receiver)
     elsif params[:feed]
       friends = current_user.friends.pluck(:friend_id)
@@ -20,8 +16,6 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    # TODO: Not in use yet. Will probably use this with notifications.
-    # Think about use of includes in this case.
     @post = Post.find(params[:id])
   end
 

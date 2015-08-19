@@ -973,3 +973,33 @@ Migrations are pending. To resolve this issue, run:
 [08/18/15 20:16:28 -0700 Cindys-MacBook-Pro.local (76682)] INFO : Doing deferred dependency-detection before Rack startup
 [08/18/15 20:16:34 -0700 Cindys-MacBook-Pro.local (76682)] ERROR : Invalid license key, please contact support@newrelic.com
 [08/18/15 20:16:34 -0700 Cindys-MacBook-Pro.local (76682)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4ecb58c48>
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4ea0b38d0>
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e35e0260>
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e7694630>
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e6b77cc0>
+[08/19/15 08:16:18 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e7395f60>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4eabd91d8>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e7763d90>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e6cbf3f8>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e1e920e0>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e1e003c0>
+[08/19/15 08:16:22 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `includes' for #<User:0x007fa4e6849210>
+[08/19/15 08:16:37 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^
+[08/19/15 08:16:38 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^
+[08/19/15 08:16:38 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^
+[08/19/15 08:16:38 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^
+[08/19/15 08:16:38 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^
+[08/19/15 08:16:38 -0700 Cindys-MacBook-Pro.local (76682)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: /Users/Cindy/Desktop/Spacebook/app/controllers/api/posts_controller.rb:11: syntax error, unexpected '.', expecting '('
+                   .timeline_posts
+                    ^

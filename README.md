@@ -23,9 +23,9 @@ Spacebook is a clone of Facebook built on Rails and Backbone. Users can:
 - [x] Edit posts
 - [x] View posts
 - [x] Search and find other users
-- [ ] Send friendship invitations
-- [ ] Accept friendship invitations
-- [ ] Show friends on page
+- [x] Send friendship invitations
+- [x] Accept friendship invitations
+- [x] Show friends on page
 - [ ] Have a feed page
 - [ ] Get notified of new changes
 
@@ -61,12 +61,12 @@ In this phase I will add API routes to serve friend requests (invitation) and fr
 [Details][phase-four]
 
 ### Phase 5: Feed Page (~1 days)
-In this phase I will add a Feed button to the navbar. This button will be used to navigate to the Feed. The Feed will have a sidebar and a content field. In the content field all the posts of a user and his friends will be displayed. The sidebar will display the users friends and pending friend invitations. By the end of this phase. The user will be able to view all posts of friends and use the sidebar to accept/decline friendrequests and visit friends' profiles.
+In this phase I will add a Feed button to the navbar. This button will be used to navigate to the Feed. The Feed will have a sidebar and a content field. In the content field all the posts of a user and his friends will be displayed. The sidebar will display the users friends and pending friend invitations. By the end of this phase. The user will be able to view all posts of friends and use the sidebar to accept/decline friend requests and visit friends' profiles.
 
 [Details][phase-five]
 
 ### Phase 6: Notifications (~2 days)
-In this phase I will set up a polymorphic association for the notifications. Users will get notifications about posts (and later also about comments). I will provide the API routes to the notifications and design the frontend as well. By the end of this phase the user will be able to receive notifications about his friends' activities.
+In this phase I will set up a polymorphic association for the notifications. Users will get notifications about posts (and later also about comments). I will provide the API routes to the notifications and design the front end as well. By the end of this phase the user will be able to receive notifications about his friends' activities.
 
 [Details][phase-six]
 
