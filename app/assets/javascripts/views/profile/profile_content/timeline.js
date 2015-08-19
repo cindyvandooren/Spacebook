@@ -5,7 +5,7 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.listenTo(this.user, "sync", this.fetchPosts);
+    this.listenTo(this.user, "change", this.fetchPosts);
     this.listenTo(this.collection, "add remove sync", this.render);
     this.userId = options.userId;
     this.userName = options.userName;

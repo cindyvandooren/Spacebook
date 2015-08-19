@@ -36,7 +36,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
       },
       //TODO Make this a helpful message for the user
       error: function () {
-        console.log("Something went wrong");
+        alert("Something went wrong! Please try again!");
       }
     });
   },

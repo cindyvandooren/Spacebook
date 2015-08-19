@@ -29,7 +29,7 @@ Spacebook.Views.HeaderFriender = Backbone.View.extend({
       },
 
       error: function () {
-        console.log("Something went wrong");
+        alert("Something went wrong! Please try again!");
       }
     });
   }
