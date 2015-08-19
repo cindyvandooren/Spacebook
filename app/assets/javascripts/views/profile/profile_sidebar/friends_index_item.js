@@ -1,5 +1,5 @@
 Spacebook.Views.FriendsIndexItem = Backbone.View.extend({
-  template: JST["profile/profile_sidebar/friends_index_item"],
+  // template: JST["profile/profile_sidebar/friends_index_item"],
   //Change this to pass in the right template when creating the view.
 
   tagName: "li",
@@ -7,8 +7,7 @@ Spacebook.Views.FriendsIndexItem = Backbone.View.extend({
   className: "friends-list-item",
 
   initialize: function (options) {
-    this.sidebar = options.sidebar;
-    // this.template = options.template;
+    this.template = options.itemTemplate;
     // Pass in the right template when creating the view.
     this.listenTo(this.model, "sync", this.render);
   },

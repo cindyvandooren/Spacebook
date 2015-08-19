@@ -2,7 +2,7 @@ Spacebook.Views.FriendsIndex = Backbone.CompositeView.extend({
   template: JST["profile/profile_sidebar/friends_index"],
 
   initialize: function (options) {
-    this.sidebar = options.sidebar;
+    this.itemTemplate = options.itemTemplate;
     this.userId = options.userId;
     this.listenTo(this.collection, "sync", this.render);
     this.listenTo(this.collection, "add", this.addFriendsIndexItemView);
@@ -22,7 +22,7 @@ Spacebook.Views.FriendsIndex = Backbone.CompositeView.extend({
       model: friend,
       collection: this.collection,
       userId: this.userId,
-      sidebar: this.sidebar
+      itemTemplate: this.itemTemplate
     });
     this.addSubview(".friends-list", subview);
   },
