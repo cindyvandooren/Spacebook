@@ -66,7 +66,7 @@ In this phase I will add a Feed button to the navbar. This button will be used t
 [Details][phase-five]
 
 ### Phase 6: Notifications (~2 days)
-In this phase I will set up a polymorphic association for the notifications. Users will get notifications about posts (and later also about comments). I will provide the API routes to the notifications and design the front end as well. By the end of this phase the user will be able to receive notifications about his friends' activities.
+In this phase I will set up notifications. Users will get notifications about posts (and later also about comments). I will provide the API routes to the notifications and design the front end as well. By the end of this phase the user will be able to receive notifications about his friends' activities.
 
 [Details][phase-six]
 

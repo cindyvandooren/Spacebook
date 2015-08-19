@@ -6,10 +6,13 @@ class Api::PostsController < ApplicationController
     if params[:profile]
       @posts = Post.where(timeline_id: params[:id])
                    .includes(:author, :receiver)
+                   .limit(15)
+
     elsif params[:feed]
       friends = current_user.friends.pluck(:friend_id)
       @posts = Post.where(author_id: friends)
                    .includes(:author, :receiver)
+                   .limit(15)
     else
       @posts = Post.all
     end
@@ -24,6 +27,17 @@ class Api::PostsController < ApplicationController
     @post.author_id = current_user.id
 
     if @post.save
+      if @post.timeline_id != current_user.id
+        Notification.create!(
+          user_id: @post.timeline_id,
+          body: "#{current_user.username} posted on your timeline,"
+        )
+
+        Notification.create!(
+          user_id: current_user.id,
+          body: "You posted on #{@post.receiver.username}'s wall"
+        )
+      end
       render :show
     else
       render json: @post.errors.full_messages,

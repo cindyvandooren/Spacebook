@@ -4,12 +4,9 @@
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-type        | string    | not null
-type_id     | integer   | not null, foreign key
 author_id   | integer   | not null, foreign key
-post_id     | integer   | not null, foreign key
+body        | text      | not null
 
-type and type_id reference comments, posts or likes
 
 ## likes
 column name | data type | details

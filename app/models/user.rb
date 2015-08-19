@@ -51,6 +51,8 @@ class User < ActiveRecord::Base
            primary_key: :id,
            foreign_key: :own_id
 
+  has_many :notifications
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
@@ -117,5 +119,9 @@ class User < ActiveRecord::Base
     )
 
     "http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/" + final_tiny_thumbnail_img_id
+  end
+
+  def show_notifications
+    notifications.where('created_at > ?', Time.now - 2.days)
   end
 end
