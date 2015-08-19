@@ -7,7 +7,9 @@ class Api::PostsController < ApplicationController
     # the index of all posts via the api.
 
     if params[:profile]
-      @posts = User.find(params[:id]).timeline_posts.includes(:author)
+      @posts = User.find(params[:id])
+                   .timeline_posts
+                   .includes(:author, :receiver)
     elsif params[:feed]
       friends = current_user.friends.pluck(:id)
       @posts = Post.where(author_id: friends)

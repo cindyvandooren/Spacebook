@@ -2,7 +2,7 @@
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
   <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
 <% } else { %>
-  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.escape('receiver_name') %></a> <%= post.escape('created_at') %> ago</p>
+  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.receiver_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
 <% } %>
 
 <span class="post-header-divider"/>
