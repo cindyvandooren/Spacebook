@@ -11,7 +11,7 @@ Spacebook.Views.InvitationsIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template();
+    var renderedContent = this.template({ invitations: this.invitations });
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

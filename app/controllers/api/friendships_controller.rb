@@ -11,7 +11,7 @@ class Api::FriendshipsController < ApplicationController
     if @friendship.save
       Notification.create!(
         user_id: @friendship.friend_id,
-        body: "#{current_user.username} and you are now friends."
+        body: "You and #{current_user.username} are now friends."
       )
 
       Notification.create!(

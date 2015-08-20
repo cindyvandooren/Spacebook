@@ -3,5 +3,8 @@
 <div class="m-content">
   <button class="close-button">&times;</button>
   <h2>Notifications</h2>
+  <% if (notifications.length < 1) { %>
+    <p>No new notifications.</p>
+  <% } %>
   <div class="notifications-index-item"></div>
 </div>

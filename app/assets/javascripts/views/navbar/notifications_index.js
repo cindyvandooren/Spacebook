@@ -30,18 +30,24 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
 
   closeModalView: function (event) {
     event.preventDefault();
+    this.removeAndEnable();
+  },
+
+  removeAndEnable: function () {
     this.remove();
+    $(".search-form").prop("disabled", false);
     $("body").removeClass("modal-scroll");
   },
 
   handleKey: function (event) {
     if (event.keyCode === 27) {
       $("body").removeClass("modal-scroll");
-      this.remove();
+      this.removeAndEnable();
     }
   },
 
   onRender: function () {
     $("body").addClass("modal-scroll");
+    $(".search-form").prop("disabled",true);
   }
 });

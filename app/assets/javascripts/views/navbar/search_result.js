@@ -13,7 +13,7 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   events: {
     "click .m-background" : "closeModalView",
     "click .close-button" : "closeModalView",
-    "click .search-result-list-item" : "removeAndDisable"
+    "click .search-result-list-item" : "removeAndEnable"
   },
 
   render: function () {
@@ -34,16 +34,16 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
 
   closeModalView: function (event) {
     event.preventDefault();
-    this.removeAndDisable();
+    this.removeAndEnable();
   },
 
   handleKey: function (event) {
     if (event.keyCode === 27) {
-      this.removeAndDisable();
+      this.removeAndEnable();
     }
   },
 
-  removeAndDisable: function () {
+  removeAndEnable: function () {
     this.remove();
     $(".search-form").prop("disabled", false);
     $("body").removeClass("modal-scroll");
