@@ -32,7 +32,6 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
     this.user.save({}, {
       success: function () {
         $(":input").val("");
-        that.collection.add(that.user, { merge: true });
         $(".sidebar-about").click();
       },
       //TODO Make this a helpful message for the user

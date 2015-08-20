@@ -7,7 +7,7 @@ Spacebook.Routers.Router = Backbone.Router.extend({
   routes: {
     "" : "showProfile",
     "profiles/:id" : "showProfile",
-    "feeds/:id" : "showFeed"
+    "feed" : "showFeed"
   },
 
   showProfile: function (id) {
@@ -22,7 +22,8 @@ Spacebook.Routers.Router = Backbone.Router.extend({
     this.swapView(showProfileView);
   },
 
-  showFeed: function (id) {
+  showFeed: function () {
+    var id = Spacebook.CURRENT_USER_ID;
     var user = this.users.getOrFetch(id);
     var showFeedView = new Spacebook.Views.FeedShow({
       user: user

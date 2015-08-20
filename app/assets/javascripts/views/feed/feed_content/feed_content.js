@@ -5,9 +5,9 @@ Spacebook.Views.FeedContent = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.collection = new Spacebook.Collections.Posts();
-    this.listenTo(this.collection, "sync", this.render);
-    this.listenTo(this.model, "sync change", this.render);
+    this.wallPosts = new Spacebook.Collections.Posts();
+    this.listenTo(this.wallPosts, "sync", this.render);
+    this.listenTo(this.user, "sync change", this.render);
     this.addPostFormView();
     this.addPostsIndexView();
   },
@@ -22,20 +22,20 @@ Spacebook.Views.FeedContent = Backbone.CompositeView.extend({
   addPostFormView: function () {
     var newPost = new Spacebook.Models.Post();
     var subview = new Spacebook.Views.PostForm({
-      collection: this.collection,
-      model: newPost,
-      userId: this.user.id
+      posts: this.wallPosts,
+      post: newPost,
+      user: this.user
     });
     this.addSubview(".create-feed-post", subview);
   },
 
   addPostsIndexView: function () {
-    this.collection.fetch({
+    this.wallPosts.fetch({
       data: { feed: true }
     });
 
     var subview = new Spacebook.Views.PostsIndex({
-      collection: this.collection,
+      posts: this.wallPosts,
       user: this.user
     });
     this.addSubview(".feed-posts", subview);

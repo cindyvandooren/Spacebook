@@ -3,6 +3,7 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
 
   initialize: function (options) {
     this.user = options.user;
+    this.invitations = options.user.invitations();
     this.listenTo(this.user, "sync change", this.render);
   },
 
@@ -25,7 +26,7 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
       invitee_id: that.user.id
     }, {
       success: function () {
-        that.user.invitations.add(newInvitation);
+        that.invitations.add(newInvitation);
         that.user.set("is_invited", true);
       },
 

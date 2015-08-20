@@ -10,6 +10,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   },
 
   initialize: function (options) {
+    this.user = options.user;
     this.post = options.post;
     this.posts = options.posts;
     this.listenTo(this.post, "sync change", this.render);
@@ -49,8 +50,9 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   changeToEditPost: function (event) {
     this.changePostItemBodyView(event);
     var editView = new Spacebook.Views.PostForm({
-      model: this.model,
-      collection: this.collection
+      post: this.post,
+      posts: this.posts,
+      user: this.user
     });
     this.addSubview(".post-index-item-body", editView);
   },
@@ -58,7 +60,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   changeToPostsIndexItemBody: function (event) {
     this.changePostItemBodyView(event);
     var subview = new Spacebook.Views.PostsIndexItemBody({
-      model: this.model
+      post: this.post
     });
     this.addSubview(".post-index-item-body", subview);
   },
@@ -69,9 +71,9 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
     var attrs = this.$el.find('form').serializeJSON();
 
-    this.model.save(attrs, {
+    this.post.save(attrs, {
       success: function () {
-        that.collection.add(that.model, {merge: true});
+        that.posts.add(that.post, {merge: true});
         that.changeToPostsIndexItemBody(event);
       },
 
@@ -85,9 +87,9 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   deletePost: function (event) {
     var that = this;
     event.preventDefault();
-    this.model.destroy({
+    this.post.destroy({
       success: function () {
-        that.collection.remove(that.model);
+        that.posts.remove(that.post);
       },
 
       //TODO: Make this a helpful message for the user.

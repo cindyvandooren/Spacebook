@@ -7,14 +7,11 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
     this.user = options.user;
     this.timelinePosts = this.user.timelinePosts();
     this.listenTo(this.user, "sync change", this.render);
-    this.listenTo(this.timelinePosts, "add remove", this.render);
     this.addPostsIndexView();
     this.addPostFormView();
   },
 
   render: function () {
-    // TODO: Still renders a lot of times, once every time a post is added.
-    // Investigate if this really is necessary.
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
@@ -23,7 +20,8 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
 
   addPostsIndexView: function () {
     var subview = new Spacebook.Views.PostsIndex({
-      user: this.user
+      user: this.user,
+      posts: this.timelinePosts
     });
     this.addSubview(".posts", subview);
   },

@@ -39,7 +39,7 @@ Spacebook.Views.PostForm = Backbone.View.extend({
       },
       //TODO: Make this a helpful message for the user
       error: function () {
-        alert("Something went wrong. Please try again!");
+        alert("Please try again! Blank posts are not allowed!");
       }
     });
   }

@@ -3,7 +3,7 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.posts = this.user.timelinePosts();
+    this.posts = options.posts;
     this.listenTo(this.posts, "sync", this.render);
     this.listenTo(this.posts, "add", this.addPostsIndexItemView);
     this.listenTo(this.posts, "remove", this.removePostsIndexItemView);
@@ -19,6 +19,7 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
 
   addPostsIndexItemView: function (post) {
     var subview = new Spacebook.Views.PostsIndexItem({
+      user: this.user,
       post: post,
       posts: this.posts
     });
@@ -26,6 +27,7 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
   },
 
   removePostsIndexItemView: function (post) {
-  this.removeModelSubview('.posts-index', post);
-}
+    debugger;
+    this.removeModelSubview('.posts-index', post);
+  }
 });
