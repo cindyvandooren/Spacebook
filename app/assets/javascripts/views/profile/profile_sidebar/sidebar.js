@@ -5,6 +5,7 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
+    this.listenTo(this.user, "sync", this.render);
     this.addInvitationsIndexView();
     this.addFriendsIndexView();
   },

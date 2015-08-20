@@ -35,7 +35,7 @@ class Api::PostsController < ApplicationController
 
         Notification.create!(
           user_id: current_user.id,
-          body: "You posted on #{@post.receiver.username}'s wall"
+          body: "You posted on #{@post.receiver.username}'s timeline."
         )
       end
       render :show

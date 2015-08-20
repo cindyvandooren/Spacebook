@@ -12,6 +12,7 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    debugger;
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
@@ -27,6 +28,7 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   },
 
   addPostFormView: function () {
+    debugger;
     var newPost = new Spacebook.Models.Post();
     var subview = new Spacebook.Views.PostForm({
       user: this.user,
@@ -36,7 +38,7 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
 
     if (this.user.escape("id") == Spacebook.CURRENT_USER_ID) {
       this.addSubview(".create-post", subview);
-    } else if (this.user.escape("is_a_friend")) {
+    } else if (this.user.escape("is_a_friend") === "true") {
       this.addSubview(".create-post", subview);
     }
   }

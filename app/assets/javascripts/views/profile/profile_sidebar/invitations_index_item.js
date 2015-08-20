@@ -13,15 +13,14 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.invitation = options.invitation;
-    this.invitations = options.invitations;
+    this.invitations = this.user.invitations();
     this.friends = this.user.friends();
     this.listenTo(this.invitation, "sync", this.render);
   },
 
   render: function () {
     var renderedContent = this.template({
-      invitation: this.invitation,
+      invitation: this.model,
       user: this.user
      });
     this.$el.html(renderedContent);
@@ -32,9 +31,9 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
     var that = this;
     event.preventDefault();
 
-    this.invitation.destroy({
+    this.model.destroy({
       success: function () {
-        that.invitations.remove(that.invitation);
+        that.invitations.remove(that.model);
       },
 
       //TODO: Make this a helpful message for the user.
@@ -46,7 +45,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
 
   becomeFriends: function (event) {
     var that = this;
-    var inviterId = this.invitation.get('inviter_id');
+    var inviterId = this.model.get('inviter_id');
     event.preventDefault();
 
     var friend = new Spacebook.Models.Friend();
@@ -63,13 +62,13 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
       own_id: inviterId,
       friend_id: Spacebook.CURRENT_USER_ID },
       { success: function () {
-          that.friends.add(otherFriend);
+        console.log("success");
       }
     });
 
-    this.invitation.destroy({
+    this.model.destroy({
       success: function () {
-        that.invitations.remove(that.invitation);
+        that.invitations.remove(that.model);
       },
 
       //TODO: Make this a helpful message for the user.

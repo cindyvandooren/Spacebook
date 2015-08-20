@@ -20,14 +20,13 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
   addPostsIndexItemView: function (post) {
     var subview = new Spacebook.Views.PostsIndexItem({
       user: this.user,
-      post: post,
+      model: post,
       posts: this.posts
     });
     this.addSubview(".posts-index", subview, true);
   },
 
   removePostsIndexItemView: function (post) {
-    debugger;
     this.removeModelSubview('.posts-index', post);
   }
 });

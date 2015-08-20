@@ -11,9 +11,8 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.post = options.post;
     this.posts = options.posts;
-    this.listenTo(this.post, "sync change", this.render);
+    this.listenTo(this.model, "sync change", this.render);
     this.addPostsIndexItemHeaderView();
     this.addPostsIndexItemBodyView();
   },
@@ -27,14 +26,14 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   addPostsIndexItemHeaderView: function () {
     var subview = new Spacebook.Views.PostsIndexItemHeader({
-      post: this.post
+      post: this.model
     });
     this.addSubview(".post-index-item-header", subview);
   },
 
   addPostsIndexItemBodyView: function () {
     var subview = new Spacebook.Views.PostsIndexItemBody({
-      post: this.post
+      post: this.model
     });
     this.addSubview(".post-index-item-body", subview);
   },
@@ -50,7 +49,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   changeToEditPost: function (event) {
     this.changePostItemBodyView(event);
     var editView = new Spacebook.Views.PostForm({
-      post: this.post,
+      post: this.model,
       posts: this.posts,
       user: this.user
     });
@@ -60,7 +59,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   changeToPostsIndexItemBody: function (event) {
     this.changePostItemBodyView(event);
     var subview = new Spacebook.Views.PostsIndexItemBody({
-      post: this.post
+      post: this.model
     });
     this.addSubview(".post-index-item-body", subview);
   },
@@ -71,9 +70,9 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
     var attrs = this.$el.find('form').serializeJSON();
 
-    this.post.save(attrs, {
+    this.model.save(attrs, {
       success: function () {
-        that.posts.add(that.post, {merge: true});
+        that.posts.add(that.model, {merge: true});
         that.changeToPostsIndexItemBody(event);
       },
 
@@ -87,9 +86,9 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
   deletePost: function (event) {
     var that = this;
     event.preventDefault();
-    this.post.destroy({
+    this.model.destroy({
       success: function () {
-        that.posts.remove(that.post);
+        that.posts.remove(that.model);
       },
 
       //TODO: Make this a helpful message for the user.

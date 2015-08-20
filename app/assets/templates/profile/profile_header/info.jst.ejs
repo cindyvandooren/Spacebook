@@ -1,8 +1,8 @@
 <% if (user.escape("id") == Spacebook.CURRENT_USER_ID) { %>
   <button class="update-info btn btn-primary">Update Profile</button>
-<% } else if (user.escape("is_a_friend")) { %>
+<% } else if (user.escape("is_a_friend") === "true") { %>
   <p class="friends btn btn-primary">Friend</p>
-<% } else if (user.escape("is_invited") === true) { %>
+<% } else if (user.escape("is_invited") === "true") { %>
   <p class="invitation-pending btn btn-primary">Invitation Pending</p>
 <% } else { %>
   <button class="become-friends btn btn-primary">Send Friend Request</button>
