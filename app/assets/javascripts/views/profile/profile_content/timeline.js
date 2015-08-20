@@ -8,7 +8,7 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
     this.timelinePosts = this.user.timelinePosts();
     this.listenTo(this.user, "sync change", this.render);
     this.addPostsIndexView();
-    this.listenTo(this.user, "sync", this.addPostFormView);
+    this.addPostFormView();
   },
 
   render: function () {
@@ -33,11 +33,6 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
       post: newPost,
       posts: this.timelinePosts
     });
-
-    if (this.user.escape("id") == Spacebook.CURRENT_USER_ID) {
-      this.addSubview(".create-post", subview);
-    } else if (this.user.escape("is_a_friend") === "true") {
-      this.addSubview(".create-post", subview);
-    }
+    this.addSubview(".create-post", subview);
   }
 });

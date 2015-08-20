@@ -1,14 +1,16 @@
-<form class="change-post-form">
-  <textarea name="body"
-            id="body"
-            class="create-post-body"
-            placeholder="What's on your mind?"><%= post.escape('body') %></textarea>
-  <br>
+<% if ((this.user.escape("id") == Spacebook.CURRENT_USER_ID) || (this.user.escape("is_a_friend") ==="true")) { %>
+  <form class="change-post-form">
+    <textarea name="body"
+              id="body"
+              class="create-post-body"
+              placeholder="What's on your mind?"><%= post.escape('body') %></textarea>
+    <br>
 
-  <% if (post.isNew()){ %>
-    <input class="btn btn-primary btn-default create-post" type="submit" value="Post">
-    <input type="hidden" name="timeline_id" value="<%= timeline_id %>">
-  <% } else { %>
-    <input class="btn btn-primary btn-default edit-post" type="submit" value="Done">
-  <% } %>
-</form>
+    <% if (post.isNew()){ %>
+      <input class="btn btn-primary btn-default create-post" type="submit" value="Post">
+      <input type="hidden" name="timeline_id" value="<%= timeline_id %>">
+    <% } else { %>
+      <input class="btn btn-primary btn-default edit-post" type="submit" value="Done">
+    <% } %>
+  </form>
+<% } %>
