@@ -33,7 +33,7 @@
 }
 
 .invitation-index-item {
-  margin-left: -24px;
+  margin-left: -20px;
 }
 
 ul.friends-list {
@@ -46,4 +46,47 @@ ul.friends-list {
 
 .friends-list > li {
   padding-top: 10px;
+}
+
+.invitations-list > .invitation-index-item:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.invitations-list > .invitation-index-item {
+  position: relative;
+  margin-bottom: 20px;
+  height: 55px;
+}
+
+.invitation-index-item > a {
+  position: absolute;
+  float: left;
+}
+
+.invitation-index-item:last-child {
+  margin-bottom: 0px;
+}
+
+.invitation-index-item > div {
+  margin-left: 50px;
+  position: absolute;
+  float: right;
+  font-size: 14px;
+  height: 100%;
+  width: 200px;
+}
+
+.invitation-index-item > .invitation-buttons {
+  margin-left: 260px;
+  width: 20px;
+  font-size: 12px;
+}
+
+.invitation-buttons > button {
+  background-color: white;
+  color: grey;
+  border: none;
+  font-size: 14px;
 }

@@ -1,14 +1,18 @@
 <% if (user.escape("id") == invitation.inviter_details().escape('id')) { %>
   <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><img src="<%= invitation.invitee_details().escape('thumbnail_img_url') %>"/></a>
-  <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><%= invitation.invitee_details().escape('username') %></a> has not accepted the invitation yet.
+  <div class="invitation-text-box"><a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><%= invitation.invitee_details().escape('username') %></a> has not accepted the invitation yet.</div>
   <% if (user.escape("id") == Spacebook.CURRENT_USER_ID) { %>
-    <button class="btn btn-primary withdraw-invitation">Withdraw</button>
+    <div class="invitation-buttons">
+      <button class="withdraw-invitation"><i class="glyphicon glyphicon-remove"></i></button>
+    </div>
 <% } %>
 <% } else { %>
   <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><img src="<%= invitation.inviter_details().escape('thumbnail_img_url') %>"/></a>
-  <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><%= invitation.inviter_details().escape('username') %></a> would like to be friends.
+  <div class ="invitation-text-box"><a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><%= invitation.inviter_details().escape('username') %></a> would like to be friends.</div>
   <% if (user.escape("id") == Spacebook.CURRENT_USER_ID) { %>
-    <button class="btn btn-primary approve-invitation">Approve</button>
-    <button class="btn btn-primary deny-invitation">Deny</button>
+    <div class="invitation-buttons">
+      <button class="deny-invitation"><i class="glyphicon glyphicon-remove"></i></button>
+      <button class="approve-invitation"><i class="glyphicon glyphicon-ok"></i></button>
+    </div>
   <% } %>
 <% } %>
