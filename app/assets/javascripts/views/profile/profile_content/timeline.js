@@ -8,11 +8,10 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
     this.timelinePosts = this.user.timelinePosts();
     this.listenTo(this.user, "sync change", this.render);
     this.addPostsIndexView();
-    this.addPostFormView();
+    this.listenTo(this.user, "sync", this.addPostFormView);
   },
 
   render: function () {
-    debugger;
     var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
@@ -28,7 +27,6 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   },
 
   addPostFormView: function () {
-    debugger;
     var newPost = new Spacebook.Models.Post();
     var subview = new Spacebook.Views.PostForm({
       user: this.user,
