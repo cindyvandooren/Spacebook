@@ -10,11 +10,12 @@
   clear: both;
 }
 
-.feed-content {
+.feed-content.feed {
   position: absolute;
   float: right;
   width: 510px;
   margin-left: 341px;
+  margin-top: -20px;
 }
 
 .feed-sidebar {
