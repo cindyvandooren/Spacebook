@@ -26,7 +26,8 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
 
   addFriendsIndexView: function () {
     var subview = new Spacebook.Views.FriendsIndex({
-      user: this.user
+      user: this.user,
+      extraInfo: false
     });
     this.addSubview(".friends", subview);
   }

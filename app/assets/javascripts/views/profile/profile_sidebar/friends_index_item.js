@@ -7,10 +7,14 @@ Spacebook.Views.FriendsIndexItem = Backbone.View.extend({
 
   initialize: function (options) {
     this.friend = options.friend;
+    this.extraInfo = options.extraInfo;
   },
 
   render: function () {
-    var renderedContent = this.template({ friend: this.friend });
+    var renderedContent = this.template({
+      friend: this.friend,
+      extraInfo: this.extraInfo
+     });
     this.$el.html(renderedContent);
     return this;
   }

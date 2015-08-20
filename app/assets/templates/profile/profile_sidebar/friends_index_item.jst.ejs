@@ -1,2 +1,9 @@
 <a href="/#/profiles/<%= friend.escape('id') %>"><img src="<%= friend.escape('thumbnail_img_url') %>"/></a>
 <a href="/#/profiles/<%= friend.escape('id') %>"><%= friend.escape('username') %></a>
+<% if (extraInfo) { %>
+  <% if (friend.escape("home_planet")) { %>
+    is currently living on <%= friend.escape("home_planet") %>.
+  <% } else { %>
+    has no home planet.
+  <% } %>
+<% } %>
