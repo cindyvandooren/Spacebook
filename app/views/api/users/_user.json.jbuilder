@@ -26,3 +26,15 @@ json.friends do
     json.partial!("api/users/limited_info", user: friend)
   end
 end
+
+json.timeline_posts do
+  json.array!(user.timeline_posts) do |post|
+    json.partial!("api/posts/post", post: post)
+  end
+end
+
+json.invitations do
+  json.array!(user.all_invitations) do |invitation|
+    json.partial!("api/invitations/invitation", invitation: invitation)
+  end
+end

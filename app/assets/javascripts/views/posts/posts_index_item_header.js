@@ -3,10 +3,12 @@ Spacebook.Views.PostsIndexItemHeader = Backbone.View.extend({
 
   className: "post-heading",
 
+  initialize: function (options) {
+    this.post = options.post;
+  },
+
   render: function () {
-    var renderedContent = this.template({
-      post: this.model
-    });
+    var renderedContent = this.template({ post: this.post });
     this.$el.html(renderedContent);
     return this;
   }

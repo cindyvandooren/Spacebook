@@ -12,15 +12,15 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
   },
 
   initialize: function (options) {
-    this.userId = options.userId;
-    this.friends = options.friends;
+    this.user = options.user;
+    this.friends = this.user.friends();
     this.listenTo(this.model, "sync", this.render);
   },
 
   render: function () {
     var renderedContent = this.template({
       invitation: this.model,
-      userId: this.userId
+      user: this.user
      });
     this.$el.html(renderedContent);
     return this;

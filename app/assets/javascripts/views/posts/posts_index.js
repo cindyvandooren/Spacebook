@@ -3,15 +3,15 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.userName = options.userName;
-    this.listenTo(this.collection, "sync", this.render);
-    this.listenTo(this.collection, "add", this.addPostsIndexItemView);
-    this.listenTo(this.collection, "remove", this.removePostsIndexItemView);
-    this.collection.each(this.addPostsIndexItemView.bind(this));
+    this.posts = this.user.timelinePosts();
+    this.listenTo(this.posts, "sync", this.render);
+    this.listenTo(this.posts, "add", this.addPostsIndexItemView);
+    this.listenTo(this.posts, "remove", this.removePostsIndexItemView);
+    this.posts.each(this.addPostsIndexItemView.bind(this));
   },
 
   render: function () {
-    var renderedContent = this.template({ posts: this.collection });
+    var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
@@ -19,8 +19,8 @@ Spacebook.Views.PostsIndex = Backbone.CompositeView.extend({
 
   addPostsIndexItemView: function (post) {
     var subview = new Spacebook.Views.PostsIndexItem({
-      model: post,
-      collection: this.collection
+      post: post,
+      posts: this.posts
     });
     this.addSubview(".posts-index", subview, true);
   },

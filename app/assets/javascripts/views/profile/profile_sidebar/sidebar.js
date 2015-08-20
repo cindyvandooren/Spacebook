@@ -5,7 +5,6 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.invitations = options.invitations;
     this.addInvitationsIndexView();
     this.addFriendsIndexView();
   },
@@ -19,9 +18,7 @@ Spacebook.Views.ProfileSideBar = Backbone.CompositeView.extend({
 
   addInvitationsIndexView: function () {
     var subview = new Spacebook.Views.InvitationsIndex({
-      collection: this.invitations,
-      userId: this.user.id,
-      friends: this.friends
+      user: this.user
     });
     this.addSubview(".all-invitations", subview);
   },

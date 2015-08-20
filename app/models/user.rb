@@ -125,4 +125,8 @@ class User < ActiveRecord::Base
   def show_notifications
     notifications.where('created_at > ?', Time.now - 2.days)
   end
+
+  def all_invitations
+    self.received_invitations + self.sent_invitations
+  end
 end

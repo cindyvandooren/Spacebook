@@ -1,13 +1,13 @@
-<% if (userId == invitation.inviter_details().escape('id')) { %>
+<% if (user.escape("id") == invitation.inviter_details().escape('id')) { %>
   <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><img src="<%= invitation.invitee_details().escape('thumbnail_img_url') %>"/></a>
   <a href="/#/profiles/<%= invitation.invitee_details().escape('id') %>"><%= invitation.invitee_details().escape('username') %></a> has not accepted the invitation yet.
-  <% if (userId == Spacebook.CURRENT_USER_ID) { %>
+  <% if (user.escape("id") == Spacebook.CURRENT_USER_ID) { %>
     <button class="btn btn-primary withdraw-invitation">Withdraw</button>
 <% } %>
 <% } else { %>
   <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><img src="<%= invitation.inviter_details().escape('thumbnail_img_url') %>"/></a>
   <a href="/#/profiles/<%= invitation.inviter_details().escape('id') %>"><%= invitation.inviter_details().escape('username') %></a> would like to be friends.
-  <% if (userId == Spacebook.CURRENT_USER_ID) { %>
+  <% if (user.escape("id") == Spacebook.CURRENT_USER_ID) { %>
     <button class="btn btn-primary approve-invitation">Approve</button>
     <button class="btn btn-primary deny-invitation">Deny</button>
   <% } %>

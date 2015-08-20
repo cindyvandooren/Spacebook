@@ -4,7 +4,6 @@ Spacebook.Views.FeedShow = Backbone.CompositeView.extend({
   className: "feed-main",
 
   initialize: function (options) {
-    debugger;
     this.user = options.user;
     this.invitations = options.invitations;
     this.listenTo(this.model, "sync change", this.render);

@@ -11,12 +11,13 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
     "click .update-background-picture" : "updatePicture"
   },
 
-  initialize: function () {
-    this.listenTo(this.model, "sync change", this.render);
+  initialize: function (options) {
+    this.user = options.user;
+    this.listenTo(this.user, "sync change", this.render);
   },
 
   render: function () {
-    var renderedContent = this.template({ user: this.model });
+    var renderedContent = this.template({ user: this.user });
     this.$el.html(renderedContent);
     return this;
   },
@@ -27,11 +28,11 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
 
     var attrs = this.$el.serializeJSON();
 
-    this.model.set(attrs);
-    this.model.save({}, {
+    this.user.set(attrs);
+    this.user.save({}, {
       success: function () {
         $(":input").val("");
-        that.collection.add(that.model, { merge: true });
+        that.collection.add(that.user, { merge: true });
         $(".sidebar-about").click();
       },
       //TODO Make this a helpful message for the user
@@ -60,10 +61,10 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         var uploaded_picture_id = data.url.substring(36);
         var options = {};
         options[image_type] = uploaded_picture_id;
-        that.model.set(options);
-        that.model.save({}, {
+        that.user.set(options);
+        that.user.save({}, {
           success: function () {
-            that.model.fetch();
+            that.user.fetch();
           }
         });
       }

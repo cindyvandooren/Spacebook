@@ -2,12 +2,7 @@ class Api::InvitationsController < ApplicationController
   before_action :require_signed_in
 
   def index
-    if params[:id]
-      @invitations = Invitation.where("invitee_id = ? or inviter_id = ?", params[:id], params[:id])
-                               .includes(:invitee, :inviter)
-    else
-      @invitations = Invitation.all
-    end
+    @invitations = Invitation.all
   end
 
   def show
@@ -39,7 +34,7 @@ class Api::InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
 
     if @invitation.destroy
-      if current_user.id == invitee_id
+      if current_user.id == @invitation.invitee_id
         Notification.create!(
           user_id: @invitation.invitee_id,
           body: "You rejected the friend request of #{@invitation.inviter.username}."

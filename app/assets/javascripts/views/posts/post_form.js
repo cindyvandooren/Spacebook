@@ -8,14 +8,16 @@ Spacebook.Views.PostForm = Backbone.View.extend({
   },
 
   initialize: function (options) {
-    this.userId = options.userId;
-    this.listenTo(this.model, "sync", this.render);
+    this.post = options.post;
+    this.user = options.user;
+    this.posts = options.posts;
+    this.listenTo(this.post, "sync", this.render);
   },
 
   render: function () {
     var renderedContent = this.template({
-      post: this.model,
-      timeline_id: this.userId
+      post: this.post,
+      timeline_id: this.user.id
     });
     this.$el.html(renderedContent);
     return this;
@@ -27,12 +29,12 @@ Spacebook.Views.PostForm = Backbone.View.extend({
 
     var attrs = this.$el.find('form').serializeJSON();
 
-    this.model.set(attrs);
-    this.model.save({}, {
+    this.post.set(attrs);
+    this.post.save({}, {
       success: function () {
         $("textarea").val("");
-        that.collection.add(that.model, { merge: true });
-        that.model = new Spacebook.Models.Post();
+        that.posts.add(that.post, { merge: true });
+        that.post = new Spacebook.Models.Post();
         that.render();
       },
       //TODO: Make this a helpful message for the user

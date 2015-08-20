@@ -3,14 +3,14 @@ Spacebook.Models.Post = Backbone.Model.extend({
 
   author_details: function () {
     if (!this._author_details) {
-      this._author_details = new Spacebook.Models.User();
+      this._author_details = new Spacebook.Models.User({ post: this });
     }
     return this._author_details;
   },
 
   receiver_details: function () {
     if (!this._receiver_details) {
-      this._receiver_details = new Spacebook.Models.User();
+      this._receiver_details = new Spacebook.Models.User({ post: this });
     }
     return this._receiver_details;
   },

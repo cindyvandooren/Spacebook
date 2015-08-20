@@ -1,12 +1,13 @@
 Spacebook.Views.HeaderName = Backbone.View.extend({
   template: JST["profile/profile_header/name"],
 
-  initialize: function () {
-    this.listenTo(this.model, "sync change", this.render);
+  initialize: function (options) {
+    this.user = options.user;
+    this.listenTo(this.user, "sync change", this.render);
   },
 
   render: function () {
-    var renderedContent = this.template({ user: this.model });
+    var renderedContent = this.template({ user: this.user });
     this.$el.html(renderedContent);
     return this;
   }

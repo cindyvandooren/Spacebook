@@ -9,14 +9,16 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
     "click .edit-post" : "editPost"
   },
 
-  initialize: function () {
-    this.listenTo(this.model, "sync change", this.render);
+  initialize: function (options) {
+    this.post = options.post;
+    this.posts = options.posts;
+    this.listenTo(this.post, "sync change", this.render);
     this.addPostsIndexItemHeaderView();
     this.addPostsIndexItemBodyView();
   },
 
   render: function () {
-    var renderedContent = this.template({ post: this.model });
+    var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
@@ -24,14 +26,14 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   addPostsIndexItemHeaderView: function () {
     var subview = new Spacebook.Views.PostsIndexItemHeader({
-      model: this.model,
+      post: this.post
     });
     this.addSubview(".post-index-item-header", subview);
   },
 
   addPostsIndexItemBodyView: function () {
     var subview = new Spacebook.Views.PostsIndexItemBody({
-      model: this.model
+      post: this.post
     });
     this.addSubview(".post-index-item-body", subview);
   },

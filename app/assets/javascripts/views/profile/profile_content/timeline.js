@@ -5,31 +5,24 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
-    this.listenTo(this.user, "change", this.fetchPosts);
-    this.listenTo(this.collection, "add remove sync", this.render);
-    this.userId = options.userId;
-    this.userName = options.userName;
+    this.timelinePosts = this.user.timelinePosts();
+    this.listenTo(this.user, "sync change", this.render);
+    this.listenTo(this.timelinePosts, "add remove", this.render);
     this.addPostsIndexView();
     this.addPostFormView();
   },
 
   render: function () {
-    var renderedContent = this.template({ posts: this.collection });
+    // TODO: Still renders a lot of times, once every time a post is added.
+    // Investigate if this really is necessary.
+    var renderedContent = this.template();
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
   },
 
-  fetchPosts: function () {
-    this.collection.fetch({
-      data: { id: this.user.id, profile: true }
-    });
-  },
-
   addPostsIndexView: function () {
     var subview = new Spacebook.Views.PostsIndex({
-      collection: this.collection,
-      userId: this.userId,
       user: this.user
     });
     this.addSubview(".posts", subview);
@@ -38,14 +31,14 @@ Spacebook.Views.ProfileTimeline = Backbone.CompositeView.extend({
   addPostFormView: function () {
     var newPost = new Spacebook.Models.Post();
     var subview = new Spacebook.Views.PostForm({
-      collection: this.collection,
-      model: newPost,
-      userId: this.userId
+      user: this.user,
+      post: newPost,
+      posts: this.timelinePosts
     });
 
-    if (this.user.get("id") === Spacebook.CURRENT_USER_ID) {
+    if (this.user.escape("id") == Spacebook.CURRENT_USER_ID) {
       this.addSubview(".create-post", subview);
-    } else if (this.user.get("is_a_friend")) {
+    } else if (this.user.escape("is_a_friend")) {
       this.addSubview(".create-post", subview);
     }
   }
