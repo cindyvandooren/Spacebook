@@ -51,3 +51,6 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
     $(".search-form").prop("disabled",true);
   }
 });
+
+
+  // coll.fetch( { add : true } );

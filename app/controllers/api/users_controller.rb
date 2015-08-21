@@ -19,6 +19,10 @@ class Api::UsersController < ApplicationController
 
     if @user.update(update_params)
       render :show
+      Notification.create!(
+        user_id: @user.id,
+        body: "You updated your profile."
+      )
     else
       render json: @user.errors.full_messages,
                    status: :unprocessable_entity
