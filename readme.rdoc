@@ -3,7 +3,7 @@
 ####http://www.spacebook.website/
 
 Spacebook is a social networking app for earthlings and non-earthlings alike.
-It is the ideal place to keep in contact with your friends from space.
+Sign up and keep in touch with your friends from space.
 
 ## Features
 - Users can create, edit and delete posts.
