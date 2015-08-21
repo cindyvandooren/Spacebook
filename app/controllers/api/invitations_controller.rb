@@ -34,27 +34,6 @@ class Api::InvitationsController < ApplicationController
     @invitation = Invitation.find(params[:id])
 
     if @invitation.destroy
-      if current_user.id == @invitation.invitee_id
-        Notification.create!(
-          user_id: @invitation.invitee_id,
-          body: "You rejected the friend request of #{@invitation.inviter.username}."
-        )
-
-        Notification.create!(
-          user_id: @invitation.inviter_id,
-          body: "#{@invitation.invitee.username} rejected your friend request."
-        )
-      else
-        Notification.create!(
-          user_id: @invitation.invitee_id,
-          body: "#{@invitation.inviter.username} cancelled the friend request."
-        )
-
-        Notification.create!(
-          user_id: @invitation.inviter_id,
-          body: "You cancelled the friend request with #{@invitation.invitee_id}."
-        )
-      end
       render json: {}
     else
       render json: @invitation.errors_full_messages,

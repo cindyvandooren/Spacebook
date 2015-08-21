@@ -30,7 +30,7 @@ class Api::PostsController < ApplicationController
       if @post.timeline_id != current_user.id
         Notification.create!(
           user_id: @post.timeline_id,
-          body: "#{current_user.username} posted on your timeline,"
+          body: "#{current_user.username} posted on your timeline."
         )
 
         Notification.create!(

@@ -42,7 +42,6 @@
   margin: 8px 22px;
 }
 
-//Navbar for root page
 .m-background {
   background: rgba(92, 88, 88, 0.6);
   position: absolute;
@@ -100,4 +99,18 @@
   width: 200px;
   margin-top: - 20px;
   margin-bottom: 40px;
+}
+
+.notifications-index-item {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.notifications-index-item > body {
+  padding: 20px;
+}
+
+tr.notifications-item {
+  height: 40px;
+  margin-left: 20px;
 }

@@ -7,6 +7,7 @@ Spacebook.Views.FriendsIndexItem = Backbone.View.extend({
 
   initialize: function (options) {
     this.friend = options.friend;
+    this.listenTo(this.friend, "sync", this.render);
     this.extraInfo = options.extraInfo;
   },
 

@@ -42,6 +42,12 @@ Post.create!(
   body: "ET phone home"
 )
 
+Post.create!(
+  author_id: 5,
+  timeline_id: 5,
+  body: "Elliott! Elliott!"
+)
+
 # User 3
 User.create!(
   username: "Wall-e",
@@ -108,6 +114,24 @@ User.create!(
   background_img_id: "image/upload/gd0nfztluirdqslxjg7t"
 )
 
+Post.create!(
+  author_id: 5,
+  timeline_id: 5,
+  body: "Sky People can not learn, they do not see."
+)
+
+Post.create!(
+  author_id: 5,
+  timeline_id: 5,
+  body: "Our great mother Eywa protects the balance of life."
+)
+
+Post.create!(
+  author_id: 5,
+  timeline_id: 5,
+  body: "All energy is only borrowed, at some point we have to return it."
+)
+
 # User 6
 User.create!(
   username: "Jake",
@@ -126,6 +150,18 @@ Post.create!(
   body: "I grew up hearing about Pandora. I never figured I'd be going there."
 )
 
+Post.create!(
+  author_id: 6,
+  timeline_id: 6,
+  body: "I’m a warrior... of the Jarhead clan"
+)
+
+Post.create!(
+  author_id: 6,
+  timeline_id: 6,
+  body: "Sometimes your whole life boils down to one insane move."
+)
+
 # User 7
 User.create!(
   username: "Dr_Grace",
@@ -136,6 +172,24 @@ User.create!(
   interests: "Research, coaching, visiting Pandora, reading, knitting",
   profile_img_id: "image/upload/xkmeplqxhbr0irgw2gl6",
   background_img_id: "image/upload/v3ep2tol2qkw67dm4a7w"
+)
+
+Post.create!(
+  author_id: 7,
+  timeline_id: 7,
+  body: "Where's my cigarette?"
+)
+
+Post.create!(
+  author_id: 7,
+  timeline_id: 7,
+  body: "In Pandora there's some kind of communication between the roots of the trees. Like the synapses between neurons. Each tree has ten to the fourth connections to the trees around it, and there are ten to the twelfth trees on Pandora..."
+)
+
+Post.create!(
+  author_id: 7,
+  timeline_id: 7,
+  body: "I need to get some samples."
 )
 
 # User 8
@@ -154,7 +208,7 @@ User.create!(
 Post.create!(
   author_id: 8,
   timeline_id: 8,
-  body: "Have you ever had a woman with 8 hands to satisfy all your needs ..., like cooking and cleaning?"
+  body: "Have you ever had a woman with 8 hands to satisfy all your needs ... like cooking and cleaning?"
 )
 
 # User 9
@@ -171,7 +225,7 @@ User.create!(
 
 # User 10
 User.create!(
-  username: "Sharlaveer-Slam ",
+  username: "Sharlaveer-Slam",
   password: "password",
   birthday: Time.now + 78.years + 5.months + 29.day,
   interests: "Intergalactical politics, traveling, reading, costume play, swimming, war",
@@ -192,6 +246,30 @@ User.create!(
   background_img_id: "image/upload/ssi66bld1k0px0wycpgm"
 )
 
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "The universe is big. It’s vast and complicated and ridiculous. And sometimes, very rarely, impossible things just happen and we call them miracles."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "You want weapons? Books! The best weapons in the world!"
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "I always rip out the last page of a book then it doens't have to end. I hate endings."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "Do what I do. Hold tight and pretend it’s a plan!"
+)
+
 # User 12
 User.create!(
   username: "Alf",
@@ -202,6 +280,65 @@ User.create!(
   home_planet: "Earth",
   profile_img_id: "image/upload/mxrckxwq4n3js3z0zcen",
   background_img_id: "image/upload/ulaum0gwbbqqqdw1kjrv"
+)
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
+  body: "I've decided to reveal myself to the world.  This way I can meet new people, travel, see a Grateful Dead concert."
+)
+
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
+  body: "I learned one thing about eating jigsaw puzzles...an hour later, you're hungry again."
+)
+
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
+  body: "Oreos!?! My kinda people!"
+)
+
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
+  body: "I tried to puree a rock...it didn't work."
+)
+
+# User 13
+User.create!(
+  username: "Amy_Pond",
+  password: "password",
+  birthday: Time.now - 26.years - 5.months - 9.days,
+  interests: "Journalism, Scotland, The Doctor, space travel, meeting Vincent van Gogh"
+  planet_of_birth: "Earth",
+  home_planet: "Earth",
+  profile_img_id: "image/upload/xrn7altusqbd3jg1rrm8",
+  background_img_id: "image/upload/hpfbvmsnqm1wl1u5qq8z"
+)
+
+Post.create!(
+  author_id: 13,
+  timeline_id: 13,
+  body: "There's a man who's never going to let us down, and not even an army can get..."
+)
+
+Post.create!(
+  author_id: 13,
+  timeline_id: 13,
+  body: "Time can be rewritten."
+)
+
+# User 14
+User.create!(
+  username: "Cyberman",
+  password: "password",
+  birthday: Time.now + 890.years + 4.months + 2.days,
+  interests: "Meeting Daleks",
+  planet_of_birth: "Mondas",
+  home_planet: "Earth",
+  profile_img_id: "image/upload/zvp3smio3ewgjuv7ris2",
+  background_img_id: "image/upload/hurnlk8ctus8vfsrzwzk"
 )
 
 Friendship.create!(own_id: 5, friend_id: 6)
@@ -239,4 +376,16 @@ Post.create!(
   author_id: 8,
   timeline_id: 1,
   body: "I keep an eye on you."
+)
+
+Post.create!(
+  author_id: 13,
+  timeline_id: 11,
+  body: "I started to think you were just a madman with a box."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 13,
+  body: "There’s something you’d better understand about me ‘cause it’s important, and one day your life may depend on it: I am definitely a mad man with a box!"
 )
