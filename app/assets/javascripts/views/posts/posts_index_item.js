@@ -26,7 +26,8 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
 
   addPostsIndexItemHeaderView: function () {
     var subview = new Spacebook.Views.PostsIndexItemHeader({
-      post: this.model
+      post: this.model,
+      user: this.user
     });
     this.addSubview(".post-index-item-header", subview);
   },

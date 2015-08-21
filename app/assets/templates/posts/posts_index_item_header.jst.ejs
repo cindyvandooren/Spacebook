@@ -1,8 +1,16 @@
 <a href="#/profiles/<%= post.author_details().escape('id') %>" class="header-image"><img src="<%= post.author_details().escape('thumbnail_img_url') %>"/></a>
 <% if (post.escape('author_id') === post.escape('timeline_id')) { %>
-  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
+  <% if (post.escape('author_id') === user.escape('id')) { %>
+    <p><%= post.author_details().escape('username') %> <%= post.escape('created_at') %> ago</p>
+  <% } else { %>
+    <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
+  <% } %>
 <% } else { %>
-  <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.receiver_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
+  <% if (post.escape('timeline_id') === user.escape('id')) { %>
+    <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <%= post.receiver_details().escape('username') %> <%= post.escape('created_at') %> ago</p>
+  <% } else { %>
+    <p><a href="/#/profiles/<%= post.escape('author_id') %>"><%= post.author_details().escape('username') %></a> > <a href="/#/profiles/<%= post.escape('timeline_id') %>"><%= post.receiver_details().escape('username') %></a> <%= post.escape('created_at') %> ago</p>
+  <% } %>
 <% } %>
 
 <span class="post-header-divider"/>
