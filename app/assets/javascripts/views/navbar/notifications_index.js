@@ -25,7 +25,7 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
     var subview = new Spacebook.Views.NotificationsIndexItem({
       model: notification
     });
-    this.addSubview(".notifications-index-item", subview, true);
+    this.addSubview(".notifications-index-item", subview);
   },
 
   closeModalView: function (event) {
@@ -51,6 +51,3 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
     $(".search-form").prop("disabled",true);
   }
 });
-
-
-  // coll.fetch( { add : true } );

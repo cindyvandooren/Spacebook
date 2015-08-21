@@ -164,6 +164,7 @@ ul.posts-index {
 
 .search-results > p {
   margin-left: 15px;
+  position: relative;
 }
 
 .profile-content-friends {
@@ -183,4 +184,9 @@ ul.posts-index {
 .friends-list-item > p {
   margin-left: 170px;
   margin-top: -35px;
+}
+
+.m.spinner-loader.search {
+  margin-left: 50%;
+  margin-top: 25%;
 }

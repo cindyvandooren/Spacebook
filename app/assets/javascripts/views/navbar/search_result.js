@@ -5,7 +5,11 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
 
   initialize: function () {
     $(document).on('keyup', this.handleKey.bind(this));
-    this.listenTo(this.collection, "sync", this.render);
+    this.fetched = false;
+    this.listenTo(this.collection, "sync", function () {
+      this.fetched = true;
+      this.render();
+    });
     this.listenTo(this.collection, "add", this.addSearchResultItemView);
     this.collection.each(this.addSearchResultItemView.bind(this));
   },
@@ -17,7 +21,10 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({ users: this.collection });
+    var renderedContent = this.template({
+      users: this.collection,
+      fetched: this.fetched
+     });
     this.$el.html(renderedContent);
     this.attachSubviews();
     this.onRender();

@@ -3,10 +3,17 @@
 <div class="m-content">
   <button class="close-button">&times;</button>
   <h2>Search results</h2>
-  <div class="search-results">
-    <% if (users.length < 1) { %>
-      <p>No match found.</p>
-    <% } %>
-     <ul class="search-result-list"></ul>
-  </div>
+
+  <% if (fetched) { %>
+    <div class="search-results">
+      <% if (users.length < 1) { %>
+        <p>No match found.</p>
+      <% } %>
+       <ul class="search-result-list"></ul>
+    </div>
+  <% } else { %>
+    <div class="m spinner-loader search">
+      Loading…
+    </div>
+  <% } %>
 </div>

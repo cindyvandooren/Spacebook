@@ -101,16 +101,32 @@
   margin-bottom: 40px;
 }
 
-.notifications-index-item {
+table.notifications-index-item {
   font-size: 16px;
-  padding: 10px;
+  margin-left: 30px;
+  width: 400px;
 }
 
-.notifications-index-item > body {
-  padding: 20px;
+.m-content > table {
+  position: relative;
+}
+
+tbody {
+  position: relative;
+  width: 400px;
 }
 
 tr.notifications-item {
   height: 40px;
   margin-left: 20px;
+  position: relative;
+}
+
+.notifications-item > p {
+  padding-top: 10px;
+  padding-left: 7px;
+}
+
+.m-content > p {
+  margin-left: 15px;
 }

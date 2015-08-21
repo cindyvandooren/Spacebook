@@ -123,7 +123,7 @@ class User < ActiveRecord::Base
   end
 
   def show_notifications
-    notifications.where('created_at > ?', Time.now - 2.days)
+    notifications.where('created_at > ?', Time.now - 2.days).order(id: :desc).limit(8)
   end
 
   def all_invitations
