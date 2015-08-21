@@ -12,7 +12,7 @@ It is the ideal place to keep in contact with your friends from space.
 - Users can become friends to other users.
 - Users receive notifications when friends perform actions.
 - Users have a feed page with posts their friends made.
-- Users can search other users.
+- Users can search for other users.
 
 ## Technologies
 - Own implementation for authentication
