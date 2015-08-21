@@ -8,7 +8,7 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
   },
 
   events: {
-    "click" : "sendFriendInvitation"
+    "click .become-friends" : "sendFriendInvitation"
   },
 
   render: function () {
