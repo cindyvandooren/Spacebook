@@ -263,6 +263,7 @@ Friendship.create!(own_id: 8, friend_id: 1)
 Friendship.create!(own_id: 8, friend_id: 2)
 Friendship.create!(own_id: 8, friend_id: 3)
 Friendship.create!(own_id: 8, friend_id: 4)
+Friendship.create!(own_id: 8, friend_id: 12)
 Friendship.create!(own_id: 9, friend_id: 1)
 Friendship.create!(own_id: 9, friend_id: 10)
 Friendship.create!(own_id: 9, friend_id: 11)
@@ -276,8 +277,10 @@ Friendship.create!(own_id: 11, friend_id: 9)
 Friendship.create!(own_id: 11, friend_id: 10)
 Friendship.create!(own_id: 11, friend_id: 13)
 Friendship.create!(own_id: 11, friend_id: 14)
+Friendship.create!(own_id: 11, friend_id: 16)
 Friendship.create!(own_id: 12, friend_id: 2)
 Friendship.create!(own_id: 12, friend_id: 5)
+Friendship.create!(own_id: 12, friend_id: 8)
 Friendship.create!(own_id: 13, friend_id: 1)
 Friendship.create!(own_id: 13, friend_id: 9)
 Friendship.create!(own_id: 13, friend_id: 11)
@@ -286,6 +289,7 @@ Friendship.create!(own_id: 14, friend_id: 10)
 Friendship.create!(own_id: 14, friend_id: 11)
 Friendship.create!(own_id: 15, friend_id: 2)
 Friendship.create!(own_id: 15, friend_id: 3)
+Friendship.create!(own_id: 16, friend_id: 11)
 Friendship.create!(own_id: 16, friend_id: 17)
 Friendship.create!(own_id: 16, friend_id: 18)
 Friendship.create!(own_id: 17, friend_id: 16)
@@ -302,33 +306,33 @@ Post.create!(
 )
 
 Post.create!(
+  author_id: 13,
+  timeline_id: 13,
+  body: "There's a man who's never going to let us down, and not even an army can get..."
+)
+
+Post.create!(
+  author_id: 19,
+  timeline_id: 19,
+  body: "It's true, we are aliens. But what are you going to do about it? It's a two-party system. You have to vote for one of us."
+)
+
+Post.create!(
+  author_id: 15,
+  timeline_id: 2,
+  body: "Will help you phone home!"
+)
+
+Post.create!(
   author_id: 1,
   timeline_id: 1,
   body: "I need hugs, lots of hugs!"
 )
 
 Post.create!(
-  author_id: 2,
-  timeline_id: 2,
-  body: "Elliott! Elliott!"
-)
-
-Post.create!(
   author_id: 18,
   timeline_id: 18,
   body: "Genius doesn’t work on an assembly line basis... You can’t simply say, ‘Today I will be brilliant.'"
-)
-
-Post.create!(
-  author_id: 4,
-  timeline_id: 3,
-  body: "I miss you!"
-)
-
-Post.create!(
-  author_id: 3,
-  timeline_id: 3,
-  body: "I don't want to survive, I want to live"
 )
 
 Post.create!(
@@ -340,27 +344,26 @@ Post.create!(
 Post.create!(
   author_id: 4,
   timeline_id: 3,
-  body: "You're my Wall-e and I'm your Eve."
+  body: "I miss you!"
 )
 
 Post.create!(
-  author_id: 3,
-  timeline_id: 3,
-  body: "Sometimes things look a lot closer than they are."
+  author_id: 16,
+  timeline_id: 16,
+  body: "Change is the essential process of all existence."
 )
 
 Post.create!(
-  author_id: 3,
+  author_id: 4,
   timeline_id: 4,
-  body: "You're my Eve-e and I'm your Wall-e."
+  body: "Wall-e is my favorite Spacebook friend!"
 )
 
 Post.create!(
-  author_id: 3,
-  timeline_id: 8,
-  body: "So what have you been doing lately?"
+  author_id: 9,
+  timeline_id: 9,
+  body: "I'm hungry!"
 )
-
 
 Post.create!(
   author_id: 1,
@@ -371,7 +374,13 @@ Post.create!(
 Post.create!(
   author_id: 7,
   timeline_id: 7,
-  body: "In Pandora there's some kind of communication between the roots of the trees. Like the synapses between neurons. Each tree has ten to the fourth connections to the trees around it, and there are ten to the twelfth trees on Pandora..."
+  body: "Where's my cigarette?"
+)
+
+Post.create!(
+  author_id: 3,
+  timeline_id: 4,
+  body: "You're my Eve-e and I'm your Wall-e."
 )
 
 Post.create!(
@@ -380,8 +389,6 @@ Post.create!(
   body: "You Earthlings should take better care of the planet!"
 )
 
-
-
 Post.create!(
   author_id: 5,
   timeline_id: 5,
@@ -389,45 +396,9 @@ Post.create!(
 )
 
 Post.create!(
-  author_id: 11,
-  timeline_id: 11,
-  body: "The universe is big. It’s vast and complicated and ridiculous. And sometimes, very rarely, impossible things just happen and we call them miracles."
-)
-
-Post.create!(
-  author_id: 5,
-  timeline_id: 5,
-  body: "Our great mother Eywa protects the balance of life."
-)
-
-Post.create!(
-  author_id: 5,
-  timeline_id: 6,
-  body: "I see you!"
-)
-
-Post.create!(
   author_id: 6,
   timeline_id: 6,
   body: "I grew up hearing about Pandora. I never figured I'd be going there."
-)
-
-Post.create!(
-  author_id: 6,
-  timeline_id: 6,
-  body: "I’m a warrior... of the Jarhead clan"
-)
-
-Post.create!(
-  author_id: 6,
-  timeline_id: 6,
-  body: "Sometimes your whole life boils down to one insane move."
-)
-
-Post.create!(
-  author_id: 7,
-  timeline_id: 7,
-  body: "Where's my cigarette?"
 )
 
 Post.create!(
@@ -445,7 +416,31 @@ Post.create!(
 Post.create!(
   author_id: 12,
   timeline_id: 12,
+  body: "I've decided to reveal myself to the world.  This way I can meet new people, travel, see a Grateful Dead concert."
+)
+
+Post.create!(
+  author_id: 5,
+  timeline_id: 12,
+  body: "Here are some Oreos!"
+)
+
+Post.create!(
+  author_id: 17,
+  timeline_id: 17,
+  body: "Time is a companion that goes with us on a journey. It reminds us to cherish each moment, because it will never come again. What we leave behind is not as important as how we have lived."
+)
+
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
   body: "Oreos!?! My kinda people!"
+)
+
+Post.create!(
+  author_id: 2,
+  timeline_id: 2,
+  body: "Elliott! Elliott!"
 )
 
 Post.create!(
@@ -466,17 +461,10 @@ Post.create!(
   body: "Have you ever had a woman with 8 hands to satisfy all your needs ... like cooking and cleaning?"
 )
 
-
 Post.create!(
-  author_id: 8,
-  timeline_id: 1,
-  body: "I keep an eye on you."
-)
-
-Post.create!(
-  author_id: 11,
-  timeline_id: 11,
-  body: "You want weapons? Books! The best weapons in the world!"
+  author_id: 5,
+  timeline_id: 6,
+  body: "I see you!"
 )
 
 Post.create!(
@@ -487,26 +475,38 @@ Post.create!(
 
 Post.create!(
   author_id: 11,
-  timeline_id: 11,
-  body: "Do what I do. Hold tight and pretend it’s a plan!"
-)
-
-Post.create!(
-  author_id: 11,
   timeline_id: 9,
   body: "So, why are you visiting Earth?"
 )
 
 Post.create!(
-  author_id: 11,
-  timeline_id: 10,
-  body: "Long time no see."
+  author_id: 5,
+  timeline_id: 5,
+  body: "Our great mother Eywa protects the balance of life."
+)
+
+Post.create!(
+  author_id: 3,
+  timeline_id: 8,
+  body: "So what have you been doing lately?"
 )
 
 Post.create!(
   author_id: 13,
   timeline_id: 11,
   body: "I started to think you were just a madman with a box."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "You want weapons? Books! The best weapons in the world!"
+)
+
+Post.create!(
+  author_id: 17,
+  timeline_id: 18,
+  body: "I could use some advice right now."
 )
 
 Post.create!(
@@ -528,9 +528,9 @@ Post.create!(
 )
 
 Post.create!(
-  author_id: 13,
-  timeline_id: 11,
-  body: "Why do you keep coming back for us?"
+  author_id: 18,
+  timeline_id: 17,
+  body: "I was like you once... so worried about duty and obligation that I couldn't see past my own uniform. And what did it get me? An empty house."
 )
 
 Post.create!(
@@ -553,20 +553,8 @@ Post.create!(
 
 Post.create!(
   author_id: 11,
-  timeline_id: 10,
-  body: "Have you seen my sonic screwdriver?"
-)
-
-Post.create!(
-  author_id: 11,
   timeline_id: 14,
   body: "Have you seen my sonic screwdriver?"
-)
-
-Post.create!(
-  author_id: 12,
-  timeline_id: 12,
-  body: "I've decided to reveal myself to the world.  This way I can meet new people, travel, see a Grateful Dead concert."
 )
 
 Post.create!(
@@ -576,27 +564,21 @@ Post.create!(
 )
 
 Post.create!(
+  author_id: 2,
+  timeline_id: 12,
+  body: "Do you like jigsaw puzzles?"
+)
+
+Post.create!(
   author_id: 12,
   timeline_id: 12,
   body: "I learned one thing about eating jigsaw puzzles...an hour later, you're hungry again."
 )
 
 Post.create!(
-  author_id: 19,
-  timeline_id: 19,
-  body: "It's true, we are aliens. But what are you going to do about it? It's a two-party system. You have to vote for one of us."
-)
-
-Post.create!(
-  author_id: 12,
-  timeline_id: 12,
-  body: "I tried to puree a rock...it didn't work."
-)
-
-Post.create!(
-  author_id: 13,
-  timeline_id: 13,
-  body: "There's a man who's never going to let us down, and not even an army can get..."
+  author_id: 4,
+  timeline_id: 3,
+  body: "You're my Wall-e and I'm your Eve."
 )
 
 Post.create!(
@@ -612,6 +594,18 @@ Post.create!(
 )
 
 Post.create!(
+  author_id: 6,
+  timeline_id: 6,
+  body: "Sometimes your whole life boils down to one insane move."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 10,
+  body: "Long time no see."
+)
+
+Post.create!(
   author_id: 14,
   timeline_id: 14,
   body: "Everyone will receive a free upgrade. You will become like us."
@@ -624,9 +618,27 @@ Post.create!(
 )
 
 Post.create!(
+  author_id: 3,
+  timeline_id: 3,
+  body: "I don't want to survive, I want to live"
+)
+
+Post.create!(
   author_id: 15,
   timeline_id: 15,
   body: "Do. Or do not. There is no try."
+)
+
+Post.create!(
+  author_id: 2,
+  timeline_id: 15,
+  body: "Yodaaaaaa!"
+)
+
+Post.create!(
+  author_id: 12,
+  timeline_id: 12,
+  body: "I tried to puree a rock...it didn't work."
 )
 
 Post.create!(
@@ -642,9 +654,9 @@ Post.create!(
 )
 
 Post.create!(
-  author_id: 4,
-  timeline_id: 4,
-  body: "Wall-e is my favorite Spacebook friend!"
+  author_id: 11,
+  timeline_id: 16,
+  body: "Have you seen my sonic screwdriver?"
 )
 
 Post.create!(
@@ -654,11 +666,10 @@ Post.create!(
 )
 
 Post.create!(
-  author_id: 16,
-  timeline_id: 16,
-  body: "Change is the essential process of all existence."
+  author_id: 3,
+  timeline_id: 3,
+  body: "Sometimes things look a lot closer than they are."
 )
-
 
 Post.create!(
   author_id: 17,
@@ -667,9 +678,21 @@ Post.create!(
 )
 
 Post.create!(
-  author_id: 17,
-  timeline_id: 17,
-  body: "Time is a companion that goes with us on a journey. It reminds us to cherish each moment, because it will never come again. What we leave behind is not as important as how we have lived."
+  author_id: 14,
+  timeline_id: 10,
+  body: "So, what are your newest plans to conquer Earth?"
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "Do what I do. Hold tight and pretend it’s a plan!"
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 10,
+  body: "Have you seen my sonic screwdriver?"
 )
 
 Post.create!(
@@ -685,9 +708,27 @@ Post.create!(
 )
 
 Post.create!(
+  author_id: 6,
+  timeline_id: 6,
+  body: "I’m a warrior... of the Jarhead clan"
+)
+
+Post.create!(
   author_id: 19,
   timeline_id: 19,
   body: "My fellow Americans. As a young boy, I dreamed of being a baseball; but tonight I say, we must move forward, not backward; upward, not forward; and always twirling, twirling, twirling towards freedom!"
+)
+
+Post.create!(
+  author_id: 6,
+  timeline_id: 5,
+  body: "I see you!"
+)
+
+Post.create!(
+  author_id: 7,
+  timeline_id: 5,
+  body: "I admire you for your courage!"
 )
 
 Post.create!(
@@ -700,4 +741,808 @@ Post.create!(
   author_id: 11,
   timeline_id: 14,
   body: "Will you get an upgrade too?"
+)
+
+Post.create!(
+  author_id: 7,
+  timeline_id: 7,
+  body: "In Pandora there's some kind of communication between the roots of the trees. Like the synapses between neurons. Each tree has ten to the fourth connections to the trees around it, and there are ten to the twelfth trees on Pandora..."
+)
+
+Post.create!(
+  author_id: 13,
+  timeline_id: 11,
+  body: "Why do you keep coming back for us?"
+)
+
+Post.create!(
+  author_id: 8,
+  timeline_id: 1,
+  body: "I keep an eye on you."
+)
+
+Post.create!(
+  author_id: 11,
+  timeline_id: 11,
+  body: "The universe is big. It’s vast and complicated and ridiculous. And sometimes, very rarely, impossible things just happen and we call them miracles."
+)
+
+Invitation.create!(inviter_id: 19, invitee_id: 1)
+Invitation.create!(inviter_id: 19, invitee_id: 2)
+Invitation.create!(inviter_id: 12, invitee_id: 19)
+Invitation.create!(inviter_id: 18, invitee_id: 15)
+Invitation.create!(inviter_id: 7,  invitee_id: 18)
+Invitation.create!(inviter_id: 17, invitee_id: 15)
+Invitation.create!(inviter_id: 12, invitee_id: 17)
+Invitation.create!(inviter_id: 16, invitee_id: 12)
+Invitation.create!(inviter_id: 15, invitee_id: 14)
+Invitation.create!(inviter_id: 14, invitee_id: 13)
+Invitation.create!(inviter_id: 13, invitee_id: 2)
+Invitation.create!(inviter_id: 10, invitee_id: 7)
+Invitation.create!(inviter_id: 9,  invitee_id: 7)
+Invitation.create!(inviter_id: 8,  invitee_id: 9)
+Invitation.create!(inviter_id: 3,  invitee_id: 9)
+Invitation.create!(inviter_id: 8,  invitee_id: 19)
+Invitation.create!(inviter_id: 7,  invitee_id: 8)
+Invitation.create!(inviter_id: 6,  invitee_id: 13)
+Invitation.create!(inviter_id: 5,  invitee_id: 13)
+Invitation.create!(inviter_id: 19, invitee_id: 5)
+Invitation.create!(inviter_id: 4,  invitee_id: 17)
+Invitation.create!(inviter_id: 18,  invitee_id: 4)
+Invitation.create!(inviter_id: 18,  invitee_id: 3)
+Invitation.create!(inviter_id: 17,  invitee_id: 2)
+Invitation.create!(inviter_id: 16,  invitee_id: 1)
+Invitation.create!(inviter_id: 1,  invitee_id: 18)
+Invitation.create!(inviter_id: 2,  invitee_id: 16)
+
+Notification.create!(
+  user_id: 1,
+  body: "You and The_Doctor are now friends."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "You and Blon_Fel-Fotch are now friends."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "You and Robot_Octopus are now friends."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "You posted on Robot_Octopus' timeline."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "Robot_Octopus posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "Mr_Spock would like to be friends."
+)
+
+Notification.create!(
+  user_id: 1,
+  body: "You sent James_Kirk a friend request."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "You and Yoda are now friends."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "Kang would like to be friends."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "Amy_Pond would like to be friends."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "You sent Mr_Spock a friend request."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "Yoda posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "You and Wall-e are now friends."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "You posted on Alf's timeline."
+)
+
+Notification.create!(
+  user_id: 2,
+  body: "You posted on Yoda's timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "You and Yoda are now friends."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "You and ET are now friends."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "Eve-e posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "You posted on Robot_Octopus' timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "You posted on Kang's timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "You posted on Eve-e's timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "Kang posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 3,
+  body: "James_Kirk would like to be friends."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "James_Kirk would like to be friends."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You sent Picard a friend request."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You and Kang are now friends."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You and Robot_Octopus are now friends."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You and Wall-e are now friends."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You posted on Wall-e's timeline."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "You posted on Wall-e's timeline."
+)
+
+Notification.create!(
+  user_id: 4,
+  body: "Wall-e posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You and Dr_Grace are now friends."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You and Jake are now friends."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You and Alf are now friends."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You posted on Alf's timeline."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You posted on Jake's timeline."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "Jake posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "Kang would like to be friends."
+)
+
+Notification.create!(
+  user_id: 5,
+  body: "You sent Amy_Pond a friend request."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "You sent Amy_Pond a friend request."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "You and Dr_Grace are now friends."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "Dr_Grace posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "You and Neytiri are now friends."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "You posted on Neytiri's timeline."
+)
+
+Notification.create!(
+  user_id: 6,
+  body: "Neytiri posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You and Jake are now friends."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You and Neytiri are now friends."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "Dr_Grace posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You posted on Dr_Grace's timeline."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You posted on Jake's timeline."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You posted on Neytiri's timeline."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "Sharlaveer-Slam would like to be friends."
+)
+
+Notification.create!(
+  user_id: 7,
+  body: "You sent Robot_Octopus a friend request."
+)
+
+
+Notification.create!(
+  user_id: 8,
+  body: "Dr_Grace would like to be friends."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "You sent Kang a friend request."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "You sent Blon_Fel-Fotch a friend request."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "You and Vicci_Carillium are now friends."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "You and Wall-e are now friends."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "Vicci_Carillium posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "Wall-e posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 8,
+  body: "You posted on Vicci_Carillium's timeline."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "You posted on The_Doctor's timeline."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "You and Vicci_Carillium are now friends."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "You and Sharlaveer-Slam are now friends."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "You and Amy_Pond are now friends."
+)
+
+
+Notification.create!(
+  user_id: 9,
+  body: "Robot_Octopus would like to be friends."
+)
+
+Notification.create!(
+  user_id: 9,
+  body: "You sent Dr_Grace a friend request."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You sent Dr_Grace a friend request."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You and Vicci_Carillium are now friends."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You and The_Doctor are now friends."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You and Blon_Fel-Fotch are now friends."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You and Cyberman are now friends."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "You posted on The_Doctor's timeline."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 10,
+  body: "Cyberman posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You and Cyberman are now friends."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You and Mr_Spock are now friends."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You posted on Blon_Fel-Fotch's timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You posted on Vicci_Carillium's timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "Amy_Pond posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You posted on Amy_Pond's timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "You posted on Amy_Pond's timeline."
+)
+
+Notification.create!(
+  user_id: 11,
+  body: "Sharlaveer-Slam posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "You and Robot_Octopus are now friends."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "You and Neytiri are now friends."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "Neytiri posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "You and ET are now friends."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "ET posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "Mr_Spock would like to be friends."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "You sent Picard a friend request."
+)
+
+Notification.create!(
+  user_id: 12,
+  body: "You sent Kang a friend request."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "Jake would like to be friends."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "Neytiri would like to be friends."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "You sent ET a friend request."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "You posted on The_Doctor's timeline."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "You posted on The_Doctor's timeline."
+)
+
+Notification.create!(
+  user_id: 13,
+  body: "You and Vicci_Carillium are now friends."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "You and Sharlaveer-Slam are now friends."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "You and The_Doctor are now friends."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "You and Vicci_Carillium are now friends."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "You posted on Sharlaveer-Slam's timeline."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "Yoda would like to be friends."
+)
+
+Notification.create!(
+  user_id: 14,
+  body: "You sent Amy_Pond a friend request."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "Picard would like to be friends."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "You sent Cyberman a friend request."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "You and ET are now friends."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "ET posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "You and Wall-e are now friends."
+)
+
+Notification.create!(
+  user_id: 15,
+  body: "You posted on Yoda's timeline."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "You and The_Doctor are now friends."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "You and Picard are now friends."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "You and James_Kirk are now friends."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "The_Doctor posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "ET would like to be friends."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "You sent Vicci_Carillium a friend request."
+)
+
+Notification.create!(
+  user_id: 16,
+  body: "You sent Alf a friend request."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "Alf would like to be friends."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "Eve-e would like to be friends."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "You sent ET a friend request."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "You sent Yoda a friend request."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "You and James_Kirk are now friends."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "You posted on James_Kirk's timeline."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "James_Kirk posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 17,
+  body: "You and Mr_Spock are now friends."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You and Picard are now friends."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You and Mr_Spock are now friends."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "Picard posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You posted on Picard's timeline."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "Dr_Grace would like to be friends."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "Vicci_Carillium would like to be friends."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You sent Eve-e a friend request."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You sent Wall-e a friend request."
+)
+
+Notification.create!(
+  user_id: 18,
+  body: "You sent Yoda a friend request."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "Alf would like to be friends."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "Robot_Octopus would like to be friends."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You sent Neytiri a friend request."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You sent ET a friend request."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You sent Vicci_Carillium a friend request."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You and Wall-e are now friends."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "Wall-e posted on your timeline."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You posted on Wall-e's timeline."
+)
+
+Notification.create!(
+  user_id: 19,
+  body: "You and Eve-e are now friends."
 )

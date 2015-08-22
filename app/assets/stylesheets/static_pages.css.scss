@@ -3,11 +3,26 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .alert.alert-danger {
-   width: 368px;
-   height: 70px;
-   position: absolute;
-   margin-left: 725px;
+   width: 1200px;
    font-size: 16px;
+ }
+
+ .welcome-message {
+   font-size: 24px;
+   text-shadow: 1px 1px #ada8a8;
+   margin-left: 20px;
+   margin-right: 20px;
+   text-align: center;
+   color: #3a5795;
+ }
+
+ .welcome-title {
+   margin-left: 20px;
+   margin-right: 20px;
+   font-size: 32px;
+   text-align: center;
+   text-shadow: 1px 1px #ada8a8;
+   color: #3a5795;
  }
 
 .navbar.landing {
@@ -27,7 +42,7 @@
  }
 
 .home-img {
-   margin-top: 132px;
+   margin-top: 102px;
    margin-left: 45px;
    float: left;
    position: absolute;
@@ -36,7 +51,7 @@
  }
 
 #loginbox {
-   margin-top: 30px;
+   margin-top: 0px;
    width: 400px;
    padding-top: 100px;
    float: right;

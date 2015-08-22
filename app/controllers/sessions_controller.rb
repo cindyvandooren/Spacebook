@@ -26,7 +26,7 @@ class SessionsController < ApplicationController
   end
 
   def guest_signin
-    user = User.find(3)
+    user = User.find(11)
     sign_in(user)
     redirect_to root_url
   end
