@@ -3,81 +3,81 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .alert.alert-danger {
-   width: 1200px;
-   font-size: 16px;
+  width: 1200px;
+  font-size: 16px;
  }
 
  .welcome-message {
-   font-size: 24px;
-   text-shadow: 1px 1px #ada8a8;
-   margin-left: 20px;
-   margin-right: 20px;
-   text-align: center;
-   color: #3a5795;
+  font-size: 24px;
+  text-shadow: 1px 1px #ada8a8;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  color: #3a5795;
  }
 
  .welcome-title {
-   margin-left: 20px;
-   margin-right: 20px;
-   font-size: 32px;
-   text-align: center;
-   text-shadow: 1px 1px #ada8a8;
-   color: #3a5795;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: 1px 1px #ada8a8;
+  color: #3a5795;
  }
 
 .navbar.landing {
-   height: 82px;
+  height: 82px;
  }
 
 .navbar-brand.landing {
-   font-size: 36px;
-   text-shadow: 2px 2px grey;
+  font-size: 36px;
+  text-shadow: 2px 2px grey;
  }
 
 .navbar-brand.landing {
-   padding: 30px;
+  padding: 30px;
  }
 
 #signin {
-   margin: 25px;
+  margin: 25px;
  }
 
 .home-img {
-   margin-top: 102px;
-   margin-left: 45px;
-   float: left;
-   position: absolute;
-   border: 1px white solid;
-   border-radius: 5px;
+  margin-top: 102px;
+  margin-left: 45px;
+  float: left;
+  position: absolute;
+  border: 1px white solid;
+  border-radius: 5px;
  }
 
 #loginbox {
-   margin-top: 0px;
-   width: 400px;
-   padding-top: 100px;
-   float: right;
-   position: absolute;
+  margin-top: 0px;
+  width: 400px;
+  padding-top: 100px;
+  float: right;
+  position: absolute;
  }
 
 #loginbox > div:first-child {
-   padding-bottom: 10px;
-   float: left;
+  padding-bottom: 10px;
+  float: left;
  }
 
 .container.landing-content {
-   position: relative;
+  position: relative;
  }
 
 .container.landing-content:after {
-   content: "";
-   display: block;
-   clear: both;
+  content: "";
+  display: block;
+  clear: both;
  }
 
  @media only screen and (max-width: 768px){
-   .home-img{
-     display: none;
-   }
+  .home-img{
+    display: none;
+  }
  }
 
 .btn.btn-primary.guest-sign-in {

@@ -1,8 +1,5 @@
-<!-- Sign In bar on top -->
-
 <nav class="navbar navbar-default landing">
   <div class="container-fluid">
-
     <div class="navbar-header">
       <button type="button"
               class="navbar-toggle collapsed"
@@ -23,30 +20,32 @@
             role="form"
             action="<%= session_url %>"
             method="post">
-       <%= auth_token_input %>
-          <div class="input-group">
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-user"></i></span>
-              <input id="user_username"
-                     type="text"
-                     class="form-control"
-                     name="user[username]"
-                     value=""
-                     placeholder="Username">
-          </div>
+        <%= auth_token_input %>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-user"></i>
+          </span>
+          <input id="user_username"
+                 type="text"
+                 class="form-control"
+                 name="user[username]"
+                 value=""
+                 placeholder="Username">
+        </div>
 
-          <div class="input-group">
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-lock"></i></span>
-              <input id="user_password"
-                     type="password"
-                     class="form-control"
-                     name="user[password]"
-                     value=""
-                     placeholder="Password">
-          </div>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-lock"></i>
+          </span>
+          <input id="user_password"
+                 type="password"
+                 class="form-control"
+                 name="user[password]"
+                 value=""
+                 placeholder="Password">
+        </div>
 
-          <button type="submit" class="btn btn-primary">Sign In</button>
+        <button type="submit" class="btn btn-primary">Sign In</button>
      </form>
     </div>
   </div>
@@ -58,63 +57,61 @@
 <p class="welcome-title">Welcome to Spacebook.</p>
 <p class="welcome-message">Sign up to keep in touch with all your friends in the universe!</p>
 
-<!-- Sign Up form in page -->
-
 <div class="container landing-content">
     <div class="home-img">
         <%= image_tag("http://res.cloudinary.com/#{ENV['CLOUD_NAME']}/image/upload/c_scale,h_260/v1439329894/spaceship_img.jpg.jpg") %>
     </div>
-
     <div id="loginbox"
          class="mainbox col-md-6 col-md-offset-7 col-sm-6 col-sm-offset-7">
-         <div class="panel panel-default" >
-            <div class="panel-heading">
-                <div class="panel-title text-center">Sign Up For Free</div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+        <div class="panel-title text-center">Sign Up For Free</div>
+      </div>
+
+      <div class="panel-body">
+        <form name="form"
+              id="form"
+              class="form-horizontal"
+              enctype="multipart/form-data"
+              action="<%= users_url %>"
+              method="post">
+          <%= auth_token_input %>
+
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-user"></i>
+            </span>
+            <input id="user_username"
+                   type="text"
+                   class="form-control"
+                   name="user[username]"
+                   value=""
+                   placeholder="Username">
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-lock"></i>
+            </span>
+            <input id="user_password"
+                   type="password"
+                   class="form-control"
+                   name="user[password]"
+                   placeholder="Password">
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-12 controls">
+              <button type="submit"
+                      class="btn btn-primary pull-right">Sign Up</button>
+
+              <%= link_to "Guest Sign In", guest_signin_url,
+                  class: "btn btn-primary guest-sign-in",
+                  form_class: "guest-sign-in" %>
             </div>
-
-            <div class="panel-body" >
-                <form name="form"
-                      id="form"
-                      class="form-horizontal"
-                      enctype="multipart/form-data"
-                      action="<%= users_url %>"
-                      method="post">
-                  <%= auth_token_input %>
-
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="glyphicon glyphicon-user"></i></span>
-                        <input id="user_username"
-                               type="text"
-                               class="form-control"
-                               name="user[username]"
-                               value=""
-                               placeholder="Username">
-                    </div>
-
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                          <i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="user_password"
-                               type="password"
-                               class="form-control"
-                               name="user[password]"
-                               placeholder="Password">
-                    </div>
-
-                    <div class="form-group">
-                        <!-- Button -->
-                        <div class="col-sm-12 controls">
-                            <button type="submit"
-                                    class="btn btn-primary pull-right">
-                                    Sign Up</button>
-
-                            <%= link_to "Guest Sign In", guest_signin_url,
-                              class: "btn btn-primary guest-sign-in", form_class: "guest-sign-in" %>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

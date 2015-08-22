@@ -65,6 +65,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         var data = result[0];
         var uploaded_picture_id = data.url.substring(36);
         var options = {};
+
         options[image_type] = uploaded_picture_id;
         that.user.set(options);
         that.user.save({}, {
