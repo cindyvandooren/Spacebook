@@ -31,7 +31,10 @@ Spacebook.Views.HeaderInfo = Backbone.View.extend({
       },
 
       error: function () {
-        alert("Something went wrong! Please try again!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Something went wrong. Please try again later."
+        });
+        $("body").append(modal.render().$el);
       }
     });
   }

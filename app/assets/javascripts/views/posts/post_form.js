@@ -38,9 +38,12 @@ Spacebook.Views.PostForm = Backbone.View.extend({
         that.post = new Spacebook.Models.Post();
         that.render();
       },
-      //TODO: Make this a helpful message for the user
       error: function () {
-        alert("Please try again! Blank posts are not allowed!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Post cannot be blank."
+        });
+
+        $("body").append(modal.render().$el);
       }
     });
   }

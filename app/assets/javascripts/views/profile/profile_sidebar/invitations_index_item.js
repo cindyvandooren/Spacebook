@@ -35,10 +35,11 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
       success: function () {
         that.invitations.remove(that.model);
       },
-
-      //TODO: Make this a helpful message for the user.
       error: function () {
-        alert("Something went wrong! Please try again!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Something went wrong. Please try again later."
+        });
+        $("body").append(modal.render().$el);
       }
     });
   },
@@ -60,21 +61,20 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
     var otherFriend = new Spacebook.Models.Friend();
     otherFriend.save({
       own_id: inviterId,
-      friend_id: Spacebook.CURRENT_USER_ID },
-      { success: function () {
-        console.log("success");
-      }
-      //TODO : get rid of console.log. Use proper error callback.
-    });
+      friend_id: Spacebook.CURRENT_USER_ID
+      });
+
 
     this.model.destroy({
       success: function () {
         that.invitations.remove(that.model);
       },
 
-      //TODO: Make this a helpful message for the user.
       error: function () {
-        alert("Something went wrong! Please try again!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Something went wrong. Please try again later."
+        });
+        $("body").append(modal.render().$el);
       }
     });
   }

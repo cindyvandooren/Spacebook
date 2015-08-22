@@ -34,10 +34,9 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         $(":input").val("");
         $(".sidebar-about").click();
       },
-      //TODO Make this a helpful message for the user
       error: function () {
         var modal = new Spacebook.Views.ErrorMessage({
-          message: "Your profile has not been updated. Please try again!"
+          message: "Your profile could not be updated. Please try again!"
         });
 
         $("body").append(modal.render().$el);
@@ -59,7 +58,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
       var that = this;
       if (error) {
         var modal = new Spacebook.Views.ErrorMessage({
-          message: "Your picture has not been saved. Please try again!"
+          message: "Your picture has not been saved."
         });
         $("body").append(modal.render().$el);
       } else {
