@@ -1,6 +1,5 @@
 Spacebook.Collections.Users = Backbone.Collection.extend({
   model: Spacebook.Models.User,
-
   url: "/api/users",
 
   getOrFetch: function (id) {
@@ -16,7 +15,7 @@ Spacebook.Collections.Users = Backbone.Collection.extend({
         error: function () { collection.remove(user); }
       });
     }
-    
+
     return user;
   }
 });

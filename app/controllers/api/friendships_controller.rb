@@ -1,5 +1,6 @@
 class Api::FriendshipsController < ApplicationController
   before_action :require_signed_in
+  before_action :need_invitation, only: :create
 
   def index
     @friendships = Friendship.all
@@ -24,5 +25,11 @@ class Api::FriendshipsController < ApplicationController
   private
   def friendship_params
     params.require(:friendship).permit(:friend_id, :own_id)
+  end
+
+  def need_invitation
+    id = current_user.id
+    invitation = Invitation.where("inviter_id = ? OR invitee_id = ?", id, id)
+    invitation ? true : false
   end
 end

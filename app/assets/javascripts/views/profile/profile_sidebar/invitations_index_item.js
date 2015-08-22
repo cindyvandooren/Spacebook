@@ -64,6 +64,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
       { success: function () {
         console.log("success");
       }
+      //TODO : get rid of console.log. Use proper error callback.
     });
 
     this.model.destroy({

@@ -9,7 +9,6 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   initialize: function () {
     this.listenTo(this.model, "sync change", this.render);
     this.notifications = this.model.notifications();
-    // this.updateNotifications();
   },
 
   render: function () {
@@ -42,14 +41,5 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     });
 
     $("body").append(notesModal.render().$el);
-  },
-  //
-  // updateNotifications: function () {
-  //   debugger;
-  //   var that = this;
-  //   this.notifications.fetch({
-  //       add: true
-  //   });
-  //   setTimeout(that.updateNotifications, 1000);
-  // }
+  }
 });

@@ -75,7 +75,7 @@ class Api::PostsController < ApplicationController
   def require_own_post
     post = Post.find(params[:id])
     unless current_user.id == post.author_id
-      render json: "You can't change other user's posts"
+      render json: {}
     end
   end
 end

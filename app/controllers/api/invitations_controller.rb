@@ -1,6 +1,6 @@
 class Api::InvitationsController < ApplicationController
   before_action :require_signed_in
-
+  before_action :require_invitation_relation, only: :destroy
 
   def index
     @invitations = Invitation.all
