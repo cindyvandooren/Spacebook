@@ -1286,3 +1286,5 @@ LINE 1: ...ons" WHERE "notifications"."user_id" = $1 AND (created_at >)
 [08/22/15 15:34:36 -0700 Cindys-MacBook-Pro.local (27245)] INFO : Installing Rails 4 Error instrumentation
 [08/22/15 15:34:36 -0700 Cindys-MacBook-Pro.local (27245)] INFO : Finished instrumentation
 [08/22/15 15:34:37 -0700 Cindys-MacBook-Pro.local (27245)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/15 15:49:58 -0700 Cindys-MacBook-Pro.local (27245)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/22/15 15:49:58 -0700 Cindys-MacBook-Pro.local (27245)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

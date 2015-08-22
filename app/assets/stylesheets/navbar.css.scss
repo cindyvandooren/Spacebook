@@ -138,3 +138,26 @@ tr.notifications-item {
 .m-content > p {
   margin-left: 15px;
 }
+
+.m-error-content {
+  z-index: 2;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  background-color: white;
+  padding: 1pc;
+  border: 1px solid #3a5795;
+  border-radius: 5px;
+  width: 500px;
+  height: 200px;
+}
+
+.m-error-content > h2 {
+  width: 200px;
+  margin-top: - 20px;
+  margin-bottom: 40px;
+}
+
+.m-error-content > p {
+  margin-left: 15px;
+}

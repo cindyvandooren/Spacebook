@@ -53,11 +53,11 @@ Spacebook.Views.SearchResult = Backbone.CompositeView.extend({
   removeAndEnable: function () {
     this.remove();
     $(".search-form").prop("disabled", false);
-    $("body").removeClass("modal-scroll");
+    $("body").removeClass("modal-preventscroll");
   },
 
   onRender: function () {
-    $("body").addClass("modal-scroll");
+    $("body").addClass("modal-preventscroll");
     $(".search-form").prop("disabled",true);
   }
 });

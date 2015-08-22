@@ -36,7 +36,11 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
       },
       //TODO Make this a helpful message for the user
       error: function () {
-        alert("Something went wrong! Please try again!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Your profile has not been updated. Please try again!"
+        });
+
+        $("body").append(modal.render().$el);
       }
     });
   },
@@ -54,7 +58,10 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, result) {
       var that = this;
       if (error) {
-        alert("Your picture was not saved. Please try again!");
+        var modal = new Spacebook.Views.ErrorMessage({
+          message: "Your picture has not been saved. Please try again!"
+        });
+        $("body").append(modal.render().$el);
       } else {
         var data = result[0];
         var uploaded_picture_id = data.url.substring(36);
