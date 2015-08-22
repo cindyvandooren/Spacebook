@@ -1,6 +1,7 @@
 class Api::InvitationsController < ApplicationController
   before_action :require_signed_in
 
+
   def index
     @invitations = Invitation.all
   end
@@ -44,5 +45,20 @@ class Api::InvitationsController < ApplicationController
   private
   def invitation_params
     params.require(:invitation).permit(:inviter_id, :invitee_id)
+  end
+
+  def require_invitation_relation
+    @invitation = Invitation.find(params[:id])
+    unless (is_inviter?(@invitation) || is_invitee?(@invitation))
+      render json: "You can't delete other user's invitations."
+    end
+  end
+
+  def is_inviter?(invitation)
+    current_user.id = invitation.inviter_id
+  end
+
+  def is_invitee?(invitation)
+    current_user.id = invitation.invitee_id
   end
 end

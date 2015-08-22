@@ -37,10 +37,11 @@ ActiveRecord::Schema.define(version: 20150819174300) do
   add_index "invitations", ["inviter_id"], name: "index_invitations_on_inviter_id", using: :btree
 
   create_table "notifications", force: :cascade do |t|
-    t.integer  "user_id",    null: false
-    t.string   "body",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",                    null: false
+    t.string   "body",                       null: false
+    t.boolean  "seen",       default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "notifications", ["user_id"], name: "index_notifications_on_user_id", using: :btree
