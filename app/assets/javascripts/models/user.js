@@ -29,6 +29,13 @@ Spacebook.Models.User = Backbone.Model.extend({
     return this._timelinePosts;
   },
 
+  friendsOfFriends: function () {
+    if (!this._friendsOfFriends) {
+      this._friendsOfFriends = new Spacebook.Collections.Users();
+    }
+    return this._friendsOfFriends;
+  },
+
   parse: function (response) {
     if (response.notifications) {
       this.notifications().set(response.notifications);
@@ -48,6 +55,11 @@ Spacebook.Models.User = Backbone.Model.extend({
     if (response.invitations) {
       this.invitations().set(response.invitations, { parse: true });
       delete response.invitations;
+    }
+
+    if (response.friends_of_friends) {
+      this.friendsOfFriends().set(response.friends_of_friends);
+      delete response.friends_of_friends;
     }
 
     return response;

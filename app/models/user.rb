@@ -138,12 +138,13 @@ class User < ActiveRecord::Base
   end
 
   def friends_of_friends
-  f = friends.pluck(:friend_id)
-  friends_of_friends_ids = Friendship.where(own_id: f)
-                                 .where.not(friend_id: self.id)
-                                 .pluck(:friend_id)
-                                 .uniq
-                                 .shuffle[0..4]
+  friend_ids = friends.pluck(:friend_id)
+  exclude_ids = friend_ids + [self.id]
+  friends_of_friends_ids = Friendship.where(own_id: friend_ids)
+                                     .where.not(friend_id: exclude_ids)
+                                     .pluck(:friend_id)
+                                     .uniq
+                                     .shuffle[0..4]
   friends_of_friends = User.where(id: friends_of_friends_ids)
   end
 end

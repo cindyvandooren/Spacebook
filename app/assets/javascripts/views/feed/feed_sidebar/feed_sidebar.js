@@ -3,8 +3,9 @@ Spacebook.Views.FeedSideBar = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.user = options.user;
+    this.listenTo(this.user, "sync", this.render);
     this.addInvitationsIndexView();
-    this.addFriendsIndexView();
+    this.addFriendsOfFriendsIndexView();
   },
 
   render: function () {
@@ -16,15 +17,15 @@ Spacebook.Views.FeedSideBar = Backbone.CompositeView.extend({
 
   addInvitationsIndexView: function () {
     var subview = new Spacebook.Views.InvitationsIndex({
-      user: this.user,
+      user: this.user
     });
     this.addSubview(".all-invitations", subview);
   },
 
-  addFriendsIndexView: function () {
-    var subview = new Spacebook.Views.FriendsIndex({
-      user: this.user,
+  addFriendsOfFriendsIndexView: function () {
+    var subview = new Spacebook.Views.FriendsOfFriendsIndex({
+      user: this.user
     });
-    this.addSubview(".friends", subview);
+    this.addSubview(".friends-of-friends", subview);
   }
 });
