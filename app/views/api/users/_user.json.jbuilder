@@ -37,3 +37,9 @@ json.invitations do
     json.partial!("api/invitations/invitation", invitation: invitation)
   end
 end
+
+json.friends_of_friends do
+  json.array!(user.friends_of_friends) do |friend_of_friend|
+    json.partial!("api/users/limited_info", user: friend_of_friend)
+  end
+end

@@ -53,6 +53,8 @@ class User < ActiveRecord::Base
 
   has_many :new_friends, through: :friends, source: :friend
 
+  # has_many :friends_of_friends, through: :new_friends, source: :owner
+
   has_many :notifications
 
   def self.find_by_credentials(username, password)
@@ -133,5 +135,15 @@ class User < ActiveRecord::Base
 
   def all_invitations
     self.received_invitations + self.sent_invitations
+  end
+
+  def friends_of_friends
+  f = friends.pluck(:friend_id)
+  friends_of_friends_ids = Friendship.where(own_id: f)
+                                 .where.not(friend_id: self.id)
+                                 .pluck(:friend_id)
+                                 .uniq
+                                 .shuffle[0..4]
+  friends_of_friends = User.where(id: friends_of_friends_ids)
   end
 end
