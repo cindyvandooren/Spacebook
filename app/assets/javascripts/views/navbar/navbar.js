@@ -7,9 +7,13 @@ Spacebook.Views.Navbar = Backbone.View.extend({
   },
 
   initialize: function () {
+    var that = this;
     this.listenTo(this.model, "sync change", this.render);
     this.notifications = this.model.notifications();
     this.listenTo(this.notifications, "sync change", this.render);
+    this.timer = setInterval(function() {
+      that.model.fetch();
+    }, 20000);
   },
 
   render: function () {
@@ -18,7 +22,6 @@ Spacebook.Views.Navbar = Backbone.View.extend({
       number: this.notifications.length
     });
     this.$el.html(renderedContent);
-    this.onRender();
     return this;
   },
 
@@ -46,13 +49,5 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     });
 
     $("body").append(notesModal.render().$el);
-  },
-
-  //TODO: The view is being rendered twice, I guess. The issues is that
-  // you have to click twice to close the modal.
-  onRender: function () {
-    if (this.notifications.length > 0) {
-      badge.css('background-color', 'red');
-    }
-      }
+  }
 });
