@@ -18,3 +18,24 @@
   background-color: white;
   margin-top: 20px;
 }
+
+.sidebar-friends-of-friends-list {
+  border: 1px #3a5795 solid;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #ADA8A8;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.friends-of-friends-list {
+  padding-left: 15px;
+}
+
+.friends-of-friends-list > li:first-child {
+  padding-top: 0px;
+}
+
+.friends-of-friends-list > li {
+  padding-top: 10px;
+  font-size: 14px;
+}

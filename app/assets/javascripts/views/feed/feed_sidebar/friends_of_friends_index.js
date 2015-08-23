@@ -33,7 +33,6 @@ Spacebook.Views.FriendsOfFriendsIndex = Backbone.CompositeView.extend({
   },
 
   addFriendsOfFriendsIndexItemView: function (friendOfFriends) {
-    debugger;
     var view = this;
     if (view.countSubViews() >= 5) {
       var firstView = view.subviews(".friends-of-friends-list").first();

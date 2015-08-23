@@ -1,7 +1,7 @@
 Spacebook.Views.FriendsOfFriendsIndexItem = Backbone.View.extend({
   template: JST["feed/feed_sidebar/friends_of_friends_index_item"],
 
-  tagname: "li",
+  tagName: "li",
 
   className: "friends-of-friends-index-item",
 
