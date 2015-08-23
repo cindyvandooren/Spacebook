@@ -58,7 +58,7 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
       var that = this;
       if (error) {
         var modal = new Spacebook.Views.ErrorMessage({
-          message: "Your picture has not been saved."
+          message: "No pictures selected."
         });
         $("body").append(modal.render().$el);
       } else {
@@ -71,6 +71,13 @@ Spacebook.Views.ProfileUpdate = Backbone.View.extend({
         that.user.save({}, {
           success: function () {
             that.user.fetch();
+          },
+
+          error: function (model, response) {
+            var modal = new Spacebook.Views.ErrorMessage({
+              message: "Your picture could not be save. Please try again!"
+            });
+            $("body").append(modal.render().$el);
           }
         });
       }

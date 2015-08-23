@@ -50,7 +50,7 @@ class Api::InvitationsController < ApplicationController
   def require_invitation_relation
     @invitation = Invitation.find(params[:id])
     unless (is_inviter?(@invitation) || is_invitee?(@invitation))
-      render json: "You can't delete other user's invitations."
+      render json: {}
     end
   end
 

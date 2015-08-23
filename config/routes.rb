@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show, :create, :update, :destroy]
     resources :invitations, only: [:index, :show, :create, :destroy]
     resources :friendships, only: [:index, :create]
-    resources :notifications, only: [:index, :create, :show]
+    resources :notifications, only: [:index, :create, :update, :show]
   end
 end

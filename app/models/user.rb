@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
            foreign_key: :own_id
 
   has_many :new_friends, through: :friends, source: :friend
-  
+
   has_many :notifications
 
   def self.find_by_credentials(username, password)
@@ -124,7 +124,11 @@ class User < ActiveRecord::Base
   end
 
   def show_notifications
-    notifications.where('created_at > ?', Time.now - 2.days).order(id: :desc).limit(8)
+    notifications.where('created_at > ? AND seen = FALSE', Time.now - 2.days).order(id: :desc).limit(8)
+  end
+
+  def show_new_notifications
+    notifications.where('seen = FALSE').order(id: :desc).limit(8)
   end
 
   def all_invitations

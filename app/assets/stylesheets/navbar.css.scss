@@ -15,27 +15,27 @@
 }
 
 .menu-root:first-child {
-   position: relative;
+  position: relative;
 }
 
 .menu-root:first-child:after {
-   content: "";
-   clear: both;
-   display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .thumbnail-link {
-   position: absolute;
-   float: left;
-   padding-right: 0px;
-   margin-top: -5px;
+  position: absolute;
+  float: left;
+  padding-right: 0px;
+  margin-top: -5px;
 }
 
 .username-link {
-   position: absolute;
-   float:right;
-   padding-left: 0px;
-   margin-left: -15px;
+  position: absolute;
+  float:right;
+  padding-left: 0px;
+  margin-left: -15px;
 }
 
 .navbar-default.root {
@@ -58,6 +58,8 @@
   left: 0;
   right: 0;
   z-index: 1;
+  width: 110%;
+  height: 110%;
 }
 
 .m-content {
@@ -74,14 +76,14 @@
 }
 
 .m-content ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
+  -webkit-appearance: none;
+  width: 7px;
 }
 
 .m-content ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: rgba(0,0,0,.5);
-    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }
 
 .search-result-list-item {

@@ -1,11 +1,12 @@
 Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
   template: JST["navbar/notifications_index"],
 
-  initialize: function () {
+  initialize: function (options) {
+    this.notifications = options.notifications;
     $(document).on('keyup', this.handleKey.bind(this));
-    this.listenTo(this.collection, "sync", this.render);
-    this.listenTo(this.collection, "add", this.addNotificationsIndexItemView);
-    this.collection.each(this.addNotificationsIndexItemView.bind(this));
+    this.listenTo(this.notifications, "sync", this.render);
+    this.listenTo(this.notifications, "add", this.addNotificationsIndexItemView);
+    this.notifications.each(this.addNotificationsIndexItemView.bind(this));
   },
 
   events: {
@@ -14,7 +15,7 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({ notifications: this.collection });
+    var renderedContent = this.template({ notifications: this.notifications });
     this.$el.html(renderedContent);
     this.attachSubviews();
     this.onRender();
@@ -34,6 +35,10 @@ Spacebook.Views.NotificationsIndex = Backbone.CompositeView.extend({
   },
 
   removeAndEnable: function () {
+    this.notifications.each(function (notification) {
+      notification.save({ seen: true });
+    });
+    this.notifications.fetch({ reset: true });
     this.remove();
     $(".search-form").prop("disabled", false);
     $("body").removeClass("modal-preventscroll");

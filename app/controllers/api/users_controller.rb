@@ -46,7 +46,7 @@ class Api::UsersController < ApplicationController
   def require_own_profile
     user = User.find(params[:id])
     unless current_user.id == user.id
-      render json: "You can't change other user's profiles."
+      render json: {}
     end
   end
 end

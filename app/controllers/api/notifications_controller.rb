@@ -3,7 +3,7 @@ class Api::NotificationsController < ApplicationController
   before_action :require_current_user, only: :show
 
   def index
-    @notifications = Notification.all
+    @notifications = current_user.show_new_notifications
   end
 
   def show
@@ -16,14 +16,26 @@ class Api::NotificationsController < ApplicationController
     if @notification.save
       render :show
     else
-      render json: @notifications.errors.full_messages,
+      render json: @notification.errors.full_messages,
                    status: :unprocessable_entity
     end
   end
 
+  def update
+    @notification = Notification.find(params[:id])
+
+    if @notification.update(notification_params)
+      render :show
+    else
+      render json: @notification.errors.full_messages,
+                   status: :unprocessable_entity
+    end
+
+  end
+
   private
   def notification_params
-    params.require(:notification).permit(:user_id, :body)
+    params.require(:notification).permit(:user_id, :body, :seen)
   end
 
   def require_current_user
