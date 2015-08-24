@@ -79,7 +79,7 @@
 textarea#body.create-post-body {
   margin-top: 20px;
   width: 100%;
-  height: 60px;
+  height: 80px;
   border-radius: 5px;
   font-size: 16px;
   box-shadow: 2px 2px 2px #ADA8A8;
@@ -160,6 +160,49 @@ ul.posts-index {
   color: grey;
   border: none;
   font-size: 16px;
+}
+
+.post-index-item-footer {
+  height: 50px;
+  border-top: 1px solid grey;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.post-index-item-footer > div {
+  position: relative;
+}
+
+.post-index-item-footer > div:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.like-post.btn {
+  height: 30px;
+  font-size: 12px;
+  margin: 5px;
+  background-color: white;
+  color: grey;
+  border: none;
+  font-size: 16px;
+}
+
+.unlike-post.btn {
+  height: 30px;
+  font-size: 12px;
+  margin: 5px;
+  background-color: white;
+  color: grey;
+  border: none;
+  font-size: 16px;
+}
+
+.num-likes {
+  font-size: 14px;
+  margin-left: 310px;
+  margin-top: -30px;
 }
 
 .search-results > p {

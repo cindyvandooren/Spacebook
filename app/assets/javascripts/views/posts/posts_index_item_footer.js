@@ -5,14 +5,13 @@ Spacebook.Views.PostsIndexItemFooter = Backbone.CompositeView.extend({
     this.user = options.user;
     this.post = options.post;
     this.likes = this.post.likes();
-    this.listenTo(this.likes, "sync", this.render);
-    this.listenTo(this.likes, "remove", this.render);
+    this.listenTo(this.likes, "sync remove", this.render);
     this.listenTo(this.like, "sync", this.render);
   },
 
   events: {
-    "click .like" : "likePost",
-    "click .unlike" : "unlikePost"
+    "click .like-post" : "likePost",
+    "click .unlike-post" : "unlikePost"
   },
 
   render: function () {
@@ -44,11 +43,11 @@ Spacebook.Views.PostsIndexItemFooter = Backbone.CompositeView.extend({
   },
 
   unlikePost: function (event) {
+    event.preventDefault();
     var findLike = this.likes.findWhere({ "liker_id": this.user.id });
     var id = findLike.id;
     var like = this.likes.getOrFetch(id);
     var that = this;
-    event.preventDefault();
     like.destroy({
       success: function () {
         that.likes.remove(that.like);

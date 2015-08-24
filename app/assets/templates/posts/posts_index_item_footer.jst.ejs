@@ -1,12 +1,18 @@
-<% if (num > 0) { %>
-  <h3><%= num %> people like this post</h3>
-<% } %>
-
 <% var id = parseInt(user.escape('id')) %>
 <% var like = likes.findWhere({'liker_id': id}); %>
 
-<% if (like) { %>
-  <button class="unlike btn btn-primary">Unlike</button>
-<% } else { %>
-  <button class="like btn btn-primary">Like</button>
-<% } %>
+<div class="like-unlike">
+  <% if (like) { %>
+    <button class="unlike-post btn"><i class="glyphicon glyphicon-thumbs-down"></i></button>
+  <% } else { %>
+    <button class="like-post btn"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+  <% } %>
+</div>
+
+<div class="num-likes">
+  <% if (num > 1) { %>
+    <p>This post has <%= num %> likes.</p>
+  <% } else if (num === 1) { %>
+    <p>This post has <%= num %> like. </p>
+  <% } %>
+</div>

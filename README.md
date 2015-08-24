@@ -10,25 +10,25 @@ Sign up and keep in touch with your friends from space.
 - They can visit other users' profile pages.
 - They can update their own profile page (changing profile pictures and background pictures)
 - Users can become friends to other users.
-- Users receive notifications when friends perform actions.
+- Users receive notifications when they (or their friends) perform actions.
 - Users have a feed page with posts their friends made.
 - Users can search for other users.
+- Users can like and unlike posts.
 
 ## Technologies
 - Own implementation for authentication
 - Backbone
-- Cloudinary
-- Figaro
+- Cloudinary + Figaro
 - Json jbuilder
 - Ruby on Rails
 - Javascript
 - jQuery
 - Postgresql
+- Polymorphic Associations
 
 ## Todo
 - Custom styling for the Cloudinary widget
 - Use markdown in the creation of posts
 - Comments
-- Likes
 - Photo albums
 - Typeahead search bar
