@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819174300) do
+ActiveRecord::Schema.define(version: 20150824013833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20150819174300) do
 
   add_index "invitations", ["invitee_id"], name: "index_invitations_on_invitee_id", using: :btree
   add_index "invitations", ["inviter_id"], name: "index_invitations_on_inviter_id", using: :btree
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "liker_id",      null: false
+    t.integer  "likeable_id"
+    t.string   "likeable_type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id", using: :btree
 
   create_table "notifications", force: :cascade do |t|
     t.integer  "user_id",                    null: false

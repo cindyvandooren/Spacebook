@@ -11,6 +11,8 @@
 #
 
 class Post < ActiveRecord::Base
+  include Likeable
+
   validates :author, :receiver, :body, presence: true
   validates :body, length: { maximum: 240 }
 

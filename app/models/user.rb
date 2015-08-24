@@ -53,9 +53,9 @@ class User < ActiveRecord::Base
 
   has_many :new_friends, through: :friends, source: :friend
 
-  # has_many :friends_of_friends, through: :new_friends, source: :owner
-
   has_many :notifications
+
+  has_many :likes, foreign_key: :liker_id
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

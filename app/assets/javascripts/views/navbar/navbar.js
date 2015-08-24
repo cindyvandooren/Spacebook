@@ -13,7 +13,7 @@ Spacebook.Views.Navbar = Backbone.View.extend({
     this.listenTo(this.notifications, "sync change", this.render);
     this.timer = setInterval(function() {
       that.notifications.fetch();
-    }, 2000);
+    }, 20000);
   },
 
   render: function () {
