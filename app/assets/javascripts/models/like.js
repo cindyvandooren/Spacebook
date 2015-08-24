@@ -1,3 +1,3 @@
-Spacebook.Models.Notification = Backbone.Model.extend({
-  urlRoot: "/api/likes"  
+Spacebook.Models.Like = Backbone.Model.extend({
+  urlRoot: "/api/likes"
 });

@@ -1,0 +1,12 @@
+<% if (num > 0) { %>
+  <h3><%= num %> people like this post</h3>
+<% } %>
+
+<% var id = parseInt(user.escape('id')) %>
+<% var like = likes.findWhere({'liker_id': id}); %>
+
+<% if (like) { %>
+  <button class="unlike btn btn-primary">Unlike</button>
+<% } else { %>
+  <button class="like btn btn-primary">Like</button>
+<% } %>

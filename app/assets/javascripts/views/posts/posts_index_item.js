@@ -15,6 +15,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
     this.listenTo(this.model, "sync change", this.render);
     this.addPostsIndexItemHeaderView();
     this.addPostsIndexItemBodyView();
+    this.addPostsIndexItemFooterView();
   },
 
   render: function () {
@@ -37,6 +38,14 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
       post: this.model
     });
     this.addSubview(".post-index-item-body", subview);
+  },
+
+  addPostsIndexItemFooterView: function () {
+    var subview = new Spacebook.Views.PostsIndexItemFooter({
+      post: this.model,
+      user: this.user
+    });
+    this.addSubview(".post-index-item-footer", subview);
   },
 
   changePostItemBodyView: function (event) {

@@ -14,8 +14,8 @@ json.author_details do
   json.partial!("api/users/limited_info", user: post.author)
 end
 
-json.likers do
-  json.array!(post.likers) do |liker|
-    json.partial!("api/users/limited_info", user: liker)
+json.likes do
+  json.array!(post.likes) do |like|
+    json.partial!("api/likes/like", like: like)
   end
 end

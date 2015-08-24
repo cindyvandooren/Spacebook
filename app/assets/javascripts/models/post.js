@@ -15,12 +15,12 @@ Spacebook.Models.Post = Backbone.Model.extend({
     return this._receiver_details;
   },
 
-  likers: function () {
-    if (!this._likers) {
-      this._likers = new Spacebook.Collections.Users({ post: this });
+  likes: function () {
+    if (!this._likes) {
+      this._likes = new Spacebook.Collections.Likes();
     }
 
-    return this._likers;
+    return this._likes;
   },
 
   parse: function (response) {
@@ -34,9 +34,9 @@ Spacebook.Models.Post = Backbone.Model.extend({
       delete response.receiver_details;
     }
 
-    if (response.likers) {
-      this.likers().set(response.likers);
-      delete response.likers;
+    if (response.likes) {
+      this.likes().set(response.likes);
+      delete response.likes;
     }
     return response;
   }
