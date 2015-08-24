@@ -1546,3 +1546,231 @@ Notification.create!(
   user_id: 19,
   body: "You and Eve-e are now friends."
 )
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 3,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 6,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 6,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 67,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 22,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 22,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 63,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 9,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 58,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 58,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 55,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 74,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 2,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 48,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 57,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 57,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 57,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 78,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 78,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 78,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 11,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 75,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 75,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 69,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 69,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 71,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 15,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 47,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 4,
+  likeable_type: "Post"
+)
