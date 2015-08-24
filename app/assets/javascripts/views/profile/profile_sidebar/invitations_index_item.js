@@ -36,10 +36,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
         that.invitations.remove(that.model);
       },
       error: function () {
-        var modal = new Spacebook.Views.ErrorMessage({
-          message: "Something went wrong. Please try again later."
-        });
-        $("body").append(modal.render().$el);
+        alert("Something went wrong. Please try again later.");
       }
     });
   },
@@ -71,10 +68,7 @@ Spacebook.Views.InvitationsIndexItem = Backbone.View.extend({
       },
 
       error: function () {
-        var modal = new Spacebook.Views.ErrorMessage({
-          message: "Something went wrong. Please try again later."
-        });
-        $("body").append(modal.render().$el);
+        alert("Something went wrong. Please try again later.");
       }
     });
   }

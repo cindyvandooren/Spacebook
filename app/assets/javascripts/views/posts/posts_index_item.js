@@ -86,10 +86,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
         that.changeToPostsIndexItemBody(event);
       },
       error: function () {
-        var modal = new Spacebook.Views.ErrorMessage({
-          message: "Posts cannot be blank."
-        });
-        $("body").append(modal.render().$el);
+        alert("Posts cannot be blank.");
       }
     });
   },
@@ -102,10 +99,7 @@ Spacebook.Views.PostsIndexItem = Backbone.CompositeView.extend({
         that.posts.remove(that.model);
       },
       error: function () {
-        var modal = new Spacebook.Views.ErrorMessage({
-          message: "You can only delete your own posts."
-        });
-        $("body").append(modal.render().$el);
+        alert("You can only delete your own posts.");
       }
     });
   }
