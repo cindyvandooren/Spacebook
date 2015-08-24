@@ -1422,3 +1422,4 @@ LINE 1: ...ons" WHERE "notifications"."user_id" = $1 AND (created_at >)
 [08/23/15 19:46:44 -0700 Cindys-MacBook-Pro.local (13604)] INFO : Installing Rails 4 view instrumentation
 [08/23/15 19:46:44 -0700 Cindys-MacBook-Pro.local (13604)] INFO : Installing Rails 4 Error instrumentation
 [08/23/15 19:46:44 -0700 Cindys-MacBook-Pro.local (13604)] INFO : Finished instrumentation
+[08/24/15 16:36:00 -0700 Cindys-MacBook-Pro.local (4523)] INFO : Starting Agent shutdown

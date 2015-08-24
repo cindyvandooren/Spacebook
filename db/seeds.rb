@@ -1746,12 +1746,6 @@ Like.create!(
 )
 
 Like.create!(
-  liker_id: 3,
-  likeable_id: 70,
-  likeable_type: "Post"
-)
-
-Like.create!(
   liker_id: 6,
   likeable_id: 71,
   likeable_type: "Post"
