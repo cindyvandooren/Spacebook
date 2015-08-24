@@ -18,7 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 3.hours do
+every 2.hours do
   rake "heroku:reset"
   rake "heroku:migrate"
   rake "heroku:seed"
