@@ -13,6 +13,6 @@ Rails.application.routes.draw do
     resources :invitations, only: [:index, :show, :create, :destroy]
     resources :friendships, only: [:index, :create]
     resources :notifications, only: [:index, :create, :update, :show]
-    resources :likes, only: [:index, :create, :update, :show, :destroy]
+    resources :likes, only: [:index, :create, :show, :destroy]
   end
 end
