@@ -42,15 +42,20 @@
 }
 
 p.friends {
-  margin-left: 40px;
+  margin-left: 52px;
   color: white;
   background: linear-gradient(#67ae55, #578843);
   background-color: #69a74e;
   border-color: #3b6e22 #3b6e22 #2c5115;
-}
-
-p.friends:hover {
-  cursor: none;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  border: 1p solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
 }
 
 p.invitation-pending {
@@ -59,10 +64,15 @@ p.invitation-pending {
   background: linear-gradient(#67ae55, #578843);
   background-color: #69a74e;
   border-color: #3b6e22 #3b6e22 #2c5115;
-}
-
-p.invitation-pending:hover {
-  cursor: none;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  border: 1p solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
 }
 
 .btn.btn-primary.become-friends {
