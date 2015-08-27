@@ -8,7 +8,7 @@
 
 # User 1
 User.create!(
-  username: "Vicci_Carillium",
+  username: "Vicci Carillium",
   password: "password",
   birthday: Time.now + 500.years,
   interests: "Food, being cute, cuddling, hugging",
@@ -80,7 +80,7 @@ User.create!(
 
 # User 7
 User.create!(
-  username: "Dr_Grace",
+  username: "Dr Grace",
   password: "password",
   birthday: Time.now - 47.years - 8.months - 9.days,
   home_planet: "Earth",
@@ -92,7 +92,7 @@ User.create!(
 
 # User 8
 User.create!(
-  username: "Robot_Octopus",
+  username: "Robot Octopus",
   password: "password",
   birthday: Time.now - 27.years - 3.months - 11.days,
   interests: "Space cookies, hide and seek, sunglassess,
@@ -105,7 +105,7 @@ User.create!(
 
 # User 9
 User.create!(
-  username: "Blon_Fel-Fotch",
+  username: "Blon Fel-Fotch",
   password: "password",
   birthday: Time.now + 67.years + 2.months + 1.day,
   interests: "Bowling, eating humans, propito trees, intergalactical politics",
@@ -129,9 +129,9 @@ User.create!(
 
 # User 11
 User.create!(
-  username: "The_Doctor",
+  username: "The Doctor",
   password: "password",
-  birthday: Time.now - 2000.years + 3.months + 5.days,
+  birthday: Time.now - 320.years + 3.months + 5.days,
   interests: "History, time traveling, Rose, sonic screwdrivers, Earth, cleaning the Tardis",
   planet_of_birth: "Gallifrey",
   profile_img_id: "image/upload/doekq2glsdw6xz4ug5a7",
@@ -152,7 +152,7 @@ User.create!(
 
 # User 13
 User.create!(
-  username: "Amy_Pond",
+  username: "Amy Pond",
   password: "password",
   birthday: Time.now - 26.years - 5.months - 9.days,
   interests: "Journalism, Scotland, The Doctor, space travel, meeting Vincent van Gogh",
@@ -187,7 +187,7 @@ User.create!(
 
 # User 16
 User.create!(
-  username: "Mr_Spock",
+  username: "Mr Spock",
   password: "password",
   birthday: Time.now + 215.years + 3.months + 6.days,
   interests: "Science, computers, Starfleet",
@@ -211,7 +211,7 @@ User.create!(
 
 # User 18
 User.create!(
-  username: "James_Kirk",
+  username: "James Kirk",
   password: "password",
   birthday: Time.now + 198.years + 4.months + 7.days,
   planet_of_birth: "Earth",
@@ -797,42 +797,42 @@ Invitation.create!(inviter_id: 2,  invitee_id: 16)
 
 Notification.create!(
   user_id: 1,
-  body: "You and The_Doctor are now friends."
+  body: "You and The Doctor are now friends."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "You and Blon_Fel-Fotch are now friends."
+  body: "You and Blon Fel-Fotch are now friends."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "You and Robot_Octopus are now friends."
+  body: "You and Robot Octopus are now friends."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "You posted on Robot_Octopus' timeline."
+  body: "You posted on Robot Octopus' timeline."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "Robot_Octopus posted on your timeline."
+  body: "Robot Octopus posted on your timeline."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "Mr_Spock would like to be friends."
+  body: "Mr Spock would like to be friends."
 )
 
 Notification.create!(
   user_id: 1,
-  body: "You sent James_Kirk a friend request."
+  body: "You sent James Kirk a friend request."
 )
 
 Notification.create!(
@@ -847,12 +847,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 2,
-  body: "Amy_Pond would like to be friends."
+  body: "Amy Pond would like to be friends."
 )
 
 Notification.create!(
   user_id: 2,
-  body: "You sent Mr_Spock a friend request."
+  body: "You sent Mr Spock a friend request."
 )
 
 Notification.create!(
@@ -892,7 +892,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 3,
-  body: "You posted on Robot_Octopus' timeline."
+  body: "You posted on Robot Octopus' timeline."
 )
 
 Notification.create!(
@@ -912,12 +912,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 3,
-  body: "James_Kirk would like to be friends."
+  body: "James Kirk would like to be friends."
 )
 
 Notification.create!(
   user_id: 4,
-  body: "James_Kirk would like to be friends."
+  body: "James Kirk would like to be friends."
 )
 
 Notification.create!(
@@ -932,7 +932,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 4,
-  body: "You and Robot_Octopus are now friends."
+  body: "You and Robot Octopus are now friends."
 )
 
 Notification.create!(
@@ -957,7 +957,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 5,
-  body: "You and Dr_Grace are now friends."
+  body: "You and Dr Grace are now friends."
 )
 
 Notification.create!(
@@ -992,22 +992,22 @@ Notification.create!(
 
 Notification.create!(
   user_id: 5,
-  body: "You sent Amy_Pond a friend request."
+  body: "You sent Amy Pond a friend request."
 )
 
 Notification.create!(
   user_id: 6,
-  body: "You sent Amy_Pond a friend request."
+  body: "You sent Amy Pond a friend request."
 )
 
 Notification.create!(
   user_id: 6,
-  body: "You and Dr_Grace are now friends."
+  body: "You and Dr Grace are now friends."
 )
 
 Notification.create!(
   user_id: 6,
-  body: "Dr_Grace posted on your timeline."
+  body: "Dr Grace posted on your timeline."
 )
 
 Notification.create!(
@@ -1037,12 +1037,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 7,
-  body: "Dr_Grace posted on your timeline."
+  body: "Dr Grace posted on your timeline."
 )
 
 Notification.create!(
   user_id: 7,
-  body: "You posted on Dr_Grace's timeline."
+  body: "You posted on Dr Grace's timeline."
 )
 
 Notification.create!(
@@ -1062,13 +1062,13 @@ Notification.create!(
 
 Notification.create!(
   user_id: 7,
-  body: "You sent Robot_Octopus a friend request."
+  body: "You sent Robot Octopus a friend request."
 )
 
 
 Notification.create!(
   user_id: 8,
-  body: "Dr_Grace would like to be friends."
+  body: "Dr Grace would like to be friends."
 )
 
 Notification.create!(
@@ -1078,12 +1078,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 8,
-  body: "You sent Blon_Fel-Fotch a friend request."
+  body: "You sent Blon Fel-Fotch a friend request."
 )
 
 Notification.create!(
   user_id: 8,
-  body: "You and Vicci_Carillium are now friends."
+  body: "You and Vicci Carillium are now friends."
 )
 
 Notification.create!(
@@ -1093,7 +1093,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 8,
-  body: "Vicci_Carillium posted on your timeline."
+  body: "Vicci Carillium posted on your timeline."
 )
 
 Notification.create!(
@@ -1103,27 +1103,27 @@ Notification.create!(
 
 Notification.create!(
   user_id: 8,
-  body: "You posted on Vicci_Carillium's timeline."
+  body: "You posted on Vicci Carillium's timeline."
 )
 
 Notification.create!(
   user_id: 9,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 9,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 9,
-  body: "You posted on The_Doctor's timeline."
+  body: "You posted on The Doctor's timeline."
 )
 
 Notification.create!(
   user_id: 9,
-  body: "You and Vicci_Carillium are now friends."
+  body: "You and Vicci Carillium are now friends."
 )
 
 Notification.create!(
@@ -1133,38 +1133,38 @@ Notification.create!(
 
 Notification.create!(
   user_id: 9,
-  body: "You and Amy_Pond are now friends."
+  body: "You and Amy Pond are now friends."
 )
 
 
 Notification.create!(
   user_id: 9,
-  body: "Robot_Octopus would like to be friends."
+  body: "Robot Octopus would like to be friends."
 )
 
 Notification.create!(
   user_id: 9,
-  body: "You sent Dr_Grace a friend request."
+  body: "You sent Dr Grace a friend request."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "You sent Dr_Grace a friend request."
+  body: "You sent Dr Grace a friend request."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "You and Vicci_Carillium are now friends."
+  body: "You and Vicci Carillium are now friends."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "You and The_Doctor are now friends."
+  body: "You and The Doctor are now friends."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "You and Blon_Fel-Fotch are now friends."
+  body: "You and Blon Fel-Fotch are now friends."
 )
 
 Notification.create!(
@@ -1174,17 +1174,17 @@ Notification.create!(
 
 Notification.create!(
   user_id: 10,
-  body: "You posted on The_Doctor's timeline."
+  body: "You posted on The Doctor's timeline."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 10,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
@@ -1199,32 +1199,32 @@ Notification.create!(
 
 Notification.create!(
   user_id: 11,
-  body: "You and Mr_Spock are now friends."
+  body: "You and Mr Spock are now friends."
 )
 
 Notification.create!(
   user_id: 11,
-  body: "You posted on Blon_Fel-Fotch's timeline."
+  body: "You posted on Blon Fel-Fotch's timeline."
 )
 
 Notification.create!(
   user_id: 11,
-  body: "You posted on Vicci_Carillium's timeline."
+  body: "You posted on Vicci Carillium's timeline."
 )
 
 Notification.create!(
   user_id: 11,
-  body: "Amy_Pond posted on your timeline."
+  body: "Amy Pond posted on your timeline."
 )
 
 Notification.create!(
   user_id: 11,
-  body: "You posted on Amy_Pond's timeline."
+  body: "You posted on Amy Pond's timeline."
 )
 
 Notification.create!(
   user_id: 11,
-  body: "You posted on Amy_Pond's timeline."
+  body: "You posted on Amy Pond's timeline."
 )
 
 Notification.create!(
@@ -1234,7 +1234,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 12,
-  body: "You and Robot_Octopus are now friends."
+  body: "You and Robot Octopus are now friends."
 )
 
 Notification.create!(
@@ -1259,7 +1259,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 12,
-  body: "Mr_Spock would like to be friends."
+  body: "Mr Spock would like to be friends."
 )
 
 Notification.create!(
@@ -1289,27 +1289,27 @@ Notification.create!(
 
 Notification.create!(
   user_id: 13,
-  body: "You posted on The_Doctor's timeline."
+  body: "You posted on The Doctor's timeline."
 )
 
 Notification.create!(
   user_id: 13,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 13,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
   user_id: 13,
-  body: "You posted on The_Doctor's timeline."
+  body: "You posted on The Doctor's timeline."
 )
 
 Notification.create!(
   user_id: 13,
-  body: "You and Vicci_Carillium are now friends."
+  body: "You and Vicci Carillium are now friends."
 )
 
 Notification.create!(
@@ -1319,17 +1319,17 @@ Notification.create!(
 
 Notification.create!(
   user_id: 14,
-  body: "You and The_Doctor are now friends."
+  body: "You and The Doctor are now friends."
 )
 
 Notification.create!(
   user_id: 14,
-  body: "You and Vicci_Carillium are now friends."
+  body: "You and Vicci Carillium are now friends."
 )
 
 Notification.create!(
   user_id: 14,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
@@ -1339,7 +1339,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 14,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
@@ -1349,7 +1349,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 14,
-  body: "You sent Amy_Pond a friend request."
+  body: "You sent Amy Pond a friend request."
 )
 
 Notification.create!(
@@ -1384,7 +1384,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 16,
-  body: "You and The_Doctor are now friends."
+  body: "You and The Doctor are now friends."
 )
 
 Notification.create!(
@@ -1394,12 +1394,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 16,
-  body: "You and James_Kirk are now friends."
+  body: "You and James Kirk are now friends."
 )
 
 Notification.create!(
   user_id: 16,
-  body: "The_Doctor posted on your timeline."
+  body: "The Doctor posted on your timeline."
 )
 
 Notification.create!(
@@ -1409,7 +1409,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 16,
-  body: "You sent Vicci_Carillium a friend request."
+  body: "You sent Vicci Carillium a friend request."
 )
 
 Notification.create!(
@@ -1439,22 +1439,22 @@ Notification.create!(
 
 Notification.create!(
   user_id: 17,
-  body: "You and James_Kirk are now friends."
+  body: "You and James Kirk are now friends."
 )
 
 Notification.create!(
   user_id: 17,
-  body: "You posted on James_Kirk's timeline."
+  body: "You posted on James Kirk's timeline."
 )
 
 Notification.create!(
   user_id: 17,
-  body: "James_Kirk posted on your timeline."
+  body: "James Kirk posted on your timeline."
 )
 
 Notification.create!(
   user_id: 17,
-  body: "You and Mr_Spock are now friends."
+  body: "You and Mr Spock are now friends."
 )
 
 Notification.create!(
@@ -1464,7 +1464,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 18,
-  body: "You and Mr_Spock are now friends."
+  body: "You and Mr Spock are now friends."
 )
 
 Notification.create!(
@@ -1479,12 +1479,12 @@ Notification.create!(
 
 Notification.create!(
   user_id: 18,
-  body: "Dr_Grace would like to be friends."
+  body: "Dr Grace would like to be friends."
 )
 
 Notification.create!(
   user_id: 18,
-  body: "Vicci_Carillium would like to be friends."
+  body: "Vicci Carillium would like to be friends."
 )
 
 Notification.create!(
@@ -1509,7 +1509,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 19,
-  body: "Robot_Octopus would like to be friends."
+  body: "Robot Octopus would like to be friends."
 )
 
 Notification.create!(
@@ -1524,7 +1524,7 @@ Notification.create!(
 
 Notification.create!(
   user_id: 19,
-  body: "You sent Vicci_Carillium a friend request."
+  body: "You sent Vicci Carillium a friend request."
 )
 
 Notification.create!(
@@ -1572,7 +1572,7 @@ Like.create!(
 )
 
 Like.create!(
-  liker_id: 17,
+  liker id: 17,
   likeable_id: 6,
   likeable_type: "Post"
 )
