@@ -44,7 +44,7 @@ Spacebook.Views.PostsIndexItemFooter = Backbone.CompositeView.extend({
 
   unlikePost: function (event) {
     event.preventDefault();
-    var findLike = this.likes.findWhere({ "liker_id": this.user.id });
+    var findLike = this.likes.findWhere({ "liker_id": Spacebook.CURRENT_USER_ID });
     var id = findLike.id;
     var like = this.likes.getOrFetch(id);
     var that = this;
