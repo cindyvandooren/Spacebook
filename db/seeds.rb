@@ -1549,103 +1549,25 @@ Notification.create!(
 
 Like.create!(
   liker_id: 3,
-  likeable_id: 70,
+  likeable_id: 1,
   likeable_type: "Post"
 )
 
 Like.create!(
-  liker_id: 4,
-  likeable_id: 70,
+  liker_id: 8,
+  likeable_id: 1,
   likeable_type: "Post"
 )
 
 Like.create!(
-  liker_id: 3,
-  likeable_id: 3,
+  liker_id: 12,
+  likeable_id: 1,
   likeable_type: "Post"
 )
 
 Like.create!(
-  liker_id: 16,
-  likeable_id: 6,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 17,
-  likeable_id: 6,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 17,
-  likeable_id: 67,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 16,
-  likeable_id: 22,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 18,
-  likeable_id: 22,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 18,
-  likeable_id: 63,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 11,
-  likeable_id: 61,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 17,
-  likeable_id: 61,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 18,
-  likeable_id: 61,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 18,
-  likeable_id: 9,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 2,
-  likeable_id: 58,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 3,
-  likeable_id: 58,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 2,
-  likeable_id: 55,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 10,
-  likeable_id: 74,
+  liker_id: 15,
+  likeable_id: 1,
   likeable_type: "Post"
 )
 
@@ -1656,8 +1578,884 @@ Like.create!(
 )
 
 Like.create!(
+  liker_id: 1,
+  likeable_id: 2,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 3,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 3,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 4,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 4,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 4,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 5,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 5,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 5,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 6,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 6,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 7,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 7,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 15,
+  likeable_id: 7,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 7,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 8,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 8,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 8,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 15,
+  likeable_id: 8,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 8,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 9,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 9,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 10,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 10,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 10,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 11,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 11,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 11,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 11,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 12,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 13,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 13,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 14,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 14,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 14,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 15,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 15,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 15,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 16,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 16,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 12,
+  likeable_id: 16,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 17,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 17,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 19,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 19,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 20,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 20,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 20,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 22,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 22,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 23,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 23,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 23,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 15,
+  likeable_id: 24,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 12,
+  likeable_id: 24,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 25,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 25,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 26,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 27,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 27,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 27,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 27,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 28,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 28,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 29,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 30,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 30,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 30,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 30,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 31,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 31,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 32,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 32,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 32,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 32,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 33,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 33,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 33,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 34,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 34,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 34,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 34,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 35,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 35,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 36,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 36,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 37,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 37,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 38,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 38,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 38,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 39,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 39,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 40,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 40,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 41,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 41,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 41,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 41,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 42,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 42,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 42,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 43,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 44,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 44,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 45,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 45,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 46,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 46,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 47,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 47,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 47,
+  likeable_type: "Post"
+)
+
+Like.create!(
   liker_id: 11,
   likeable_id: 48,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 48,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 48,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 49,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 49,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 49,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 50,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 50,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 51,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 52,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 52,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 52,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 53,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 53,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 54,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 54,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 54,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 15,
+  likeable_id: 54,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 55,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 55,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 56,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 56,
   likeable_type: "Post"
 )
 
@@ -1680,8 +2478,344 @@ Like.create!(
 )
 
 Like.create!(
+  liker_id: 2,
+  likeable_id: 58,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 58,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 15,
+  likeable_id: 58,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 60,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 60,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 60,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 61,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 62,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 62,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 8,
+  likeable_id: 62,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 63,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 63,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 63,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 64,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 64,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 64,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
   liker_id: 13,
   likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 65,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 66,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 66,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 66,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 17,
+  likeable_id: 67,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 67,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 18,
+  likeable_id: 67,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 2,
+  likeable_id: 68,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 68,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 69,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 69,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 3,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 4,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 19,
+  likeable_id: 70,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 71,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 71,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 12,
+  likeable_id: 71,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 72,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 72,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 12,
+  likeable_id: 72,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 73,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 7,
+  likeable_id: 73,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 12,
+  likeable_id: 73,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 74,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 1,
+  likeable_id: 74,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 74,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 5,
+  likeable_id: 75,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 6,
+  likeable_id: 75,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 13,
+  likeable_id: 76,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 9,
+  likeable_id: 76,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 16,
+  likeable_id: 76,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 10,
+  likeable_id: 77,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 14,
+  likeable_id: 77,
+  likeable_type: "Post"
+)
+
+Like.create!(
+  liker_id: 11,
+  likeable_id: 77,
   likeable_type: "Post"
 )
 
@@ -1705,66 +2839,18 @@ Like.create!(
 
 Like.create!(
   liker_id: 10,
-  likeable_id: 51,
+  likeable_id: 78,
   likeable_type: "Post"
 )
 
 Like.create!(
-  liker_id: 10,
-  likeable_id: 11,
+  liker_id: 14,
+  likeable_id: 78,
   likeable_type: "Post"
 )
 
 Like.create!(
-  liker_id: 8,
-  likeable_id: 12,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 5,
-  likeable_id: 75,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 6,
-  likeable_id: 75,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 5,
-  likeable_id: 69,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 7,
-  likeable_id: 69,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 6,
-  likeable_id: 71,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 19,
-  likeable_id: 15,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 19,
-  likeable_id: 47,
-  likeable_type: "Post"
-)
-
-Like.create!(
-  liker_id: 2,
-  likeable_id: 4,
+  liker_id: 16,
+  likeable_id: 78,
   likeable_type: "Post"
 )

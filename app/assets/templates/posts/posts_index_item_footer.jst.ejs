@@ -1,5 +1,5 @@
 <% var id = parseInt(user.escape('id')) %>
-<% var like = likes.findWhere({'liker_id': id}); %>
+<% var like = likes.findWhere({'liker_id': Spacebook.CURRENT_USER_ID}); %>
 
 <div class="like-unlike">
   <% if (like) { %>

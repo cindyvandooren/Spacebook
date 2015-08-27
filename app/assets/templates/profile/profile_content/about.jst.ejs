@@ -1,23 +1,23 @@
 <div class="container about-table">
   <h2>About <%= user.escape('username') %></h2>
-  <br>  
+  <br>
   <div class="custyle">
     <table class="table table-striped .table-hover custab ">
       <tbody>
         <tr>
-          <td>Birthday</td>
+          <td><strong>Birthday</strong></td>
           <td><%= user.escape('birthday') %></td>
         </tr>
         <tr>
-          <td>Home Planet</td>
+          <td><strong>Home Planet</strong></td>
           <td><%= user.escape('home_planet') %></td>
         </tr>
         <tr>
-          <td>Planet of Birth</td>
+          <td><strong>Planet of Birth</strong></td>
           <td><%= user.escape('planet_of_birth') %></td>
         </tr>
         <tr>
-          <td>Interests</td>
+          <td><strong>Interests</strong></td>
           <td><%= user.escape('interests') %></td>
         </tr>
       </tbody>
