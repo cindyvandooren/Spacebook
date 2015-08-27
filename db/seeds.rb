@@ -1572,7 +1572,7 @@ Like.create!(
 )
 
 Like.create!(
-  liker id: 17,
+  liker_id: 17,
   likeable_id: 6,
   likeable_type: "Post"
 )
