@@ -13,11 +13,19 @@
 </nav>
 
 <div class="sidebar-invitations-list">
-	<h3>Pending invitations</h3>
+	<% if (user.escape('id') == Spacebook.CURRENT_USER_ID) { %>
+		<h3>Your Pending invitations</h3>
+	<% } else { %>
+		<h3><%= user.escape('username') %>'s Pending Invitations</h3>
+	<% } %>
 	<div class="all-invitations"></div>
 </div>
 
 <div class="sidebar-friends-list">
-	<h3>Friends</h3>
+	<% if (user.escape('id') == Spacebook.CURRENT_USER_ID) { %>
+		<h3>Friends</h3>
+	<% } else { %>
+		<h3><%= user.escape('username') %>'s Friends</h3>
+	<% } %>
 	<div class="friends"></div>
 </div>
