@@ -1,6 +1,8 @@
 # Spacebook
 
-####http://www.spacebook.website/
+####[Project link][project]
+
+[project]: http://www.spacebook.website/
 
 Spacebook is a social networking app for earthlings and non-earthlings alike.
 Sign up and keep in touch with your friends from space.
