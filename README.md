@@ -1,6 +1,6 @@
 # Spacebook
 
-####[Project link][project]
+####[Live][project]
 
 [project]: http://www.spacebook.website/
 
