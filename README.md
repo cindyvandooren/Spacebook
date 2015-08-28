@@ -5,6 +5,16 @@
 Spacebook is a social networking app for earthlings and non-earthlings alike.
 Sign up and keep in touch with your friends from space.
 
+## Screenshot
+![screenshot]
+[screenshot]: ./docs/screenshot.png
+
+## Highlights
+- Single-page Backbone app on RESTful JSON Rails API
+- Custom authentication using BCrypt overrides User#password= method
+- Advanced Backbone on Rails design patterns such as overriding Model#parse method to facilitate nested data for  user profile info
+- Polymorphic like/unlike functionality to keep database normalized
+
 ## Features
 - Users can create, edit and delete posts.
 - They can visit other users' profile pages.

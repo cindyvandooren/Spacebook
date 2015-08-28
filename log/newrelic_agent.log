@@ -1503,3 +1503,4 @@ LINE 1: ...ons" WHERE "notifications"."user_id" = $1 AND (created_at >)
 [08/27/15 10:44:41 -0700 Cindys-MacBook-Pro.local (91707)] INFO : Doing deferred dependency-detection before Rack startup
 [08/27/15 10:44:47 -0700 Cindys-MacBook-Pro.local (91707)] ERROR : Invalid license key, please contact support@newrelic.com
 [08/27/15 10:44:47 -0700 Cindys-MacBook-Pro.local (91707)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/27/15 11:42:52 -0700 Cindys-MacBook-Pro.local (91707)] INFO : Starting Agent shutdown
