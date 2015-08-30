@@ -17,6 +17,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'ejs'
 gem 'bootstrap-sass'
 gem 'whenever', :require => false
+gem "font-awesome-rails"
 
 group :development do
   gem 'better_errors'

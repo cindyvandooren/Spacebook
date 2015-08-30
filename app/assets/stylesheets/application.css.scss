@@ -16,6 +16,7 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
 
  body {
    background-color: #edf0f5;
@@ -51,6 +52,84 @@
    color: #3a5795;
    padding-left: 10px;
    margin-top: 5px;
+ }
+
+ #content {
+  width: 928px;
+  position: absolute;
+  float: left;
+ }
+
+ body:after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+
+ #games {
+   position: absolute;
+   float:right;
+   width: 323px;
+   margin-left: 948px;
+ }
+
+ .games {
+   border: 1px solid #3a5795;
+   border-radius: 5px;
+   background-color: white;
+   box-shadow: 2px 2px 2px #ADA8A8;
+ }
+
+ .about{
+   position: relative;
+   border: 1px solid #3a5795;
+   border-radius: 5px;
+   background-color: white;
+   box-shadow: 2px 2px 2px #ADA8A8;
+ }
+
+ .snake {
+   margin-top: 20px;
+ }
+
+ .snake-img {
+   position: relative;
+   margin: 0px 0px 15px 15px;
+ }
+
+ .profile-img {
+  //  float: right;
+   border: 4px solid #545464;
+   border-radius: 5px;
+   margin: 0px 0px 0px 106px;
+ }
+
+ .icons {
+  //  float: left;
+   position: relative;
+   padding: 0px;
+   margin: 10px 0px 10px 82px;
+   width: 160px;
+ }
+
+ .icons:after {
+   content: " ";
+   clear: both;
+   display: block;
+ }
+
+ .icons > li {
+   float: left;
+   padding: 0px 10px 0px 10px;
+ }
+
+ .fa {
+   color: #545464
+ }
+
+ .fa:hover {
+   color: grey;
+   cursor: pointer;
  }
 
  .navbar {
