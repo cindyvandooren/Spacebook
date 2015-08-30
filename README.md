@@ -38,6 +38,23 @@ Sign up and keep in touch with your friends from space.
 - Postgresql
 - Polymorphic Associations
 
+## Cool Code Snippets
+Customizing Backbone Model#parse method to handle nested data for user
+![snippetone]
+[snippetone]: ./docs/snippetone.png
+
+Switching subviews in the user's profile
+![snippettwo]
+[snippettwo]: ./docs/snippettwo.png
+
+Polymorphic like functionality
+![snippetthree]
+[snippetthree]: ./docs/snippetthree.png
+
+Overriding User#password= method using BCrypt
+![snippetfour]
+[snippetfour]: ./docs/snippetfour.png
+
 ## Todo
 - Custom styling for the Cloudinary widget
 - Use markdown in the creation of posts
