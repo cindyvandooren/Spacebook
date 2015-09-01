@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
 
   def index
     if params[:query]
-      @users = User.where("lower(username) LIKE ?", params[:query].downcase + "%")
+      @users = User.where("lower(username) LIKE ?", "%" + params[:query].downcase + "%")
                    .order(username: :asc)
     else
       @users = User.all.order(username: :asc)
