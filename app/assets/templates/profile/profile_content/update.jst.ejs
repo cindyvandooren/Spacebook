@@ -1,9 +1,10 @@
 <h2>Update Profile</h2>
 
-<div class = "form-input">
+<div class="form-input">
   <label id="user_birthday">Birthday</label>
   <br>
   <input type="date"
+         class="non-button"
          id="user_birthday"
          name="birthday"
          value="<%= user.escape('birthday') %>">
@@ -11,6 +12,7 @@
   <label id="user_home_planet">Home Planet</label>
   <br>
   <input type="text"
+         class="non-button"
          name="home_planet"
          id="user_home_planet"
          value="<%= user.escape('home_planet') %>">
@@ -18,6 +20,7 @@
   <label id="user_planet_of_birth">Planet of Birth</label>
   <br>
   <input type="text"
+         class="non-button"
          name="planet_of_birth"
          id="user_planet_of_birth"
          value="<%= user.escape('planet_of_birth') %>">
@@ -26,7 +29,12 @@
   <br>
   <textarea
          name="interests"
+         class="non-button user-interests"
          id="user_interests"><%= user.escape('interests') %></textarea>
+  <br>
+  <input type="submit"
+         value="Update Profile"
+         class="btn btn-primary update-profile">
   <br>
   <input type="submit"
          value="Change Profile Picture..."
@@ -34,8 +42,4 @@
   <input type="submit"
          value="Change Background Picture..."
          class="btn btn-default update-background-picture">
-  <br>
-  <input type="submit"
-         value="Update Profile"
-         class="btn btn-primary update-profile">
 </div>

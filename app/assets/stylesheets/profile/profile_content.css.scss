@@ -34,8 +34,9 @@
 .form-input > label {
   font-family: 'Freight Sans Bold', 'lucida grande',
                tahoma,verdana,arial,sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
+  padding: 15px 0px 2px;
 }
 
 .form-input > input {
@@ -45,7 +46,15 @@
   width: 100%;
   border-radius: 5px;
   border: 1px solid #3a5795;
-  height: 20px;
+  height: 100%;
+}
+
+.form-input > .non-button {
+  padding: 10px;
+}
+
+.form-input > .user-interests {
+  height: 100px;
 }
 
 .form-input > input.btn {
