@@ -1547,3 +1547,25 @@ LINE 1: ...ons" WHERE "notifications"."user_id" = $1 AND (created_at >)
 [08/29/15 16:40:33 -0700 Cindys-MBP (57189)] INFO : Doing deferred dependency-detection before Rack startup
 [08/29/15 16:40:38 -0700 Cindys-MBP (57189)] ERROR : Invalid license key, please contact support@newrelic.com
 [08/29/15 16:40:38 -0700 Cindys-MBP (57189)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[08/31/15 09:19:33 -0700 Cindys-MBP (57189)] INFO : Starting Agent shutdown
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Starting the New Relic agent in "development" environment.
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] WARN : No configuration file found. Working directory = /Users/Cindy/Desktop/Spacebook
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] WARN : Looked in these locations (based on defaults): /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/Desktop/Spacebook/config/newrelic.yml, /Users/Cindy/Desktop/Spacebook/newrelic.yml, /Users/Cindy/.newrelic/newrelic.yml, /Users/Cindy/newrelic.yml
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Environment: development
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Dispatcher: webrick
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Application: development
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing ActiveJob instrumentation
+[08/31/15 19:45:26 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing ActiveRecord 4 instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Net instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing deferred Rack instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Rack::Builder middleware instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Rails 3+ middleware instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Rails 4 Controller instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Rails 4 view instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Installing Rails 4 Error instrumentation
+[08/31/15 19:45:27 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Finished instrumentation
+[08/31/15 19:45:28 -0700 Cindys-MacBook-Pro.local (90735)] INFO : Doing deferred dependency-detection before Rack startup
+[08/31/15 19:45:31 -0700 Cindys-MacBook-Pro.local (90735)] ERROR : Invalid license key, please contact support@newrelic.com
+[08/31/15 19:45:31 -0700 Cindys-MacBook-Pro.local (90735)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

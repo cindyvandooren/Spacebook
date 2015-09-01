@@ -31,11 +31,11 @@
       </form>
     </div>
     <ul class="nav navbar-nav menu-root">
-      <li>
-        <a href="#/profiles/<%= user.escape('id') %>"
-           class="thumbnail-link"><img src="<%= user.escape('tiny_thumbnail_img_url') %>" /></a>
-        <a href="#/profiles/<%= user.escape('id') %>"
-           class="username-link"><%= user.escape('username') %></a>
+      <li><a href="#/profiles/<%= user.escape('id') %>"
+             class="thumbnail-link"><img src="<%= user.escape('tiny_thumbnail_img_url') %>" /></a>
+      </li>
+      <li class="username"><a href="#/profiles/<%= user.escape('id') %>"
+             class="username-link"><%= user.escape('username') %></a>
       </li>
       <li><a href="#/feed">Feed</a></li>
       <li><a href="javascript:void(0)"
