@@ -14,7 +14,7 @@ Sign up and keep in touch with your friends from space.
 ## Highlights
 - Single-page Backbone app on RESTful JSON Rails API
 - Custom authentication using BCrypt overrides User#password= method
-- Advanced Backbone on Rails design patterns such as overriding Model#parse method to facilitate nested data for  user profile info
+- Advanced Backbone design patterns; customized Model#parse method to handle nested data for user profile info
 - Polymorphic like/unlike functionality to keep database normalized
 
 ## Features
